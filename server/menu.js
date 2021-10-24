@@ -46,73 +46,63 @@ app.get("/menu/:id", async (req, res) => {
 //Update a Menu Selection
 app.put("/menu/:id", async (req, res) => {
     try {
-         const { id }= req.params;
-         const {dish_name, dish_description, dish_pricing, dish_type} = req.body;
-         const updateDish = await pool.query("UPDATE menu SET (dish_name, dish_description, dish_pricing, dish_type) = ($1,$2,$3,$4) WHERE dish_id = $5",
-    [dish_name, dish_description, dish_pricing, dish_type, id]);
-    res.json("Dish was updated")
+         const updateDish = await pool.query("UPDATE menu SET (Dish_Name, Dish_Description, Pricing, Dish_Type) = ($1,$2,$3,$4) WHERE dish_id = $5",
+    [req.body.Dish_Name, req.body.Dish_Description, req.body.Pricing, req.body.Dish_Type, req.body.id]);
+    res.json("Dish was updated");
         } catch (err){
-        console.error(err.message)
+        console.error(err.message);
         }
     });
     
     //Update a dish_name
 app.put("/menu/dish_name/:id", async (req, res) => {
     try {
-         const { id }= req.params;
-         const {dish_name} = req.body;
-         const updateDishName = await pool.query("UPDATE menu SET dish_name = $1 WHERE dish_id = $2",
-    [dish_name, id]);
-    res.json("DishName was updated")
+         const updateDishName = await pool.query("UPDATE menu SET Dish_Name = $1 WHERE dish_id = $2",
+    [req.body.Dish_Name, req.body.id]);
+    res.json("DishName was updated");
         } catch (err){
-        console.error(err.message)
+        console.error(err.message);
         }
     });
     //Update a dish_description
 app.put("/menu/dish_description/:id", async (req, res) => {
     try {
-         const { id }= req.params;
-         const {dish_description} = req.body;
          const updateDishDescription = await pool.query("UPDATE menu SET dish_description = $1 WHERE dish_id = $2",
-    [dish_description, id]);
+    [req.body.Dish_Description, req.body.id]);
     res.json("DishDescription was updated")
         } catch (err){
-        console.error(err.message)
+        console.error(err.message);
         }
     });
    
     //Update a dish_pricing
 app.put("/menu/dish_pricing/:id", async (req, res) => {
     try {
-         const { id }= req.params;
-         const {dish_pricing} = req.body;
          const updateDishPricing = await pool.query("UPDATE menu SET dish_pricing = $1 WHERE dish_id = $2",
-    [dish_pricing, id]);
-    res.json("DishPricing was updated")
+    [req.body.Pricing, req.body.id]);
+    res.json("DishPricing was updated");
         } catch (err){
-        console.error(err.message)
+        console.error(err.message);
         }
     });
 //Update a dish_type
 app.put("/menu/dish_type/:id", async (req, res) => {
     try {
-         const { id }= req.params;
-         const {dish_type} = req.body;
          const updateDishType = await pool.query("UPDATE menu SET dish_type = $1 WHERE dish_id = $2",
-    [dish_type, id]);
-    res.json("DishType was updated")
+    [req.body.Dish_Type, req.body.id]);
+    res.json("DishType was updated");
         } catch (err){
-        console.error(err.message)
+        console.error(err.message);
         }
     });
 //Delete a Menu Selection
 app.delete("/menu/:id", async (req, res) => {
     try {
-         const { id }= req.params;
-         const deleteDish = await pool.query("DELETE FROM menu WHERE dish_id = $1",[id]);
-  res.json("Dish was deleted")
+         
+         const deleteDish = await pool.query("DELETE FROM menu WHERE dish_id = $1",[req.body.id]);
+    res.json("Dish was deleted");
         } catch (err){
-        console.error(err.message)
+        console.error(err.message);
         }
     }); 
 app.listen(5000, ()=>{
