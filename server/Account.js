@@ -1,15 +1,19 @@
+
 const express = require("express");
 const app = express();
 const cors = require("cors");
 const pool = require("./db");
+const jwtAuth = require("./routes/jwtAuth");
 //middleware
 app.use(cors());
 app.use(express.json());
 
+//register and login routes
+app.use("/account", jwtAuth);
 //Account Routes
 
 //Create an Account
-app.post("/account", async (req, res)=> {
+/*app.post("/account", async (req, res)=> {
     try{
         const newAccount = await pool.query("INSERT INTO account (employee_firstname, employee_lastname, employee_password) VALUES($1,$2,$3) RETURNING *", 
         [req.body.Employee_FirstName, req.body.Employee_LastName, req.body.Employee_Password]);
@@ -88,3 +92,8 @@ app.delete("/account/:id", async (req, res) => {
         console.error(err.message);
         }
     }); 
+*/
+    app.listen(5000, ()=>{
+        console.log("server has started on port 5000");
+    });
+    

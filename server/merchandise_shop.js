@@ -88,3 +88,6 @@ app.delete("/merchandise_shop/:id", async (req, res) => {
         console.error(err.message);
         }
     }); 
+    app.listen(5000, ()=>{
+        console.log("server has started on port 5000");
+    });
