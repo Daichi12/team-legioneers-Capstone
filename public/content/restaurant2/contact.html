@@ -154,6 +154,7 @@
                                                 <h2>Make a Reservation6</h2>
                                                 <hr class="no_line" style="margin: 0 auto 25px">
                                                 <div id="contactWrapper">
+                                                    <h2>Table Reservation</h2>
                                                     <form id="contactform">
                                                         <!-- One Second (1/2) Column -->
                                                         <div class="column one-second">
@@ -177,7 +178,127 @@
                                                         </div>
                                                     </form>
                                                 </div>
+                                                <div id="contactWrapper2" style="display: none;">
+                                                    <h2>Venue Reservation</h2>
+                                                    <form id="contactform">
+                                                        <!-- One Second (1/2) Column -->
+                                                        <div class="column one-second">
+                                                            <input placeholder="Your FACE" type="text" name="name" id="name" size="40" aria-required="true" aria-invalid="false" />
+                                                        </div>
+                                                        <!-- One Second (1/2) Column -->
+                                                        <div class="column one-second">
+                                                            <input placeholder="Your phone number" type="email" name="email" id="email" size="40" aria-required="true" aria-invalid="false" />
+                                                        </div>
+                                                        <div class="column one">
+                                                            <input placeholder="Time" type="text" name="subject" id="subject" size="40" aria-invalid="false" />
+                                                        </div>
+                                                        <div class="column one">
+                                                            <textarea placeholder="Message" name="body" id="body" style="width:100%;" rows="10" aria-invalid="false"></textarea>
+                                                        </div>
+                                                        <div class="column one">
+                                                        <!-- BRAINTREE -->
+                                                            <input type="button" value="Submit" id="submit" onClick="return check_values();">
+                                                        </div>
+                                                    </form>
+                                                </div>
                                             </div>
+                                            <head>
+                                                <title>toggle switch</title>
+                                                  
+                                                <style>
+                                                    h1 {
+                                                        text-align: center;
+                                                        color: rgb(65, 156, 136);
+                                                    }
+                                                            
+                                                    /* toggle in label designing */
+                                                    .toggle {
+                                                      
+                                                     left: 50%;
+                                                     margin-right: -50%;
+                                                     transform: translate(-50%, -50%);
+                                                        position : absolute ;
+                                                        display : inline-block;
+                                                        width : 50px;
+                                                        height : 27px;
+                                                        background-color: rgb(0, 225, 255);
+                                                        border-radius: 30px;
+                                                        border: 2px solid rgb(0, 0, 0);
+                                                    }
+                                                            
+                                                    /* After slide changes */
+                                                    .toggle:after {
+                                                        
+                                                        content: '';
+                                                        position: absolute;
+                                                        width: 25px;
+                                                        height: 25px;
+                                                        border-radius: 50%;
+                                                        background-color: rgb(167, 61, 0);
+                                                        top: 1px; 
+                                                        left: 1px;
+                                                        transition:  all 0.5s;
+                                                    }
+                                                            
+                                                    /* Toggle text */
+                                                    p {
+                                                        text-align: center;
+                               
+                                                        font-family: Arial, Helvetica, sans-serif;
+                                                        font-weight: bold;
+                                                    }
+                                                            
+                                                    /* Checkbox checked effect */
+                                                    .checkbox:checked + .toggle::after {
+                                                        left : 23px; 
+                                                    }
+                                                            
+                                                    /* Checkbox checked toggle label bg color */
+                                                    .checkbox:checked + .toggle {
+                                                        
+                                                        background-color: rgb(17, 188, 255);
+                                                    }
+                                                            
+                                                    /* Checkbox vanished */
+                                                    .checkbox { 
+                                                        display : none;
+                                                    }
+                                                </style>
+                                            </head>
+                                              
+                                            <body>
+                                                
+                                                    <h1>Reservation Switch </h1>
+                                                    <p>Toggle switch to change Reservations Type</p>
+                                                    <br><br>
+                                                    <input type="checkbox" id="flap"
+                                                                class="checkbox" />
+                                                    <label for="flap" class="toggle">
+                                                          
+                                            <script>
+                                                var flap = document.getElementById('flap'); // Assumes element with id='button'
+
+                                                flap.onclick = function() {
+                                                    var div = document.getElementById('contactWrapper');
+                                                    var div2 = document.getElementById('contactWrapper2');
+                                                    if (div2.style.display !== 'none') {
+                                                        div2.style.display = 'none';
+                                                        div.style.display = 'block';
+                                                    }
+                                                    else {
+                                                        div2.style.display = 'block';
+                                                        div.style.display = 'none';
+
+                                                    }
+                                                };
+                                            </script>
+                                              
+                                                    </label>
+                                                
+                                            </body>
+                                              
+                                            </html>
+                                               
                                         </div>
                                     </div>
                                 </div>
