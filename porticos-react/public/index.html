@@ -24,7 +24,126 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+
+    <!-- HOME JS-SCRIPTS AND CSS RESOURCES -->
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="content/restaurant2/images/favicon.ico">
+
+    <!-- FONTS -->
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Playfair+Display:100,300,400,400italic,700,700italic'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lora:700'>
+
+    <!-- CSS -->
+    <link rel='stylesheet' href='css/global.css'>
+    <link rel='stylesheet' href='content/restaurant2/css/structure.css'>
+    <link rel='stylesheet' href='content/restaurant2/css/restaurant2.css'>
+    <link rel='stylesheet' href='content/restaurant2/css/custom.css'>
+
+    <!-- Revolution Slider -->
+    <link rel="stylesheet" href="plugins/rs-plugin/css/settings.css">
+    <script src="js/jquery-2.1.4.min.js"></script>
+
+    <script src="js/mfn.menu.js"></script>
+    <script src="js/jquery.plugins.js"></script>
+    <script src="js/jquery.jplayer.min.js"></script>
+    <script src="js/animations/animations.js"></script>
+    <script src="js/translate3d.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script src="plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="plugins/rs-plugin/js/extensions/revolution.extension.parallax.min.js"></script>
+
+    <script type="text/javascript">
+        var tpj = jQuery;
+        var revapi1;
+        tpj(document).ready(function() {
+            if (tpj("#rev_slider_1_1").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_1_1");
+            } else {
+                revapi1 = tpj("#rev_slider_1_1").show().revolution({
+                    sliderType: "standard",
+                    sliderLayout: "auto",
+                    dottedOverlay: "none",
+                    delay: 4000,
+                    navigation: {
+                        onHoverStop: "off",
+                    },
+                    visibilityLevels: [1240, 1024, 778, 480],
+                    gridwidth: 1080,
+                    gridheight: 800,
+                    lazyType: "none",
+                    shadow: 0,
+                    spinner: "spinner2",
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    disableProgressBar: "on",
+                    hideThumbsOnMobile: "off",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "off",
+                        nextSlideOnWindowFocus: "off",
+                        disableFocusListener: false,
+                    }
+                });
+            }
+        });
+        /*]]>*/
+    </script>
+    <script id="mfn-dnmc-retina-js">
+        jQuery(window).load(function() {
+            var retina = window.devicePixelRatio > 1 ? true : false;
+            if (retina) {
+                var retinaEl = jQuery("#logo img.logo-main");
+                var retinaLogoW = retinaEl.width();
+                var retinaLogoH = retinaEl.height();
+                retinaEl.attr("src", "content/restaurant2/images/retina-restaurant2.png").width(retinaLogoW).height(retinaLogoH);
+                var stickyEl = jQuery("#logo img.logo-sticky");
+                var stickyLogoW = stickyEl.width();
+                var stickyLogoH = stickyEl.height();
+                stickyEl.attr("src", "content/restaurant2/images/retina-restaurant2.png").width(stickyLogoW).height(stickyLogoH);
+                var mobileEl = jQuery("#logo img.logo-mobile");
+                var mobileLogoW = mobileEl.width();
+                var mobileLogoH = mobileEl.height();
+                mobileEl.attr("src", "content/restaurant2/images/retina-restaurant2.png").width(mobileLogoW).height(mobileLogoH);
+                var mobileStickyEl = jQuery("#logo img.logo-mobile-sticky");
+                var mobileStickyLogoW = mobileStickyEl.width();
+                var mobileStickyLogoH = mobileStickyEl.height();
+                mobileStickyEl.attr("src", "content/restaurant2/images/retina-restaurant2.png").width(mobileStickyLogoW).height(mobileStickyLogoH);
+            }
+        });
+    </script>
+  <!-- END OF HOME JS-SCRIPTS AND CSS RESOURCES -->
+  <style>
+    h1 {
+        text-shadow: 3px 3px rgb(0, 0, 0);
+    }
+    </style>
+  <meta charset="utf-8">
+  <title>Porticos 1606</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
