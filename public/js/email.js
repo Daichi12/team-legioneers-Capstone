@@ -25,16 +25,17 @@ function createRequestObject() {
 	return  xmlhttp;
 }
 
-
 function sendRequest() {
 	
 	var rnd = Math.random();
 	var name = escape(document.getElementById("name").value);
-	var email = escape(document.getElementById("email").value);
+	// var email = escape(document.getElementById("email").value);
+	var email = "obama@whitehouse.com";
 	var subject = escape(document.getElementById("subject").value);
 	var body = document.getElementById("body").value;
-
-	try{
+	console.log("@@@@@");
+	console.log(escape(document.getElementById("phone").value));
+	try {
     http.open('POST',  'php/contactform.php');
     http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     http.onreadystatechange = handleResponse;
@@ -44,54 +45,6 @@ function sendRequest() {
 	finally{
 	jQuery('#contactform').slideUp("slow").hide();
 	jQuery('#contactWrapper').append('<div class="success"><h4>Email Successfully Sent!</h4><br><p>Thank you for using our contact form <strong>'+decodeURIComponent(name)+'</strong>! Your email was successfully sent and we&#39;ll be in touch with you soon.</p></div>');
-	}
-}
-function sendRequest_booking() {
-	
-	var rnd = Math.random();
-	var name = escape(document.getElementById("name").value);
-	var email = escape(document.getElementById("email").value);
-	
-	var surname = escape(document.getElementById("surname").value);
-	var arrival = escape(document.getElementById("arrival").value);
-	var room = escape(document.getElementById("room").value);
-	var departure = escape(document.getElementById("departure").value);
-	var children = escape(document.getElementById("children").value);
-	var adults = escape(document.getElementById("adults").value);
-	var rooms = escape(document.getElementById("rooms").value);
-	
-	var body = document.getElementById("body").value;
-
-	try{
-    http.open('POST',  'php/bookingform.php');
-    http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    http.onreadystatechange = handleResponse;
-		http.send('name='+name+'&surname='+surname+'&email='+email+'&arrival='+arrival+'&room='+room+'&departure='+departure+'&children='+children+'&adults='+adults+'&rooms='+rooms+'&body='+body+'&rnd='+rnd);
-	}
-	catch(e){}
-	finally{
-	jQuery('#contactform_booking').slideUp("slow").hide();
-	jQuery('#contactWrapper').append('<div class="success"><h4>Email Successfully Sent!</h4><br><p>Thank you for using our contact form <strong>'+decodeURIComponent(name)+'</strong>! Your email was successfully sent and we&#39;ll be in touch with you soon.</p></div>');
-	}
-}
-
-function sendRequest_loans() {
-	
-	var rnd = Math.random();
-	var name = escape(document.getElementById("name").value);
-	var name_s = escape(document.getElementById("name_s").value);
-	var subject = escape(document.getElementById("subject").value);
-
-	try{
-    http.open('POST',  'php/contactform_loans.php');
-    http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    http.onreadystatechange = handleResponse_popup;
-		http.send('name='+name+'&name_s='+name_s+'&subject='+subject+'&rnd='+rnd);
-	}
-	catch(e){}
-	finally{
-	jQuery('#contactform_popup').slideUp("slow").hide();
-	jQuery('#contactWrapper_popup').append('<div class="success"><h4>Email Successfully Sent!</h4><br><p>Thank you for using our contact form <strong>'+name+'</strong>! Your email was successfully sent and we&#39;ll be in touch with you soon.</p></div>');
 	}
 }
 
@@ -116,56 +69,6 @@ function sendRequest_popup() {
 	}
 }
 
-
-function sendRequest_news() {
-	
-	var rnd = Math.random();
-	if(document.getElementById("name_news") instanceof Object){
-	var name = escape(document.getElementById("name_news").value);}
-	else{
-	var name ='noname';	
-	}
-	var email = escape(document.getElementById("email_news").value);
-
-	try{
-    http.open('POST',  'php/newsletter.php');
-    http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    http.onreadystatechange = handleResponse_news;
-
-	http.send('name_news='+name+'&email_news='+email+'&rnd_news='+rnd);
-
-	}
-	catch(e){
-	}
-	finally{
-	jQuery('#newsletterform').slideUp("slow").hide();
-	jQuery('#newsletterform').parent().append('<div class="success"><h4>Subscription Successfully Sent!</h4><br><p>Your email: '+email+' has been registered.</p></div>');
-	
-	}
-}
-function sendRequest_news_simple() {
-	
-	var rnd = Math.random();
-
-	var email = escape(document.getElementById("email_news").value);
-
-	try{
-    http.open('POST',  'php/newsletter.php');
-    http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    http.onreadystatechange = handleResponse_news;
-
-	http.send('email_news='+email+'&rnd_news='+rnd);
-
-	}
-	catch(e){
-	}
-	finally{
-	jQuery('#newsletterform').slideUp("slow").hide();
-	jQuery('#newsletterform').parent().append('<div class="success"><h4>Subscription Successfully Sent!</h4><br><p>Your email: '+email+' has been registered.</p></div>');
-	
-	}
-}
-
 function validate_email(address) {
    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
    if(reg.test(address) == false) {
@@ -176,9 +79,9 @@ function validate_email(address) {
 }
 
 function validate_phone(phone){
-	 var reg = /^[\:\-\.\_\(\) 0-9]+$/
-        	if(reg.test(phone) == false) {
-      return false;
+	 var reg = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s.]{0,1}[0-9]{3}[-\s.]{0,1}[0-9]{4}$/;
+     if(reg.test(phone) == false) {
+       return false;
    }
    else
    return true;
@@ -187,12 +90,10 @@ function validate_phone(phone){
 function check_values() {
 	//Form
 	var valid = '';
-
-	
 	var $j = jQuery.noConflict();
 	
 	var name = '';
-	var email = '';
+	var phone = '';
 	var subject = '';
 	var body = '';
 	
@@ -200,9 +101,9 @@ function check_values() {
 	{
 	 name = document.getElementById("name").value;
 	}
-	if(typeof $j('#contactform #email').val() != "undefined" )
+	if(typeof $j('#contactform #phone').val() != "undefined" )
 	{
-	 email = document.getElementById("email").value;
+	 phone = document.getElementById("phone").value;
 	}
 	if(typeof $j('#contactform #subject').val() != "undefined" )
 	{
@@ -227,17 +128,17 @@ function check_values() {
 		else
 		$j('#contactform #name').parent().find(".error").remove();
 		
-		if($j('#contactform #email').val()!=undefined)
-		if(validate_email($j('#contactform #email').val())==false ) {
-		var hasClass=$j('#contactform #email').parent().find(".error").hasClass("error");
+		if($j('#contactform #phone').val()!=undefined)
+		if(validate_phone($j('#contactform #phone').val())== false) {
+		var hasClass=$j('#contactform #phone').parent().find(".error").hasClass("error");
 	 	if(!hasClass)
-	 	    $j('#contactform #email').parent().append('<label for="contactname" generated="true" class="error">Please enter a valid email address</label>');	
-			$j('#contactform #email').focus();
+	 	    $j('#contactform #phone').parent().append('<label for="contactname" generated="true" class="error">Please enter a valid email address</label>');	
+			$j('#contactform #phone').focus();
 			//return false;
 			errors++;
 		}
 		else
-		$j('#contactform #email').parent().find(".error").remove();
+		$j('#contactform #phone').parent().find(".error").remove();
 		
 		
 		if($j('#contactform #subject').val()!=undefined)
@@ -264,7 +165,6 @@ function check_values() {
 		else
 		$j('#contactform #body').parent().find(".error").remove();
 		
-	
 
 	if(errors==0) {
 			document.getElementById("submit").disabled=true;
