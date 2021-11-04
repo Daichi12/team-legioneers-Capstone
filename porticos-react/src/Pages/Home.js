@@ -52,7 +52,7 @@ class Home extends React.Component{
                     </div>
                 </div>
                 <div class="mfn-main-slider" id="mfn-rev-slider">
-                    <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+                    <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery" style={{"margin":"0px auto","backgroundColor":"transparent","padding":"0px","marginTop":"0px","marginBottom":"0px"}}>
                         <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style={{"display":"none", "data-version":"5.3.1.5"}}>
                             <ul>
                                 <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -66,13 +66,13 @@ class Home extends React.Component{
                                 </li>
                             </ul>
                             <div class="tp-static-layers">
-                                <div class="tp-caption   tp-resizeme tp-static-layer" id="slider-1-layer-3" data-x="center" data-hoffset="" data-y="center" data-voffset="20" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-startslide="0" data-endslide="2" data-frames='[{"delay":260,"speed":700,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; white-space: nowrap; font-size: 48px; line-height: 58px; font-weight: 400; color: #0f13fcec;font-family:Arial;">
-                                    <h1 style="font-size: 90px; opacity: 1; color:#98dace"> 
+                                <div class="tp-caption   tp-resizeme tp-static-layer" id="slider-1-layer-3" data-x="center" data-hoffset="" data-y="center" data-voffset="20" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-startslide="0" data-endslide="2" data-frames='[{"delay":260,"speed":700,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style={{"zIndex":"6","whiteSpace":"nowrap","fontSize":"48px","lineHeight":"58px","fontWeight":"400","color":"#0f13fcec","fontFamily":"Arial"}}>
+                                    <h1 style={{"font-size": "90px", opacity: 1, color:"#98dace"}}> 
                                         Experiencia Única y Auténtica
                                      </h1>
                                 </div>
                             </div>
-                            <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+                            <div class="tp-bannertimer tp-bottom" style={{"visibility":"hidden !important"}}></div>
                         </div>
                     </div>
                 </div>
@@ -82,9 +82,9 @@ class Home extends React.Component{
             <div class="content_wrapper clearfix">
                 <div class="sections_group">
                     <div class="entry-content">
-                        <div class="section mcb-section no-margin-h no-margin-v" style="padding-top:0px; padding-bottom:0px; background-image:url(content/restaurant2/images/home_restaurant2_sectionbg2.jpg); background-repeat:no-repeat; background-position:center top;">
+                        <div class="section mcb-section no-margin-h no-margin-v" style={{"padding-top":"0px", "padding-bottom":"0px", "background-image": "url(assets/images/home_restaurant2_sectionbg2.jpg)", "background-repeat":"no-repeat", "background-position":"center top"}}>
                             <div class="section_wrapper mcb-section-inner">
-                                <div class="wrap mcb-wrap one-second  valign-top clearfix" style="margin-top:-60px">
+                                <div class="wrap mcb-wrap one-second  valign-top clearfix" style={{"margin-top":"-60px"}}>
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_image ">
                                             <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
@@ -94,14 +94,14 @@ class Home extends React.Component{
                                         </div>
                                     </div>
                                 </div>
-                                <div class="wrap mcb-wrap one-second  valign-top clearfix" style="padding:90px 5% 90px 10%">
+                                <div class="wrap mcb-wrap one-second  valign-top clearfix" style={{"padding":"90px 5% 90px 10%"}}>
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_column  column-margin-20px">
                                             <div class="column_attr clearfix">
                                                 <h3>We create
 													<br />
 													flavour</h3>
-                                                <hr class="no_line" style="margin: 0 auto 15px"/>
+                                                <hr class="no_line" style={{"margin": "0 auto 15px"}}/>
                                                 <h5>Disfruta de la sazón típica de nuestra tierra con una diversidad de platos fusionados.  </h5>
                                             </div>
                                         </div>
@@ -112,9 +112,9 @@ class Home extends React.Component{
                                 </div>
                             </div>
                         </div>
-                        <div class="section mcb-section full-width no-margin-h no-margin-v" style="padding-top:0px; padding-bottom:0px;">
+                        <div class="section mcb-section full-width no-margin-h no-margin-v" style={{"padding-top":"0px","padding-bottom":"0px"}}>
                             <div class="section_wrapper mcb-section-inner">
-                                <div class="wrap mcb-wrap one-third  valign-top clearfix" style="padding:60px 50px 80px">
+                                <div class="wrap mcb-wrap one-third  valign-top clearfix" style={{"padding":"60px 50px 80px"}}>
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_image ">
                                             <div class="image_frame image_item no_link scale-with-grid alignright no_border">
@@ -124,7 +124,7 @@ class Home extends React.Component{
                                         </div>
                                     </div>
                                 </div>
-                                <div class="wrap mcb-wrap two-third  valign-top clearfix" style="margin-top:-60px">
+                                <div class="wrap mcb-wrap two-third  valign-top clearfix" style={{"margin-top":"-60px"}}>
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_image ">
                                             <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
@@ -136,7 +136,7 @@ class Home extends React.Component{
                                 </div>
                             </div>
                         </div>
-                        <div class="section mcb-section no-margin-h no-margin-v" style="padding-top:0px; padding-bottom:520px; background-image:url(content/restaurant2/images/home_restaurant2_sectionbg1.jpg); background-repeat:no-repeat; background-position:center top;">
+                        <div class="section mcb-section no-margin-h no-margin-v" style={{"padding-top":"0px", "padding-bottom":"520px", "background-image":"url(assets/images/home_restaurant2_sectionbg1.jpg)", "background-repeat":"no-repeat", "background-position":"center top"}}>
                             <div class="section_wrapper mcb-section-inner">
                                 <div class="wrap mcb-wrap one-second  column-margin-0px valign-top clearfix">
                                     <div class="mcb-wrap-inner">
@@ -147,46 +147,46 @@ class Home extends React.Component{
                                         </div>
                                     </div>
                                 </div>
-                                <div class="wrap mcb-wrap one-second  valign-top clearfix" style="padding:70px 60px; background-color:#000; margin-top:-60px">
+                                <div class="wrap mcb-wrap one-second  valign-top clearfix" style={{"padding":"70px 60px","backgroundColor":"#000","marginTop":"-60px"}}>
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_column ">
                                             <div class="column_attr clearfix">
-                                                <h2 style="color: #fff;">Chef's Recommended</h2>
-                                                <hr class="no_line" style="margin: 0 auto 15px"/>
-                                                <h5 style="color: #fff; position: relative; padding-right: 50px;">Dale que es tarde <span style="position: absolute; top: 0; right: 0;">$38</span></h5>
-                                                <p style="color: #fff;">
+                                                <h2 style={{"color": "#fff"}}>Chef's Recommended</h2>
+                                                <hr class="no_line" style={{"margin":"0 auto 15px"}}/>
+                                                <h5 style={{"color": "#fff", position: "relative", "padding-right": "50px"}}>Dale que es tarde <span style={{position:"absolute", top: 0, right: 0}}>$38</span></h5>
+                                                <p style={{"color": "#fff"}}>
                                                     Filete Mignon de 10 oz cocido a la parrilla, relleno mantequilla de ajo rostizado, queso del país y pimientos morrones. Incluye dos acompañantes.
                                                 </p>
-                                                <hr class="no_line" style="margin: 0 auto 15px"/>
-                                                <h5 style="color: #fff; position: relative; padding-right: 50px;">Un, dos, tres PESCAO... (precio por libra) <span style="position: absolute; top: 0; right: 0;"></span></h5>
-                                                <p style="color: #fff;">
+                                                <hr class="no_line" style={{"margin":"0 auto 15px"}}/>
+                                                <h5 style={{"color": "#fff", "position": "relative", "padding-right": "50px"}}> Un, dos, tres PESCAO... (precio por libra) <span style={{"position": "absolute", top: 0, right: 0}}></span></h5>
+                                                <p style={{"color": "#fff"}}>
                                                     Pesca fresca del día de 1lb en adelante. Incluye dos acompañantes.
                                                 </p>
-                                                <hr class="no_line" style="margin: 0 auto 15px"/>
-                                                <h5 style="color: #fff; position: relative; padding-right: 50px;">Crème Brûlée - Vainilla <span style="position: absolute; top: 0; right: 0;">$7</span></h5>
-                                                <p style="color: #fff;">
+                                                <hr class="no_line" style={{"margin": "0 auto 15px"}}/>
+                                                <h5 style={{"color":"#fff","position":"relative","paddingRight":"50px"}}>Crème Brûlée - Vainilla <span style={{"position":"absolute","top":"0","right":"0"}}>$7</span></h5>
+                                                <p style={{"color": "#fff"}}>
             
                                                 </p>
-                                                <hr class="no_line" style="margin: 0 auto 30px;" />
-                                                <a class="button  button_full_width button_size_2 button_stroke_custom button_js" href="content/restaurant2/menu.html" style=" border-color:#fff !important; color:#fff;"><span class="button_label">VIEW MENU</span></a>
+                                                <hr class="no_line" style={{"margin":"0 auto 30px"}} />
+                                                <a class="button  button_full_width button_size_2 button_stroke_custom button_js" href="content/restaurant2/menu.html" style={{"borderColor":"#fff !important","color":"#fff"}}><span class="button_label">VIEW MENU</span></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="section mcb-section no-margin-h no-margin-v" style="padding-top:0px; padding-bottom:280px; background-image:url(content/restaurant2/images/home_restaurant2_sectionbg3.jpg); background-repeat:no-repeat; background-position:center bottom;">
+                        <div class="section mcb-section no-margin-h no-margin-v" style={{"paddingTop":"0px","paddingBottom":"280px","backgroundImage":"url(content/restaurant2/images/home_restaurant2_sectionbg3.jpg)","backgroundRepeat":"no-repeat","backgroundPosition":"center bottom"}}>
                             <div class="section_wrapper mcb-section-inner">
-                                <div class="wrap mcb-wrap one-second  valign-top clearfix" style="padding:70px 60px; background-color:#fff; margin-top:-60px">
+                                <div class="wrap mcb-wrap one-second  valign-top clearfix" style={{"padding":"70px 60px","backgroundColor":"#fff","marginTop":"-60px"}}>
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_column ">
                                             <div class="column_attr clearfix align_center">
-                                                <h4 style="letter-spacing: 4px;">Book a Table or venue!</h4>
-                                                <hr class="no_line" style="margin: 0 auto 15px"/>
+                                                <h4 style={{"letter-spacing": "4px"}}>Book a Table or venue!</h4>
+                                                <hr class="no_line" style={{"margin":"0 auto 15px"}}/>
                                                 <h5>"Insert reservation instructions/description here"</h5>
-                                                <hr class="no_line" style="margin: 0 auto 20px;" />
-                                                <h5 style="border-top: 1px solid #b2b2b2; border-bottom: 1px solid #b2b2b2; padding: 10px 0;">Sun-Wed 12:00 - 21:00 AST, Thur-Sat 12:00 - 22:00 AST </h5>
-                                                <hr class="no_line" style="margin: 0 auto 30px;" />
+                                                <hr class="no_line" style={{"margin":"0 auto 20px"}}/>
+                                                <h5 style={{"borderTop":"1px solid #b2b2b2","borderBottom":"1px solid #b2b2b2","padding":"10px 0"}}>Sun-Wed 12:00 - 21:00 AST, Thur-Sat 12:00 - 22:00 AST </h5>
+                                                <hr class="no_line" style={{"margin":"0 auto 30px"}} />
                                                 <a class="button  button_size_2 button_theme button_js" href="content/restaurant2/contact.html"><span class="button_label">Reserve Your Table Here </span></a>
                                             </div>
                                         </div>
@@ -210,16 +210,16 @@ class Home extends React.Component{
             </div>
         </div>
         <footer id="Footer" class="clearfix">
-            <div class="widgets_wrapper" style="padding:120px 0 105px;">
+            <div class="widgets_wrapper" style={{"padding":"120px 0 105px"}}>
                 <div class="container">
 
                     <div class="column one-third">
                         <aside id="text-2" class="widget widget_text">
                             <div class="textwidget">
-                                <div style="padding-right: 20%;">
+                                <div style={{"paddingRight":"20%"}}>
                                     <h4>Localization</h4>
-                                    <div style="width: 30%; height: 1px; background: #98dace;"></div>
-                                    <hr class="no_line" style="margin: 0 auto 15px"/>
+                                    <div style={{"width":"30%","height":"1px","background":"#98dace"}}></div>
+                                    <hr class="no_line" style={{"margin":"0 auto 15px"}}/>
                                     <p>
                                         <br/> 
                                         <h5> Calle Dr. Santiago Veve #55
@@ -235,10 +235,10 @@ class Home extends React.Component{
                     <div class="column one-third">
                         <aside id="text-3" class="widget widget_text">
                             <div class="textwidget">
-                                <div style="padding-right: 20%;">
+                                <div style={{"paddingRight":"20%"}}>
                                     <h4>Contact</h4>
-                                    <div style="width: 30%; height: 1px; background: #98dace;"></div>
-                                    <hr class="no_line" style="margin: 0 auto 15px"/>
+                                    <div style={{"width":"30%","height":"1px","background":"#98dace"}}></div>
+                                    <hr class="no_line" style={{"margin":"0 auto 15px"}}/>
                                     <p style={{"margin-bottom": "0px"}}>
                                         <h5>+1-(787)-978-3555</h5>
                                     </p>
