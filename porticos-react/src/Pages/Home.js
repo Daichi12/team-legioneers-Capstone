@@ -4,6 +4,7 @@ class Home extends React.Component{
 
     render(){
         return(
+    <div class="home page template-slider color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky">
     <div id="Wrapper">
         <div id="Header_wrapper">
             <header id="Header">
@@ -269,7 +270,7 @@ class Home extends React.Component{
 
         </footer>
     </div>
-
+    </div>
     // {/* <!-- Side Menu --> */
     // <div id="Side_slide" class="right dark">
     //     <div class="close-wrapper">
