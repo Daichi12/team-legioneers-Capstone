@@ -82,7 +82,7 @@ class Home extends React.Component{
             <div class="content_wrapper clearfix">
                 <div class="sections_group">
                     <div class="entry-content">
-                        <div class="section mcb-section no-margin-h no-margin-v" style={{"padding-top":"0px", "padding-bottom":"0px", "background-image": "url(assets/images/home_restaurant2_sectionbg2.jpg)", "background-repeat":"no-repeat", "background-position":"center top"}}>
+                    <div class="section mcb-section no-margin-h no-margin-v" style={{"padding-top":"0px", "padding-bottom":"520px", "background": `url(/assets/content/restaurant2/images/home_restaurant2_sectionbg2.jpg)`, "background-repeat":"no-repeat", "background-position":"center top"}}>
                             <div class="section_wrapper mcb-section-inner">
                                 <div class="wrap mcb-wrap one-second  valign-top clearfix" style={{"margin-top":"-60px"}}>
                                     <div class="mcb-wrap-inner">
@@ -136,7 +136,7 @@ class Home extends React.Component{
                                 </div>
                             </div>
                         </div>
-                        <div class="section mcb-section no-margin-h no-margin-v" style={{"padding-top":"0px", "padding-bottom":"520px", "background-image":"url(assets/images/home_restaurant2_sectionbg1.jpg)", "background-repeat":"no-repeat", "background-position":"center top"}}>
+                        <div class="section mcb-section no-margin-h no-margin-v" style={{"padding-top":"0px", "padding-bottom":"520px", "background": `url(/assets/content/restaurant2/images/home_restaurant2_sectionbg1.jpg)`, "background-repeat":"no-repeat", "background-position":"center top"}}>
                             <div class="section_wrapper mcb-section-inner">
                                 <div class="wrap mcb-wrap one-second  column-margin-0px valign-top clearfix">
                                     <div class="mcb-wrap-inner">
@@ -175,7 +175,7 @@ class Home extends React.Component{
                                 </div>
                             </div>
                         </div>
-                        <div class="section mcb-section no-margin-h no-margin-v" style={{"paddingTop":"0px","paddingBottom":"280px","backgroundImage":"url(content/restaurant2/images/home_restaurant2_sectionbg3.jpg)","backgroundRepeat":"no-repeat","backgroundPosition":"center bottom"}}>
+                        <div class="section mcb-section no-margin-h no-margin-v" style={{"padding-top":"0px", "padding-bottom":"520px", "background": `url(/assets/content/restaurant2/images/home_restaurant2_sectionbg3.jpg)`, "background-repeat":"no-repeat", "background-position":"center top"}}>
                             <div class="section_wrapper mcb-section-inner">
                                 <div class="wrap mcb-wrap one-second  valign-top clearfix" style={{"padding":"70px 60px","backgroundColor":"#fff","marginTop":"-60px"}}>
                                     <div class="mcb-wrap-inner">
