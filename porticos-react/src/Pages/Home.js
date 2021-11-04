@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 class Home extends React.Component{
 
     render(){
@@ -14,7 +13,7 @@ class Home extends React.Component{
                         <div class="column one">
                             <div class="top_bar_left clearfix">
                                 <div class="logo">
-                                    <a id="logo" href="../../index-restaurant2.html" title="PorticosDB"><img class="logo-main scale-with-grid" src="assetts/content/restaurant2/images/restaurant2.png" alt="1606" /><img class="logo-sticky scale-with-grid" src="content/restaurant2/images/restaurant2.png" alt="restaurant2" /><img class="logo-mobile scale-with-grid" src="content/restaurant2/images/restaurant2.png" alt="restaurant2" /><img class="logo-mobile-sticky scale-with-grid" src="content/restaurant2/images/restaurant2.png" alt="restaurant2" />
+                                    <a id="logo" href="../../index-restaurant2.html" title="PorticosDB"><img class="logo-main scale-with-grid" src="assets/content/restaurant2/images/restaurant2.png" alt="1606" /><img class="logo-sticky scale-with-grid" src="assets/content/restaurant2/images/restaurant2.png" alt="restaurant2" /><img class="logo-mobile scale-with-grid" src="assets/content/restaurant2/images/restaurant2.png" alt="restaurant2" /><img class="logo-mobile-sticky scale-with-grid" src="assets/content/restaurant2/images/restaurant2.png" alt="restaurant2" />
                                     </a>
                                 </div>
                                 <div class="menu_wrapper">
@@ -57,13 +56,13 @@ class Home extends React.Component{
                         <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style={{"display":"none", "data-version":"5.3.1.5"}}>
                             <ul>
                                 <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                                    <img src="../../public/assetts/content/restaurant2/images/home_restaurant2_slider_slide1.png" alt="" title="home_restaurant2_slider_slide1" width="1920" height="820" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
+                                    <img src="assets/content/restaurant2/images/home_restaurant2_slider_slide1.png" alt="" title="home_restaurant2_slider_slide1" width="1920" height="820" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
                                 </li>
                                 <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                                    <img src="content/restaurant2/images/home_restaurant2_slider_slide2.jpg" alt="" title="home_restaurant2_slider_slide2" width="1920" height="862" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
+                                    <img src="assets/content/restaurant2/images/home_restaurant2_slider_slide2.jpg" alt="" title="home_restaurant2_slider_slide2" width="1920" height="862" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
                                 </li>
                                 <li data-index="rs-3" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                                    <img src="content/restaurant2/images/home_restaurant2_slider_slide3.jpg" alt="" title="home_restaurant2_slider_slide3" width="1920" height="862" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
+                                    <img src="assets/content/restaurant2/images/home_restaurant2_slider_slide3.jpg" alt="" title="home_restaurant2_slider_slide3" width="1920" height="862" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
                                 </li>
                             </ul>
                             <div class="tp-static-layers">
@@ -89,7 +88,7 @@ class Home extends React.Component{
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_image ">
                                             <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
-                                                <div class="image_wrapper"><img class="scale-with-grid" src="content/restaurant2/images/home_restaurant2_pic1.jpg" alt="home_restaurant2_pic1" width="780" height="1200" />
+                                                <div class="image_wrapper"><img class="scale-with-grid" src="assets/content/restaurant2/images/home_restaurant2_pic1.jpg" alt="home_restaurant2_pic1" width="780" height="1200" />
                                                 </div>
                                             </div>
                                         </div>
@@ -119,7 +118,7 @@ class Home extends React.Component{
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_image ">
                                             <div class="image_frame image_item no_link scale-with-grid alignright no_border">
-                                                <div class="image_wrapper"><img class="scale-with-grid" src="content/restaurant2/images/home_restaurant2_pic3.png" alt="home_restaurant2_pic3" width="48" height="183" />
+                                                <div class="image_wrapper"><img class="scale-with-grid" src="assets/content/restaurant2/images/home_restaurant2_pic3.png" alt="home_restaurant2_pic3" width="48" height="183" />
                                                 </div>
                                             </div>
                                         </div>
@@ -129,7 +128,7 @@ class Home extends React.Component{
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_image ">
                                             <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
-                                                <div class="image_wrapper"><img class="scale-with-grid" src="content/restaurant2/images/home_restaurant2_pic2.jpg" alt="home_restaurant2_pic2" width="1280" height="840" />
+                                                <div class="image_wrapper"><img class="scale-with-grid" src="assets/content/restaurant2/images/home_restaurant2_pic2.jpg" alt="home_restaurant2_pic2" width="1280" height="840" />
                                                 </div>
                                             </div>
                                         </div>
@@ -197,7 +196,7 @@ class Home extends React.Component{
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_image ">
                                             <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
-                                                <div class="image_wrapper"><img class="scale-with-grid" src="content/restaurant2/images/home_restaurant2_pic3.jpg" alt="home_restaurant2_pic3" width="780" height="1000" />
+                                                <div class="image_wrapper"><img class="scale-with-grid" src="assets/content/restaurant2/images/home_restaurant2_pic3.jpg" alt="home_restaurant2_pic3" width="780" height="1000" />
                                                 </div>
                                             </div>
                                         </div>
@@ -270,15 +269,15 @@ class Home extends React.Component{
 
         </footer>
     </div>
+    <div id="Side_slide" class="right dark">
+    <div class="close-wrapper">
+        <a href="#" class="close"><i class="icon-cancel-fine"></i></a>
     </div>
-    // {/* <!-- Side Menu --> */
-    // <div id="Side_slide" class="right dark">
-    //     <div class="close-wrapper">
-    //         <a href="#" class="close"><i class="icon-cancel-fine"></i></a>
-    //     </div>
-    //     <div class="menu_wrapper"></div>
-    // </div>
-    // <div id="body_overlay"></div>
+        <div class="menu_wrapper"></div>
+    </div>
+    <div id="body_overlay"></div>
+    </div>
+
 
         )
 
