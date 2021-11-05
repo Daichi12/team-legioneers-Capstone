@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-class Home extends React.Component{
+class Menu extends React.Component{
 
     render(){
         return(
-            
     <div class="home page template-slider color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky">
     <div id="Wrapper">
         <div id="Header_wrapper">
@@ -21,7 +20,7 @@ class Home extends React.Component{
                                     <nav id="menu">
                                         <ul id="menu-main-menu-left" class="menu menu_left">
                                             <li class="current_page_item">
-                                                <a href="/Home"><span>This is home js</span></a>
+                                                <a href="/Home"><span>This is Menu Js</span></a>
                                             </li>
                                             <li>
                                                 <a href="content/restaurant2/restaurant.html"><span>About us</span></a>
@@ -83,9 +82,9 @@ class Home extends React.Component{
             <div class="content_wrapper clearfix">
                 <div class="sections_group">
                     <div class="entry-content">
-                    <div class="section mcb-section no-margin-h no-margin-v" style={{"padding-top":"0px", "padding-bottom":"60px", "background": `url(/assets/content/restaurant2/images/home_restaurant2_sectionbg2.jpg)`, "background-repeat":"no-repeat", "background-position":"center top"}}>
+                    <div class="section mcb-section no-margin-h no-margin-v" style={{"padding-top":"0px", "padding-bottom":"520px", "background": `url(/assets/content/restaurant2/images/home_restaurant2_sectionbg2.jpg)`, "background-repeat":"no-repeat", "background-position":"center top"}}>
                             <div class="section_wrapper mcb-section-inner">
-                                <div class="wrap mcb-wrap one-second  valign-top clearfix" style={{"margin-top":"0px"}}>
+                                <div class="wrap mcb-wrap one-second  valign-top clearfix" style={{"margin-top":"-60px"}}>
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_image ">
                                             <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
@@ -176,9 +175,9 @@ class Home extends React.Component{
                                 </div>
                             </div>
                         </div>
-                        <div class="section mcb-section no-margin-h no-margin-v" style={{"padding-top":"0px", "padding-bottom":"300px", "background": `url(/assets/content/restaurant2/images/home_restaurant2_sectionbg3.jpg)`, "background-repeat":"no-repeat", "background-position":"bottom"}}>
+                        <div class="section mcb-section no-margin-h no-margin-v" style={{"padding-top":"0px", "padding-bottom":"520px", "background": `url(/assets/content/restaurant2/images/home_restaurant2_sectionbg3.jpg)`, "background-repeat":"no-repeat", "background-position":"center top"}}>
                             <div class="section_wrapper mcb-section-inner">
-                                <div class="wrap mcb-wrap one-second  valign-top clearfix" style={{"padding":"120px 60px","backgroundColor":"#98dace","margin-top":"-40px"}}>
+                                <div class="wrap mcb-wrap one-second  valign-top clearfix" style={{"padding":"70px 60px","backgroundColor":"#fff","marginTop":"-60px"}}>
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_column ">
                                             <div class="column_attr clearfix align_center">
@@ -285,4 +284,4 @@ class Home extends React.Component{
     }
 }
 
-export default Home
+export default Menu
