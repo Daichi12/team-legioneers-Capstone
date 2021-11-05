@@ -102,8 +102,11 @@ app.post("/event_reservations", async (req, res)=> {
         const newEventReservation = await pool.query("INSERT INTO event_reservations (reservation_name, group_size, phone, email, event_start_time, event_end_time, notes) VALUES($1,$2,$3,$4,$5,$6,$7) RETURNING *", 
         [req.body.Reservation_Name, req.body.Group_Size, req.body.Phone, req.body.Email, req.body.Event_Start_Time, req.body.Event_End_Time, req.body.Notes]);
     res.json(newEventReservation.rows[0]);
+    res.status(200).send({'message':'Created Reservation'})
     } catch (err) {
-        console.error(err.message);
+        
+        res.status(500).send(err.message);
+        //console.error(err.message);
     }
 });
 //get all event reservations
@@ -111,111 +114,169 @@ app.get("/event_reservations", async(req, res) =>{
     try {
         const allEventReservations = await pool.query("SELECT * FROM event_reservations");
         res.json(allEventReservations.rows);
+        res.status(200).send({'message':'Returned all Event Reservations'})
      }
         catch(err){
-            console.error(err.message);
+           
+            res.status(500).send(err.message);
         }
     });
 //get an event reservation
 app.get("/event_reservations/:id", async (req, res) => {
     try{
-        const event_reservation = await pool.query("SELECT * FROM event_reservations WHERE event_reservation_id = $1", [req.body.id]);
+        
+        const event_reservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);
+        if(event_reservation.rows.length){
         res.json(event_reservation.rows[0]);
+        res.status(200).send({'message':'Returned Event Reservation'})
+        }
+        else{ 
+            res.status(404).send({'message':'Event Reservation Not Found'})
+        }
+        
     } catch (err) {
-        console.error(err.message);
+        res.status(500).send(err.message);
     }
 });
 //update an event reservation
 app.put("/event_reservations/:id", async (req, res) => {
     try {
-         
-         const updateEventReservation = await pool.query("UPDATE event_reservations SET (reservation_name, group_size, phone, email, event_start_time, event_end_time, notes) = ($1,$2,$3,$4,$5,$6,$7) WHERE event_reservation_id = $8",
+    const getEventReservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);   
+    if(getEventReservation.rows.length){
+        const updateEventReservation = await pool.query("UPDATE event_reservations SET (reservation_name, group_size, phone, email, event_start_time, event_end_time, notes) = ($1,$2,$3,$4,$5,$6,$7) WHERE reservation_id = $8",
     [req.body.Reservation_Name, req.body.Group_Size, req.body.Phone, req.body.Email, req.body.Event_Start_Time, req.body.Event_End_Time, req.body.Notes, req.body.id]);
-    res.json("Event Reservation was updated");
+    res.status(200).send({'message':'Event Reservation was updated'}) 
+        res.status(200).send('Ok')
+        }
+        else{
+            res.status(404).send({'message':'Event Reservation Not Found'})
+        } 
         } catch (err){
-        console.error(err.message);
+            res.status(500).send(err.message);
         }
     });
 
 //update event reservation name
 app.put("/event_reservations/reservation_name/:id", async (req, res) => {
     try {
-         const updateEventReservationName = await pool.query("UPDATE event_reservations SET reservation_name = $1 WHERE event_reservation_id = $2",
+    const getEventReservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);   
+    if(getEventReservation.rows.length){
+    const updateEventReservationName = await pool.query("UPDATE event_reservations SET reservation_name = $1 WHERE reservation_id = $2",
     [req.body.Reservation_Name,req.body.id]);
-    res.json("EventReservationName was updated");
-        } catch (err){
-        console.error(err.message);
+    res.status(200).send({'message':'Event Reservation Name was updated'}) 
         }
+        else{
+            res.status(404).send({'message':'Event Reservation Not Found'})
+        } 
+    } catch (err){
+        res.status(500).send(err.message);        }
     });
 //update event reservation group size
 app.put("/event_reservations/group_size/:id", async (req, res) => {
     try {
-         const updateEventGroupSize = await pool.query("UPDATE event_reservations SET group_size = $1 WHERE event_reservation_id = $2",
-    [req.body.Group_Size,req.body.id]);
-    res.json("EventGroupSize was updated");
-        } catch (err){
-        console.error(err.message);
+        const getEventReservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);   
+    if(getEventReservation.rows.length){
+        const updateEventGroupSize = await pool.query("UPDATE event_reservations SET group_size = $1 WHERE reservation_id = $2",
+        [req.body.Group_Size,req.body.id]);
+    res.status(200).send({'message':'Event Reservation Group Size was updated'}) 
         }
+        else{
+            res.status(404).send({'message':'Event Reservation Not Found'})
+        } 
+        } catch (err){
+            res.status(500).send(err.message);        }
     });
 //update event reservation Phone
 app.put("/event_reservations/phone/:id", async (req, res) => {
     try {
-         const updateEventPhone = await pool.query("UPDATE event_reservations SET phone = $1 WHERE event_reservation_id = $2",
+        const getEventReservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);   
+    if(getEventReservation.rows.length){
+        const updateEventPhone = await pool.query("UPDATE event_reservations SET phone = $1 WHERE reservation_id = $2",
     [req.body.Phone,req.body.id]);
+    res.status(200).send({'message':'Event Reservation Name was updated'}) 
+        }
+        else{
+            res.status(404).send({'message':'Event Reservation Not Found'})
+        } 
+         
     res.json("EventPhone was updated");
         } catch (err){
-        console.error(err.message);
-        }
+            res.status(500).send(err.message);        }
     });
 
 //update event reservation Email
 app.put("/event_reservations/email/:id", async (req, res) => {
     try {
-         const updateEventEmail = await pool.query("UPDATE event_reservations SET email = $1 WHERE event_reservation_id = $2",
+        const getEventReservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);   
+    if(getEventReservation.rows.length){
+        const updateEventEmail = await pool.query("UPDATE event_reservations SET email = $1 WHERE reservation_id = $2",
     [req.body.Email,req.body.id]);
-    res.json("EventEmail was updated");
-        } catch (err){
-        console.error(err.message);
+    res.status(200).send({'message':'Event Reservation Email was updated'}) 
         }
+        else{
+            res.status(404).send({'message':'Event Reservation Not Found'})
+        } 
+    } catch (err){
+        res.status(500).send(err.message);        }
     });
 //update event reservation start time
 app.put("/event_reservations/event_start_time/:id", async (req, res) => {
     try {
-         const updateEventStartTime = await pool.query("UPDATE event_reservations SET event_start_time = $1 WHERE event_reservation_id = $2",
+        const getEventReservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);   
+    if(getEventReservation.rows.length){
+        const updateEventStartTime = await pool.query("UPDATE event_reservations SET event_start_time = $1 WHERE reservation_id = $2",
     [req.body.Event_Start_Time,req.body.id]);
-    res.json("EventStartTime was updated");
-        } catch (err){
-        console.error(err.message);
+    res.status(200).send({'message':'Event Reservation Start Time was updated'}) 
         }
+        else{
+            res.status(404).send({'message':'Event Reservation Not Found'})
+        } 
+    } catch (err){
+        res.status(500).send(err.message);        }
     });
 //update event reservation end time
 app.put("/event_reservations/event_end_time/:id", async (req, res) => {
     try {
-         const updateEventEndTime = await pool.query("UPDATE event_reservations SET event_end_time = $1 WHERE event_reservation_id = $2",
+        const getEventReservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);   
+    if(getEventReservation.rows.length){
+        const updateEventEndTime = await pool.query("UPDATE event_reservations SET event_end_time = $1 WHERE reservation_id = $2",
     [req.body.Event_End_Time,req.body.id]);
-    res.json("EventEndTime was updated");
-        } catch (err){
-        console.error(err.message);
+    res.status(200).send({'message':'Event Reservation End Time was updated'}) 
         }
+        else{
+            res.status(404).send({'message':'Event Reservation Not Found'})
+        } 
+    } catch (err){
+        res.status(500).send(err.message);        }
     });
 //update event reservation notes
 app.put("/event_reservations/notes/:id", async (req, res) => {
     try {
-         const updateEventNotes = await pool.query("UPDATE event_reservations SET notes = $1 WHERE event_reservation_id = $2",
+        const getEventReservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);   
+        if(getEventReservation.rows.length){
+            const updateEventNotes = await pool.query("UPDATE event_reservations SET notes = $1 WHERE reservation_id = $2",
     [req.body.Notes,req.body.id]);
-    res.json("EventNotes was updated");
+        res.status(200).send({'message':'Event Reservation Notes was updated'}) 
+            }
+            else{
+                res.status(404).send({'message':'Event Reservation Not Found'})
+            } 
         } catch (err){
-        console.error(err.message);
-        }
+            res.status(500).send(err.message);        }
     });
 //delete an event reservation
 app.delete("/event_reservations/:id", async (req, res) => {
-    try {
-         const deleteEventReservation = await pool.query("DELETE FROM event_reservations WHERE event_reservation_id = $1",[req.body.id]);
-  res.json("Event Reservation was deleted");
-        } catch (err){
-        console.error(err.message);
-        }
+    try { 
+    const event_reservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);
+    if(event_reservation.rows.length){
+    const deleteEventReservation = await pool.query("DELETE FROM event_reservations WHERE reservation_id = $1",[req.body.id]);
+    res.status(200).send({'message':'Event Reservation was deleted'})
+    }
+    else{
+        res.status(404).send({'message':'Event Reservation does not exist'})
+    }
+    } catch (err){
+        res.status(500).send(err.message);        }
     }); 
 
     //Menu Routes//
@@ -228,94 +289,128 @@ app.post("/menu", async(req, res) => {
       [req.body.Dish_Name, req.body.Dish_Type, req.body.Dish_Description, req.body.Pricing]
       );  
       res.json(newMenu);
+      res.status(200).send({'message':'Created Menu Selection'})
       //console.log(req.body);
 
     } catch (error) {
-        console.error(error.message);
-    }
+        res.status(500).send(err.message);    }
 })
 
 //get all Menu Selections
 app.get("/menu", async(req, res) =>{
     try {
         const allMenu = await pool.query("SELECT * FROM menu");
-        res.json(allMenu.rows) }
+        res.json(allMenu.rows)
+        res.status(200).send({'message':'Menu has been Returned'})
+     }
         catch(err){
-            console.error(err.message);
-        }
+            res.status(500).send(err.message);        }
     });
 //Get a Menu Selection
 app.get("/menu/:id", async (req, res) => {
     try{
-        const { id } = req.params;
-        const menu = await pool.query("SELECT * FROM menu WHERE dish_id = $1", [id]);
-        res.json(menu.rows[0]);
+        const menu = await pool.query("SELECT * FROM menu WHERE dish_id = $1", [req.body.id]);
+        if(menu.rows.length){
+            res.json(menu.rows[0]);
+            res.status(200).send({'message':'Returned Dish Selection'})
+            }
+            else{
+                res.status(404).send({'message':'Menu Not Found'})
+            }
     } catch (err) {
-        console.error(err.message);
-    }
+        res.status(500).send(err.message);    }
 });
 
 //Update a Menu Selection
 app.put("/menu/:id", async (req, res) => {
     try {
-         const updateDish = await pool.query("UPDATE menu SET (Dish_Name, Dish_Description, Pricing, Dish_Type) = ($1,$2,$3,$4) WHERE dish_id = $5",
+        const menu = await pool.query("SELECT * FROM menu WHERE dish_id = $1", [req.body.id]);
+        if(menu.rows.length){
+            const updateDish = await pool.query("UPDATE menu SET (Dish_Name, Dish_Description, Pricing, Dish_Type) = ($1,$2,$3,$4) WHERE dish_id = $5",
     [req.body.Dish_Name, req.body.Dish_Description, req.body.Pricing, req.body.Dish_Type, req.body.id]);
-    res.json("Dish was updated");
+            res.status(200).send({'message':'Dish was updated'})
+            }
+            else{
+                res.status(404).send({'message':'Menu Not Found'})
+            }
         } catch (err){
-        console.error(err.message);
-        }
+            res.status(500).send(err.message);        }
     });
     
     //Update a dish_name
 app.put("/menu/dish_name/:id", async (req, res) => {
     try {
-         const updateDishName = await pool.query("UPDATE menu SET Dish_Name = $1 WHERE dish_id = $2",
+    const menu = await pool.query("SELECT * FROM menu WHERE dish_id = $1", [req.body.id]);
+    if(menu.rows.length){
+        const updateDishName = await pool.query("UPDATE menu SET Dish_Name = $1 WHERE dish_id = $2",
     [req.body.Dish_Name, req.body.id]);
-    res.json("DishName was updated");
-        } catch (err){
-        console.error(err.message);
+        res.status(200).send({'message':'Dish Name was updated'})
         }
+        else{
+            res.status(404).send({'message':'Menu Not Found'})
+        }
+        } catch (err){
+            res.status(500).send(err.message);        }
     });
     //Update a dish_description
 app.put("/menu/dish_description/:id", async (req, res) => {
     try {
-         const updateDishDescription = await pool.query("UPDATE menu SET dish_description = $1 WHERE dish_id = $2",
+        const menu = await pool.query("SELECT * FROM menu WHERE dish_id = $1", [req.body.id]);
+    if(menu.rows.length){
+        const updateDishDescription = await pool.query("UPDATE menu SET dish_description = $1 WHERE dish_id = $2",
     [req.body.Dish_Description, req.body.id]);
-    res.json("DishDescription was updated")
-        } catch (err){
-        console.error(err.message);
+        res.status(200).send({'message':'Dish Description was updated'})
         }
+        else{
+            res.status(404).send({'message':'Menu Not Found'})
+        }
+        } catch (err){
+            res.status(500).send(err.message);        }
     });
    
     //Update a dish_pricing
 app.put("/menu/dish_pricing/:id", async (req, res) => {
     try {
-         const updateDishPricing = await pool.query("UPDATE menu SET dish_pricing = $1 WHERE dish_id = $2",
+        const menu = await pool.query("SELECT * FROM menu WHERE dish_id = $1", [req.body.id]);
+    if(menu.rows.length){
+        const updateDishPricing = await pool.query("UPDATE menu SET dish_pricing = $1 WHERE dish_id = $2",
     [req.body.Pricing, req.body.id]);
-    res.json("DishPricing was updated");
-        } catch (err){
-        console.error(err.message);
+        res.status(200).send({'message':'Dish Pricing was updated'})
         }
+        else{
+            res.status(404).send({'message':'Menu Not Found'})
+        }
+        } catch (err){
+            res.status(500).send(err.message);        }
     });
 //Update a dish_type
 app.put("/menu/dish_type/:id", async (req, res) => {
     try {
-         const updateDishType = await pool.query("UPDATE menu SET dish_type = $1 WHERE dish_id = $2",
+        const menu = await pool.query("SELECT * FROM menu WHERE dish_id = $1", [req.body.id]);
+        if(menu.rows.length){
+            const updateDishType = await pool.query("UPDATE menu SET dish_type = $1 WHERE dish_id = $2",
     [req.body.Dish_Type, req.body.id]);
-    res.json("DishType was updated");
+            res.status(200).send({'message':'Dish Type was updated'})
+            }
+            else{
+                res.status(404).send({'message':'Menu Not Found'})
+            }
         } catch (err){
-        console.error(err.message);
-        }
+            res.status(500).send(err.message);        }
     });
 //Delete a Menu Selection
 app.delete("/menu/:id", async (req, res) => {
     try {
-         
-         const deleteDish = await pool.query("DELETE FROM menu WHERE dish_id = $1",[req.body.id]);
-    res.json("Dish was deleted");
+        const menu = await pool.query("SELECT * FROM menu WHERE dish_id = $1", [req.body.id]);
+        if(menu.rows.length){
+            const deleteDish = await pool.query("DELETE FROM menu WHERE dish_id = $1",[req.body.id]);
+            res.status(200).send({'message':'Dish was deleted'})
+            }
+            else{
+                res.status(404).send({'message':'Menu Not Found'})
+            }
         } catch (err){
-        console.error(err.message);
-        }
+            res.status(500).send(err.message);        }
     }); 
 
 //Merchandise Shop Routes
@@ -327,78 +422,110 @@ app.post("/merchandise_shop", async (req, res)=> {
         const newMerchandiseShop = await pool.query("INSERT INTO merchandise_shop (merchandise_name, merchandise_description, merchandise_pricing) VALUES($1,$2,$3) RETURNING *", 
         [req.body.Merchandise_Name, req.body.Merchandise_Description, req.body.Merchandise_Pricing]);
     res.json(newMerchandiseShop.rows[0]);
+    res.status(200).send({'message':'Created a Merchandise Selection'})
     } catch (err) {
-        console.error(err.message);
-    }
+        res.status(500).send(err.message);    }
 });
 //get all merchandise
 app.get("/merchandise_shop", async(req, res) =>{
     try {
+        
         const allMerchandiseShop = await pool.query("SELECT * FROM merchandise_shop");
         res.json(allMerchandiseShop.rows); 
+        res.status(200).send({'message':'Returned all Merchandise'})
     }
         catch(err){
-            console.error(err.message);
-        }
+            res.status(500).send(err.message);        }
     });
 //get a merchandise selection
 app.get("/merchandise_shop/:id", async (req, res) => {
     try{
         const merchandise_shop = await pool.query("SELECT * FROM merchandise_shop WHERE merchandise_id = $1", [req.body.id]);
-        res.json(merchandise_shop.rows[0]);
+        if(merchandise_shop.rows.length){
+            res.json(merchandise_shop.rows[0]);
+            res.status(200).send({'message':'Returned Merchandise Selection'})
+            }
+            else{
+    
+                
+                res.status(404).send({'message':'Merchandise Not Found'})
+            }
     } catch (err) {
-        console.error(err.message);
-    }
+        res.status(500).send(err.message);    }
 });
 //update a merchandise selection
 app.put("/merchandise_shop/:id", async (req, res) => {
     try {
-         
-         const updateMerchandise = await pool.query("UPDATE merchandise_shop SET (merchandise_name, merchandise_description, merchandise_pricing) = ($1,$2,$3) WHERE merchandise_id = $4",
+        const merchandise_shop = await pool.query("SELECT * FROM merchandise_shop WHERE merchandise_id = $1", [req.body.id]);
+        if(merchandise_shop.rows.length){
+            const updateMerchandise = await pool.query("UPDATE merchandise_shop SET (merchandise_name, merchandise_description, merchandise_pricing) = ($1,$2,$3) WHERE merchandise_id = $4",
     [req.body.Merchandise_Name, req.body.Merchandise_Description, req.body.Merchandise_Pricing, req.body.id]);
-    res.json("Merchandise was updated");
+            res.status(200).send({'message':'Merchandise was updated'})
+            }
+            else{
+                res.status(404).send({'message':'Merchandise Not Found'})
+            }
         } catch (err){
-        console.error(err.message);
-        }
+            res.status(500).send(err.message);        }
     });
 //update the merchandise name
 app.put("/merchandise_shop/merchandise_name/:id", async (req, res) => {
     try {
-         const updateMerchandiseName = await pool.query("UPDATE merchandise_shop SET merchandise_name= $1 WHERE merchandise_id = $2",
+    const merchandise_shop = await pool.query("SELECT * FROM merchandise_shop WHERE merchandise_id = $1", [req.body.id]);
+    if(merchandise_shop.rows.length){
+        const updateMerchandiseName = await pool.query("UPDATE merchandise_shop SET merchandise_name= $1 WHERE merchandise_id = $2",
     [req.body.Merchandise_Name, req.body.id]);
-    res.json("Merchandise Name was updated");
-        } catch (err){
-        console.error(err.message);
+        res.status(200).send({'message':'Merchandise Name was updated'})
         }
+        else{
+            res.status(404).send({'message':'Merchandise Not Found'})
+        }
+        } catch (err){
+            res.status(500).send(err.message);        }
     });
 //update the merchandise description
 app.put("/merchandise_shop/merchandise_description/:id", async (req, res) => {
     try {
-         const updateMerchandiseDescription = await pool.query("UPDATE merchandise_shop SET merchandise_description = $1 WHERE merchandise_id = $2",
+        const merchandise_shop = await pool.query("SELECT * FROM merchandise_shop WHERE merchandise_id = $1", [req.body.id]);
+    if(merchandise_shop.rows.length){
+        const updateMerchandiseDescription = await pool.query("UPDATE merchandise_shop SET merchandise_description = $1 WHERE merchandise_id = $2",
     [req.body.Merchandise_Description, req.body.id]);
-    res.json("MerchandiseDescription was updated");
-        } catch (err){
-        console.error(err.message);
+        res.status(200).send({'message':'Merchandise Description was updated'})
         }
+        else{
+            res.status(404).send({'message':'Merchandise Not Found'})
+        }
+        } catch (err){
+            res.status(500).send(err.message);        }
     });
 //update the merchandise pricing
 app.put("/merchandise_shop/merchandise_pricing/:id", async (req, res) => {
     try {
-         const updateMerchandisePricing = await pool.query("UPDATE merchandise_shop SET merchandise_pricing= $1 WHERE merchandise_id = $2",
+        const merchandise_shop = await pool.query("SELECT * FROM merchandise_shop WHERE merchandise_id = $1", [req.body.id]);
+        if(merchandise_shop.rows.length){
+        const updateMerchandisePricing = await pool.query("UPDATE merchandise_shop SET merchandise_pricing= $1 WHERE merchandise_id = $2",
     [req.body.Merchandise_Pricing, req.body.id]);
-    res.json("MerchandisePricing was updated");
+            res.status(200).send({'message':'Merchandise Price was updated'})
+            }
+            else{
+                res.status(404).send({'message':'Merchandise Not Found'})
+            }
         } catch (err){
-        console.error(err.message);
-        }
+            res.status(500).send(err.message);        }
     });
 // Delete a merchandise
 app.delete("/merchandise_shop/:id", async (req, res) => {
     try {
-         const deleteMerchandise = await pool.query("DELETE FROM merchandise_shop WHERE merchandise_id = $1",[req.body.id]);
-  res.json("Merchandise was deleted");
-        } catch (err){
-        console.error(err.message);
+    const merchandise_shop = await pool.query("SELECT * FROM merchandise_shop WHERE merchandise_id = $1", [req.body.id]);
+    if(merchandise_shop.rows.length){
+        const deleteMerchandise = await pool.query("DELETE FROM merchandise_shop WHERE merchandise_id = $1",[req.body.id]);
+        res.status(200).send({'message':'Merchandise  was Deleted'})
         }
+        else{
+            res.status(404).send({'message':'Merchandise does not exist'})
+        }
+        } catch (err){
+            res.status(500).send(err.message);        }
     }); 
 
 //Table Reservations Routes
@@ -407,103 +534,143 @@ app.delete("/merchandise_shop/:id", async (req, res) => {
 app.post("/table_reservations", async (req, res)=> {
     try{
         
-        const newTableReservation = await pool.query("INSERT INTO table_reservations (reservation_name, reservation_time, group_size, phone, notes) VALUES($1,$2,$3,$4,$5) RETURNING *", 
-        [req.body.Reservation_Name, req.body.Reservation_Time, req.body.Group_Size, req.body.Phone, req.body.Notes]);
+    const newTableReservation = await pool.query("INSERT INTO table_reservations (reservation_name, reservation_time, group_size, phone, notes) VALUES($1,$2,$3,$4,$5) RETURNING *", 
+    [req.body.Reservation_Name, req.body.Reservation_Time, req.body.Group_Size, req.body.Phone, req.body.Notes]);
     res.json(newTableReservation.rows[0]);
+    res.status(200).send({'message':'Created Table Reservation'})
     } catch (err) {
-        console.error(err.message);
-    }
+        res.status(500).send(err.message);    }
 });
 //get all table reservations
 app.get("/table_reservations", async(req, res) =>{
     try {
         const allTableReservations = await pool.query("SELECT * FROM table_reservations");
         res.json(allTableReservations.rows);
+        res.status(200).send({'message':'Returned all Table Reservations'})
      }
         catch(err){
-            console.error(err.message);
-        }
+            res.status(500).send(err.message);        }
     });
 //get a table reservation
 app.get("/table_reservations/:id", async (req, res) => {
     try{
-        const table_reservation = await pool.query("SELECT * FROM table_reservations WHERE table_reservation_id = $1", [req.body.id]);
-        res.json(table_reservation.rows[0]);
+        const table_reservation = await pool.query("SELECT * FROM table_reservations WHERE reservation_id = $1", [req.body.id]);
+        if(table_reservation.rows.length){
+            res.json(table_reservation.rows[0]);
+            res.status(200).send({'message':'Returned Table Reservation'})
+            }
+            else{   
+            res.status(404).send({'message':'Table Reservation Not Found'})
+            }
     } catch (err) {
-        console.error(err.message);
-    }
+        res.status(500).send(err.message);    }
 });
 //update a table reservation
 app.put("/table_reservations/:id", async (req, res) => {
     try {
-         
-         const updateTableReservation = await pool.query("UPDATE table_reservations SET (reservation_name, reservation_time, group_size, phone, notes) = ($1,$2,$3,$4,$5) WHERE table_reservation_id = $6",
+        const table_reservation = await pool.query("SELECT * FROM table_reservations WHERE reservation_id = $1", [req.body.id]);
+        if(table_reservation.rows.length){
+            const updateTableReservation = await pool.query("UPDATE table_reservations SET (reservation_name, reservation_time, group_size, phone, notes) = ($1,$2,$3,$4,$5) WHERE reservation_id = $6",
     [req.body.Reservation_Name, req.body.Reservation_Time, req.body.Group_Size, req.body.Phone, req.body.Notes, req.body.id]);
-    res.json("Table Reservation was updated");
+            res.status(200).send({'message':'Table Reservation was updated'})
+            }
+            else{      
+            res.status(404).send({'message':'Table Reservation Not Found'})
+            }
         } catch (err){
-        console.error(err.message);
-        }
+            res.status(500).send(err.message);        }
     });
 //update table reservation name
 app.put("/table_reservations/reservation_name/:id", async (req, res) => {
     try {
-         const updateTableReservationName = await pool.query("UPDATE table_reservations SET reservation_name = $1 WHERE table_reservation_id = $2",
-    [req.body.Reservation_Name,req.body.id]);
-    res.json("TableReservationName was updated");
+        const table_reservation = await pool.query("SELECT * FROM table_reservations WHERE reservation_id = $1", [req.body.id]);
+        if(table_reservation.rows.length){
+            const updateTableReservationName = await pool.query("UPDATE table_reservations SET reservation_name = $1 WHERE reservation_id = $2",
+            [req.body.Reservation_Name,req.body.id]);
+            res.status(200).send({'message':'Table Reservation Name was updated'})
+            }
+            else{      
+            res.status(404).send({'message':'Table Reservation Not Found'})
+            }
         } catch (err){
-        console.error(err.message);
-        }
+            res.status(500).send(err.message);        }
     });
 //update table reservation time
 app.put("/table_reservations/reservation_time/:id", async (req, res) => {
     try {
-         
-         const updateTableReservationTime = await pool.query("UPDATE table_reservations SET reservation_time = $1 WHERE table_reservation_id = $2",
+        const table_reservation = await pool.query("SELECT * FROM table_reservations WHERE reservation_id = $1", [req.body.id]);
+        if(table_reservation.rows.length){
+            const updateTableReservationTime = await pool.query("UPDATE table_reservations SET reservation_time = $1 WHERE reservation_id = $2",
     [req.body.Reservation_Time,req.body.id]);
-    res.json("TableReservationTime was updated");
+            res.status(200).send({'message':'Table Reservation Time was updated'})
+            }
+            else{      
+            res.status(404).send({'message':'Table Reservation Not Found'})
+            }
         } catch (err){
-        console.error(err.message);
-        }
+            res.status(500).send(err.message);        }
     });
 //update group size
 app.put("/table_reservations/group_size/:id", async (req, res) => {
     try {
-         
-         const updateTableGroupSize = await pool.query("UPDATE table_reservations SET group_size = $1 WHERE table_reservation_id = $2",
+        const table_reservation = await pool.query("SELECT * FROM table_reservations WHERE reservation_id = $1", [req.body.id]);
+        if(table_reservation.rows.length){
+            const updateTableGroupSize = await pool.query("UPDATE table_reservations SET group_size = $1 WHERE reservation_id = $2",
     [req.body.Group_Size,req.body.id]);
-    res.json("TableGroupSize was updated")
+            res.status(200).send({'message':'Table Reservation Group Size was updated'})
+            }
+            else{      
+            res.status(404).send({'message':'Table Reservation Not Found'})
+            }
         } catch (err){
-        console.error(err.message);
-        }
+            res.status(500).send(err.message);        }
     });
 //update phone
 app.put("/table_reservations/phone/:id", async (req, res) => {
     try {
-         const updateTablePhone = await pool.query("UPDATE table_reservations SET phone = $1 WHERE table_reservation_id = $2",
+        const table_reservation = await pool.query("SELECT * FROM table_reservations WHERE reservation_id = $1", [req.body.id]);
+        if(table_reservation.rows.length){
+            const updateTablePhone = await pool.query("UPDATE table_reservations SET phone = $1 WHERE reservation_id = $2",
     [req.body.Phone,req.body.id]);
+            res.status(200).send({'message':'Table Reservation Phone was updated'})
+            }
+            else{      
+            res.status(404).send({'message':'Table Reservation Not Found'})
+            }
+         
     res.json("TablePhone was updated");
         } catch (err){
-        console.error(err.message);
-        }
+            res.status(500).send(err.message);        }
     });
 //update notes
 app.put("/table_reservations/notes/:id", async (req, res) => {
     try {
-         const updateTableNotes = await pool.query("UPDATE table_reservations SET notes = $1 WHERE table_reservation_id = $2",
+        const table_reservation = await pool.query("SELECT * FROM table_reservations WHERE reservation_id = $1", [req.body.id]);
+        if(table_reservation.rows.length){
+            const updateTableNotes = await pool.query("UPDATE table_reservations SET notes = $1 WHERE reservation_id = $2",
     [req.body.Notes,req.body.id]);
+            res.status(200).send({'message':'Table Reservation Notes was updated'})
+            }
+            else{      
+            res.status(404).send({'message':'Table Reservation Not Found'})
+            }
+         
     res.json("TableNotes was updated");
         } catch (err){
-        console.error(err.message);
-        }
+            res.status(500).send(err.message);        }
     });
 //delete table reservation
 app.delete("/table_reservations/:id", async (req, res) => {
-    try {
-         const deleteTableReservation = await pool.query("DELETE FROM table_reservations WHERE table_reservation_id = $1",[req.body.id]);
-  res.json("Table Reservation was deleted");
-        } catch (err){
-        console.error(err.message);
+    try {const table_reservation = await pool.query("SELECT * FROM table_reservations WHERE reservation_id = $1", [req.body.id]);
+    if(table_reservation.rows.length){
+        const deleteTableReservation = await pool.query("DELETE FROM table_reservations WHERE reservation_id = $1",[req.body.id]);
+        res.status(200).send({'message':'Table Reservation was deleted'})
         }
+        else{  
+        res.status(404).send({'message':'Table Reservation does not Exist'})
+        }
+        } catch (err){
+            res.status(500).send(err.message);        }
     }); 
 
     app.listen(5000, ()=>{

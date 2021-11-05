@@ -22,8 +22,7 @@ CREATE TABLE Merchandise_Shop(
 CREATE TABLE Table_Reservations(
     Reservation_id SERIAL PRIMARY KEY,
     Reservation_Name VARCHAR(80),
-    Reservation_Time TIMESTAMP,
-    Table_OR_Event VARCHAR(80),
+    Reservation_Time VARCHAR(7),
     GROUP_SIZE INTEGER,
     Phone VARCHAR(12),
     Notes VARCHAR(100)
@@ -31,12 +30,11 @@ CREATE TABLE Table_Reservations(
 CREATE TABLE Event_Reservations(
     Reservation_id SERIAL PRIMARY KEY,
     Reservation_Name VARCHAR(80),
-    Reservation_Time TIMESTAMP,
     GROUP_SIZE INTEGER,
     Phone VARCHAR(12),
     Email VARCHAR(100),
-    Event_Start_Time TIMESTAMP,
-    Event_End_Time TIMESTAMP,
+    Event_Start_Time VARCHAR(7),
+    Event_End_Time VARCHAR(7),
     Notes VARCHAR(100)
 );
 INSERT INTO Account (Employee_UserName, Employee_Password) VALUES ('Roberto Melendez', 'abc123');
