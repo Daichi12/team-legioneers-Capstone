@@ -39,7 +39,7 @@ class Events extends React.Component{
                                                 <a href="/Menu"><span>Menu</span></a>
                                             </li>
                                             <li>
-                                                <a href="contact.html"><span>Contact</span></a>
+                                                <a href="/Contact"><span>Contact</span></a>
                                             </li>
                                         </ul>
                                     </nav><a class="responsive-menu-toggle " href="#"><i class="icon-menu-fine"></i></a>
