@@ -31,7 +31,7 @@ class AboutUs extends React.Component{
                                                 <a href="/AboutUs"><span>About us</span></a>
                                             </li>
                                             <li>
-                                                <a href="events.html"><span>Events</span></a>
+                                                <a href="/Events"><span>Events</span></a>
                                             </li>
                                         </ul>
                                         <ul id="menu-main-menu-right" class="menu menu_right">

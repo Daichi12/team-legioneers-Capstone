@@ -55,7 +55,7 @@ class Menu extends React.Component{
                           </a>
                         </li>
                         <li>
-                          <a href="events.html">
+                          <a href="/Events">
                             <span>Events</span>
                           </a>
                         </li>
