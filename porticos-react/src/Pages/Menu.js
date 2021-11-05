@@ -3,7 +3,7 @@ class Menu extends React.Component{
 
     render(){
         return(
-            <>
+          <>
     <div className="page color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky">
     <div id="Wrapper">
       <div id="Header_wrapper">
@@ -50,7 +50,7 @@ class Menu extends React.Component{
                           </a>
                         </li>
                         <li>
-                          <a href="restaurant.html">
+                          <a href="/AboutUs">
                             <span>About us</span>
                           </a>
                         </li>

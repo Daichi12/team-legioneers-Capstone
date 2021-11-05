@@ -45,6 +45,8 @@
     <link rel='stylesheet' href='assets/content/restaurant2/css/structure.css'>
     <link rel='stylesheet' href='assets/content/restaurant2/css/restaurant2.css'>
     <link rel='stylesheet' href='assets/content/restaurant2/css/custom.css'>
+    <link rel='stylesheet' href='css/structure.css'>
+    <link rel='stylesheet' href='css/custom.css'>
 
     <!-- Revolution Slider -->
     <link rel="stylesheet" href="plugins/rs-plugin/css/settings.css">
@@ -162,6 +164,73 @@
             }
         });
     </script>
+
+<script type="text/javascript">
+  var tpj = jQuery;
+  var revapi2;
+  tpj(document).ready(function() {
+      if (tpj("#rev_slider_2_1").revolution == undefined) {
+          revslider_showDoubleJqueryError("#rev_slider_2_1");
+      } else {
+          revapi2 = tpj("#rev_slider_2_1").show().revolution({
+              sliderType: "standard",
+              sliderLayout: "auto",
+              dottedOverlay: "none",
+              delay: 4000,
+              navigation: {
+                  onHoverStop: "off",
+              },
+              visibilityLevels: [1240, 1024, 778, 480],
+              gridwidth: 1080,
+              gridheight: 700,
+              lazyType: "none",
+              shadow: 0,
+              spinner: "spinner2",
+              stopLoop: "off",
+              stopAfterLoops: -1,
+              stopAtSlide: -1,
+              shuffle: "off",
+              autoHeight: "off",
+              disableProgressBar: "on",
+              hideThumbsOnMobile: "off",
+              hideSliderAtLimit: 0,
+              hideCaptionAtLimit: 0,
+              hideAllCaptionAtLilmit: 0,
+              debugMode: false,
+              fallbacks: {
+                  simplifyAll: "off",
+                  nextSlideOnWindowFocus: "off",
+                  disableFocusListener: false,
+              }
+          });
+      }
+  });
+  /*]]>*/
+</script>
+
+<script id="mfn-dnmc-retina-js">
+jQuery(window).load(function() {
+var retina = window.devicePixelRatio > 1 ? true : false;
+if (retina) {
+var retinaEl = jQuery("#logo img.logo-main");
+var retinaLogoW = retinaEl.width();
+var retinaLogoH = retinaEl.height();
+retinaEl.attr("src", "images/retina-restaurant2.png").width(retinaLogoW).height(retinaLogoH);
+var stickyEl = jQuery("#logo img.logo-sticky");
+var stickyLogoW = stickyEl.width();
+var stickyLogoH = stickyEl.height();
+stickyEl.attr("src", "images/retina-restaurant2.png").width(stickyLogoW).height(stickyLogoH);
+var mobileEl = jQuery("#logo img.logo-mobile");
+var mobileLogoW = mobileEl.width();
+var mobileLogoH = mobileEl.height();
+mobileEl.attr("src", "images/retina-restaurant2.png").width(mobileLogoW).height(mobileLogoH);
+var mobileStickyEl = jQuery("#logo img.logo-mobile-sticky");
+var mobileStickyLogoW = mobileStickyEl.width();
+var mobileStickyLogoH = mobileStickyEl.height();
+mobileStickyEl.attr("src", "images/retina-restaurant2.png").width(mobileStickyLogoW).height(mobileStickyLogoH);
+}
+});
+</script>
   <!-- END OF HOME JS-SCRIPTS AND CSS RESOURCES -->
   <style>
     h1 {

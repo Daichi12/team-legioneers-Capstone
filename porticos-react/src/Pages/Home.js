@@ -20,10 +20,10 @@ class Home extends React.Component{
                                     <nav id="menu">
                                         <ul id="menu-main-menu-left" class="menu menu_left">
                                             <li class="current_page_item">
-                                                <a href="/Home"><span>This is home js</span></a>
+                                                <a href="/Home"><span>Home</span></a>
                                             </li>
                                             <li>
-                                                <a href="content/restaurant2/restaurant.html"><span>About us</span></a>
+                                                <a href="/AboutUs"><span>About us</span></a>
                                             </li>
                                             <li>
                                                 <a href="content/restaurant2/events.html"><span>Events</span></a>
