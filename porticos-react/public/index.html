@@ -46,32 +46,8 @@
     <link rel='stylesheet' href='assets/content/restaurant2/css/restaurant2.css'>
     <link rel='stylesheet' href='assets/content/restaurant2/css/custom.css'>
   
-
     <!-- Revolution Slider -->
     <link rel="stylesheet" href="plugins/rs-plugin/css/settings.css">
-
-
-    <!-- <script src="js/jquery-2.1.4.min.js"></script>
-
-    <script src="js/mfn.menu.js"></script>
-    <script src="js/jquery.plugins.js"></script>
-    <script src="js/jquery.jplayer.min.js"></script>
-    <script src="js/animations/animations.js"></script>
-    <script src="js/translate3d.js"></script>
-    <script src="js/scripts.js"></script>
-
-    <script src="js/jquery.themepunch.tools.min.js"></script>
-    <script src="js/jquery.themepunch.revolution.min.js"></script>
-
-    <script src="js/revolution.extension.video.min.js"></script>
-    <script src="js/revolution.extension.slideanims.min.js"></script>
-    <script src="js/revolution.extension.actions.min.js"></script>
-    <script src="js/revolution.extension.layeranimation.min.js"></script>
-    <script src="js/revolution.extension.kenburn.min.js"></script>
-    <script src="js/revolution.extension.navigation.min.js"></script>
-    <script src="js/revolution.extension.migration.min.js"></script>
-    <script src="js/revolution.extension.parallax.min.js"></script> -->
-
 
     <script src="js/jquery-2.1.4.min.js"></script>
 
@@ -94,9 +70,8 @@
     <script src="plugins/rs-plugin/js/extensions/revolution.extension.migration.min.js"></script>
     <script src="plugins/rs-plugin/js/extensions/revolution.extension.parallax.min.js"></script>
 
-
-
-
+    <script src="http://maps.google.com/maps/api/js?sensor=false&ver=5.9"></script>
+    <script src="../../js/email.js"></script>
 
     <script type="text/javascript">
         var tpj = jQuery;
@@ -164,52 +139,210 @@
         });
     </script>
 
-<script type="text/javascript">
-  var tpj = jQuery;
-  var revapi2;
-  tpj(document).ready(function() {
-      if (tpj("#rev_slider_2_1").revolution == undefined) {
-          revslider_showDoubleJqueryError("#rev_slider_2_1");
-      } else {
-          revapi2 = tpj("#rev_slider_2_1").show().revolution({
-              sliderType: "standard",
-              sliderLayout: "auto",
-              dottedOverlay: "none",
-              delay: 4000,
-              navigation: {
-                  onHoverStop: "off",
-              },
-              visibilityLevels: [1240, 1024, 778, 480],
-              gridwidth: 1080,
-              gridheight: 700,
-              lazyType: "none",
-              shadow: 0,
-              spinner: "spinner2",
-              stopLoop: "off",
-              stopAfterLoops: -1,
-              stopAtSlide: -1,
-              shuffle: "off",
-              autoHeight: "off",
-              disableProgressBar: "on",
-              hideThumbsOnMobile: "off",
-              hideSliderAtLimit: 0,
-              hideCaptionAtLimit: 0,
-              hideAllCaptionAtLilmit: 0,
-              debugMode: false,
-              fallbacks: {
-                  simplifyAll: "off",
-                  nextSlideOnWindowFocus: "off",
-                  disableFocusListener: false,
-              }
+    <script type="text/javascript">
+      var tpj = jQuery;
+      var revapi2;
+      tpj(document).ready(function() {
+          if (tpj("#rev_slider_2_1").revolution == undefined) {
+              revslider_showDoubleJqueryError("#rev_slider_2_1");
+          } else {
+              revapi2 = tpj("#rev_slider_2_1").show().revolution({
+                  sliderType: "standard",
+                  sliderLayout: "auto",
+                  dottedOverlay: "none",
+                  delay: 4000,
+                  navigation: {
+                      onHoverStop: "off",
+                  },
+                  visibilityLevels: [1240, 1024, 778, 480],
+                  gridwidth: 1080,
+                  gridheight: 700,
+                  lazyType: "none",
+                  shadow: 0,
+                  spinner: "spinner2",
+                  stopLoop: "off",
+                  stopAfterLoops: -1,
+                  stopAtSlide: -1,
+                  shuffle: "off",
+                  autoHeight: "off",
+                  disableProgressBar: "on",
+                  hideThumbsOnMobile: "off",
+                  hideSliderAtLimit: 0,
+                  hideCaptionAtLimit: 0,
+                  hideAllCaptionAtLilmit: 0,
+                  debugMode: false,
+                  fallbacks: {
+                      simplifyAll: "off",
+                      nextSlideOnWindowFocus: "off",
+                      disableFocusListener: false,
+                  }
+              });
+          }
+      });
+      /*]]>*/
+    </script>
+                                                     
+    <!-- <script>
+      var flap = document.getElementById('flap'); // Assumes element with id='button'
+      flap.onclick = function() {
+          var div = document.getElementById('contactWrapper');
+          var div2 = document.getElementById('contactWrapper2');
+          if (div2.style.display !== 'none') {
+              div2.style.display = 'none';
+              div.style.display = 'block';
+          }
+          else {
+              div2.style.display = 'block';
+              div.style.display = 'none';
+
+          }
+      };
+    </script> -->
+
+    <script>
+      function google_maps_58aa3de9b18db() {
+          var latlng = new google.maps.LatLng(18.08188,-67.04164);
+          var draggable = true;
+          var myOptions = {
+              zoom: 15,
+              center: latlng,
+              mapTypeId: google.maps.MapTypeId.ROADMAP,
+              styles: [{
+                  "featureType": "water",
+                  "elementType": "geometry",
+                  "stylers": [{
+                      "color": "#e9e9e9"
+                  }, {
+                      "lightness": 17
+                  }]
+              }, {
+                  "featureType": "landscape",
+                  "elementType": "geometry",
+                  "stylers": [{
+                      "color": "#f5f5f5"
+                  }, {
+                      "lightness": 20
+                  }]
+              }, {
+                  "featureType": "road.highway",
+                  "elementType": "geometry.fill",
+                  "stylers": [{
+                      "color": "#ffffff"
+                  }, {
+                      "lightness": 17
+                  }]
+              }, {
+                  "featureType": "road.highway",
+                  "elementType": "geometry.stroke",
+                  "stylers": [{
+                      "color": "#ffffff"
+                  }, {
+                      "lightness": 29
+                  }, {
+                      "weight": 0.2
+                  }]
+              }, {
+                  "featureType": "road.arterial",
+                  "elementType": "geometry",
+                  "stylers": [{
+                      "color": "#ffffff"
+                  }, {
+                      "lightness": 18
+                  }]
+              }, {
+                  "featureType": "road.local",
+                  "elementType": "geometry",
+                  "stylers": [{
+                      "color": "#ffffff"
+                  }, {
+                      "lightness": 16
+                  }]
+              }, {
+                  "featureType": "poi",
+                  "elementType": "geometry",
+                  "stylers": [{
+                      "color": "#f5f5f5"
+                  }, {
+                      "lightness": 21
+                  }]
+              }, {
+                  "featureType": "poi.park",
+                  "elementType": "geometry",
+                  "stylers": [{
+                      "color": "#dedede"
+                  }, {
+                      "lightness": 21
+                  }]
+              }, {
+                  "elementType": "labels.text.stroke",
+                  "stylers": [{
+                      "visibility": "on"
+                  }, {
+                      "color": "#ffffff"
+                  }, {
+                      "lightness": 16
+                  }]
+              }, {
+                  "elementType": "labels.text.fill",
+                  "stylers": [{
+                      "saturation": 36
+                  }, {
+                      "color": "#333333"
+                  }, {
+                      "lightness": 40
+                  }]
+              }, {
+                  "elementType": "labels.icon",
+                  "stylers": [{
+                      "visibility": "off"
+                  }]
+              }, {
+                  "featureType": "transit",
+                  "elementType": "geometry",
+                  "stylers": [{
+                      "color": "#f2f2f2"
+                  }, {
+                      "lightness": 19
+                  }]
+              }, {
+                  "featureType": "administrative",
+                  "elementType": "geometry.fill",
+                  "stylers": [{
+                      "color": "#fefefe"
+                  }, {
+                      "lightness": 20
+                  }]
+              }, {
+                  "featureType": "administrative",
+                  "elementType": "geometry.stroke",
+                  "stylers": [{
+                      "color": "#fefefe"
+                  }, {
+                      "lightness": 17
+                  }, {
+                      "weight": 1.2
+                  }]
+              }],
+              draggable: draggable,
+              zoomControl: true,
+              mapTypeControl: false,
+              streetViewControl: false,
+              scrollwheel: false
+          };
+          var map = new google.maps.Map(document.getElementById("google-map-area-58aa3de9b18db"), myOptions);
+          var marker = new google.maps.Marker({
+              position: latlng,
+              icon: "images/home_restaurant2_pin.png",
+              map: map
           });
       }
-  });
-  /*]]>*/
-</script>
-
+      jQuery(document).ready(function($) {
+          google_maps_58aa3de9b18db();
+      });
+    </script>
 
   <!-- END OF HOME JS-SCRIPTS AND CSS RESOURCES -->
-  <style>
+    <style>
     h1 {
         text-shadow: 3px 3px rgb(0, 0, 0);
     }

@@ -67,7 +67,7 @@ class Menu extends React.Component{
                           </a>
                         </li>
                         <li>
-                          <a href="contact.html">
+                          <a href="/Contact">
                             <span>Contact</span>
                           </a>
                         </li>

@@ -13,7 +13,7 @@ class Home extends React.Component{
                         <div class="column one">
                             <div class="top_bar_left clearfix">
                                 <div class="logo">
-                                    <a id="logo" href="../../index-restaurant2.html" title="PorticosDB"><img class="logo-main scale-with-grid" src="assets/content/restaurant2/images/restaurant2.png" alt="1606" /><img class="logo-sticky scale-with-grid" src="assets/content/restaurant2/images/restaurant2.png" alt="restaurant2" /><img class="logo-mobile scale-with-grid" src="assets/content/restaurant2/images/restaurant2.png" alt="restaurant2" /><img class="logo-mobile-sticky scale-with-grid" src="assets/content/restaurant2/images/restaurant2.png" alt="restaurant2" />
+                                    <a id="logo" href="/Home" title="PorticosDB"><img class="logo-main scale-with-grid" src="assets/content/restaurant2/images/restaurant2.png" alt="1606" /><img class="logo-sticky scale-with-grid" src="assets/content/restaurant2/images/restaurant2.png" alt="restaurant2" /><img class="logo-mobile scale-with-grid" src="assets/content/restaurant2/images/restaurant2.png" alt="restaurant2" /><img class="logo-mobile-sticky scale-with-grid" src="assets/content/restaurant2/images/restaurant2.png" alt="restaurant2" />
                                     </a>
                                 </div>
                                 <div class="menu_wrapper">
@@ -34,7 +34,7 @@ class Home extends React.Component{
                                                 <a href="/Menu"><span>Menu</span></a>
                                             </li>
                                             <li>
-                                                <a href="content/restaurant2/contact.html"><span>Contact</span></a>
+                                                <a href="/Contact"><span>Contact</span></a>
                                             </li> 
                                         </ul>
                                     </nav><a class="responsive-menu-toggle " href="/#"><i class="icon-menu-fine"></i></a>
@@ -168,7 +168,7 @@ class Home extends React.Component{
             
                                                 </p>
                                                 <hr class="no_line" style={{"margin":"0 auto 30px"}} />
-                                                <a class="button  button_full_width button_size_2 button_stroke_custom button_js" href="content/restaurant2/menu.html" style={{"borderColor":"#fff !important","color":"#fff"}}><span class="button_label">VIEW MENU</span></a>
+                                                <a class="button  button_full_width button_size_2 button_stroke_custom button_js" href="/Menu" style={{"borderColor":"#fff !important","color":"#fff"}}><span class="button_label">VIEW MENU</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -187,7 +187,7 @@ class Home extends React.Component{
                                                 <hr class="no_line" style={{"margin":"0 auto 20px"}}/>
                                                 <h5 style={{"borderTop":"1px solid #b2b2b2","borderBottom":"1px solid #b2b2b2","padding":"10px 0"}}>Sun-Wed 12:00 - 21:00 AST, Thur-Sat 12:00 - 22:00 AST </h5>
                                                 <hr class="no_line" style={{"margin":"0 auto 30px"}} />
-                                                <a class="button  button_size_2 button_theme button_js" href="content/restaurant2/contact.html"><span class="button_label">Reserve Your Table Here </span></a>
+                                                <a class="button  button_size_2 button_theme button_js" href="/Contact"><span class="button_label">Reserve Your Table Here </span></a>
                                             </div>
                                         </div>
                                     </div>
