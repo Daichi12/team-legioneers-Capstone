@@ -86,41 +86,24 @@ class Contact extends React.Component{
                 <div className="content_wrapper clearfix">
                   <div className="sections_group">
                     <div className="entry-content">
-                      <div
-                        className="section mcb-section"
-                        style={{ paddingTop: 220, paddingBottom: 250 }}
-                        data-parallax="3d"
-                      >
-                        <img
-                          className="mfn-parallax"
-                          src="/assets/content/restaurant2/images/home_restaurant2_sectionbg6.png"
-                          alt="Porticos contact banner"
-                          style={{ opacity: 100}}
-                        />
-                        <div className="section_wrapper mcb-section-inner">
-                          <div className="wrap mcb-wrap one  valign-top clearfix">
-                            <div className="mcb-wrap-inner">
-                              <div className="column mcb-column one-fourth column_placeholder">
-                                <div className="placeholder">&nbsp;</div>
-                              </div>
-                              <div className="column mcb-column one column_column ">
-                                <div
-                                  className="column_attr clearfix align_center"
-                                  style={{
-                                    backgroundColor: "rgb(48, 48, 48)",
-                                    padding: "30px 20px 20px"
-                                  }}
-                                >
-                                  <h3 style={{ color: "#89d8cc" }}>
-                                    {" "}
-                                    Join us for an Unique Cultural Experience
-                                  </h3>
+                    <div class="section mcb-section" style={{"paddingTop":"220px","paddingBottom":"250px"}} data-parallax="3d"><img class="mfn-parallax" src="/assets/content/restaurant2/images/home_restaurant2_sectionbg6.png" alt="" style={{"opacity":"100"}} />
+                            <div class="section_wrapper mcb-section-inner">
+                                <div class="wrap mcb-wrap one  valign-top clearfix">
+                                    <div class="mcb-wrap-inner">
+                                        <div class="column mcb-column one-fourth column_placeholder">
+                                            <div class="placeholder">
+                                                &nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="column mcb-column one column_column ">
+                                            <div class="column_attr clearfix align_center" style={{"backgroundColor":"rgb(48, 48, 48)","padding":"30px 20px 20px"}}>
+                                                <h3 style={{"color":"#89d8cc"}}> Join us for an Unique Cultural Experience</h3>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                              </div>
                             </div>
-                          </div>
                         </div>
-                      </div>
                       <div
                         className="section mcb-section no-margin-h no-margin-v"
                         style={{
