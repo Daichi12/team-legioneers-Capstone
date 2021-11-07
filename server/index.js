@@ -4,12 +4,16 @@ const app = express();
 const cors = require("cors");
 const pool = require("./db");
 const jwtAuth = require("./routes/jwtAuth");
+const authorization = require("./middleware/authorization");
 //middleware
 app.use(cors());
 app.use(express.json());
 
 //register and login routes
 app.use("/account", jwtAuth);
+
+//Admin Route
+app.use("/dashboard", require("./routes/dashboard"))
 //Account Routes
 
 //Create an Account
