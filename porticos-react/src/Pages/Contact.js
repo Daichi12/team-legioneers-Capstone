@@ -86,26 +86,30 @@ class Contact extends React.Component{
                 <div className="content_wrapper clearfix">
                   <div className="sections_group">
                     <div className="entry-content">
-                    <div class="section mcb-section" style={{"paddingTop":"220px","paddingBottom":"250px"}} data-parallax="3d"><img class="mfn-parallax" src="/assets/content/restaurant2/images/home_restaurant2_sectionbg6.png" alt="" style={{"opacity":"100"}} />
-                            <div class="section_wrapper mcb-section-inner">
-                                <div class="wrap mcb-wrap one  valign-top clearfix">
-                                    <div class="mcb-wrap-inner">
-                                        <div class="column mcb-column one-fourth column_placeholder">
-                                            <div class="placeholder">
-                                                &nbsp;
-                                            </div>
-                                        </div>
-                                        <div class="column mcb-column one column_column ">
-                                            <div class="column_attr clearfix align_center" style={{"backgroundColor":"rgb(48, 48, 48)","padding":"30px 20px 20px"}}>
-                                                <h3 style={{"color":"#89d8cc"}}> Join us for an Unique Cultural Experience</h3>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="mfn-main-slider" id="mfn-rev-slider">
+                    <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery" style={{"margin":"0px auto","backgroundColor":"transparent","padding":"0px","marginTop":"0px","marginBottom":"0px"}}>
+                    <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style={{"display":"none", "data-version=": "5.3.1.5"}}>
+                    <ul>
+                                <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                    <img src="/assets/content/restaurant2/images/home_restaurant2_about_slider1.jpg" alt="" title="home_restaurant2_about_slider1" width="1920" height="720" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
+                                </li>
+                                <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                    <img src="/assets/content/restaurant2/images/home_restaurant2_about_slider2.png" alt="" title="home_restaurant2_about_slider2" width="1920" height="720" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
+                                </li>
+                            </ul> 
+                            <div class="tp-static-layers">
+                                <div class="tp-caption   tp-resizeme tp-static-layer" id="slider-1-layer-3" data-x="center" data-hoffset="" data-y="center" data-voffset="20" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-startslide="0" data-endslide="2" data-frames='[{"delay":260,"speed":700,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style={{"zIndex":"6","whiteSpace":"nowrap","fontSize":"48px","lineHeight":"58px","fontWeight":"400","color":"#0f13fcec","fontFamily":"Arial"}}>
+                                    <h1 style={{"font-size": "90px", opacity: 1, color:"#98dace"}}> 
+                                        Join Us For A Unique Cultural Experience
+                                     </h1>
+                                </div>
+                            </div>
+                            <div class="tp-bannertimer tp-bottom" style={{"visibility":"hidden !important"}}></div>             
+
                                 </div>
                             </div>
                         </div>
-                      <div
-                        className="section mcb-section no-margin-h no-margin-v"
+                      <div className="section mcb-section no-margin-h no-margin-v"
                         style={{
                           paddingTop: 60,
                           paddingBottom: 0,
@@ -220,7 +224,7 @@ class Contact extends React.Component{
                           <div
                             className="wrap mcb-wrap two-third  valign-top clearfix"
                             style={{
-                              padding: "30px 60px 20px",
+                              padding: "90px 60px 20px",
                               backgroundColor: "#98dace",
                               marginTop: 220
                             }}
@@ -234,7 +238,7 @@ class Contact extends React.Component{
                                     style={{ margin: "0 auto 25px" }}
                                   />
                                   <div id="contactWrapper">
-                                    <h2>Table Reservation</h2>
+                                    {/* <h2>Table Reservation</h2> */}
                                     <form id="contactform">
                                       {/* One Second (1/2) Column */}
                                       <div className="column one-second">
@@ -361,19 +365,18 @@ class Contact extends React.Component{
                                     </form>
                                   </div>
                                 </div>
-                                <title>toggle switch</title>
+                                {/* <title>toggle switch</title>
                                 <style
-                                  dangerouslySetInnerHTML={{
-                                    __html:
-                                      "\n                                                    h1 {\n                                                        text-align: center;\n                                                        color: rgb(65, 156, 136);\n                                                    }\n                                                            \n                                                    /* toggle in label designing */\n                                                    .toggle {\n                                                      \n                                                     left: 50%;\n                                                     margin-right: -50%;\n                                                     transform: translate(-50%, -50%);\n                                                        position : absolute ;\n                                                        display : inline-block;\n                                                        width : 50px;\n                                                        height : 27px;\n                                                        background-color: rgb(0, 225, 255);\n                                                        border-radius: 30px;\n                                                        border: 2px solid rgb(0, 0, 0);\n                                                    }\n                                                            \n                                                    /* After slide changes */\n                                                    .toggle:after {\n                                                        \n                                                        content: '';\n                                                        position: absolute;\n                                                        width: 25px;\n                                                        height: 25px;\n                                                        border-radius: 50%;\n                                                        background-color: rgb(167, 61, 0);\n                                                        top: 1px; \n                                                        left: 1px;\n                                                        transition:  all 0.5s;\n                                                    }\n                                                            \n                                                    /* Toggle text */\n                                                    p {\n                                                        text-align: center;\n                               \n                                                        font-family: Arial, Helvetica, sans-serif;\n                                                        font-weight: bold;\n                                                    }\n                                                            \n                                                    /* Checkbox checked effect */\n                                                    .checkbox:checked + .toggle::after {\n                                                        left : 23px; \n                                                    }\n                                                            \n                                                    /* Checkbox checked toggle label bg color */\n                                                    .checkbox:checked + .toggle {\n                                                        \n                                                        background-color: rgb(17, 188, 255);\n                                                    }\n                                                            \n                                                    /* Checkbox vanished */\n                                                    .checkbox { \n                                                        display : none;\n                                                    }\n                                                "
-                                  }}
+                                  // dangerouslySetInnerHTML={{
+                                  //   __html:
+                                  // }}
                                 />
                                 <h1>Reservation Switch </h1>
                                 <p>Toggle switch to change Reservations Type</p>
                                 <br />
                                 <br />
                                 <input type="checkbox" id="flap" className="checkbox" />
-                                <label htmlFor="flap" className="toggle"></label>
+                                <label htmlFor="flap" className="toggle"></label> */}
                               </div>
                             </div>
                           </div>
