@@ -1,7 +1,35 @@
-import React, {Component} from 'react';
+import React from 'react';
+import axios from 'axios';
 class Contact extends React.Component{
 
-    render(){
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      email: '',
+      message: '',
+      group: '',
+      time: ''
+    }
+  }
+
+  // handleSubmit(e){
+  //   e.preventDefault();
+  //   axios({
+  //     method: "POST",
+  //     url:"http://localhost:3002/send",
+  //     data:  this.state
+  //   }).then((response)=>{
+  //     if (response.data.status === 'success') {
+  //       alert("Message Sent.");
+  //       this.resetForm()
+  //     } else if (response.data.status === 'fail') {
+  //       alert("Message failed to send.")
+  //     }
+  //   })
+  // }
+
+  render(){
         return(
             <div className="page color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky">
             <div id="Wrapper">
@@ -234,146 +262,31 @@ class Contact extends React.Component{
                                     style={{ margin: "0 auto 25px" }}
                                   />
                                   <div id="contactWrapper">
-                                    <h2>Table Reservation</h2>
-                                    <form id="contactform">
-                                      {/* One Second (1/2) Column */}
-                                      <div className="column one-second">
-                                        <input
-                                          placeholder="Name"
-                                          type="text"
-                                          name="name"
-                                          id="name"
-                                          size={40}
-                                          aria-required="true"
-                                          aria-invalid="false"
-                                        />
-                                      </div>
-                                      {/* One Second (1/2) Column */}
-                                      <div className="column one-second">
-                                        <input
-                                          placeholder="Phone Number"
-                                          type="phone"
-                                          name="phone"
-                                          id="phone"
-                                          size={40}
-                                          aria-required="true"
-                                          aria-invalid="false"
-                                        />
-                                      </div>
-                                      <div className="column one">
-                                        <input
-                                          placeholder="Time of Arrival"
-                                          type="text"
-                                          name="subject"
-                                          id="subject"
-                                          size={40}
-                                          aria-invalid="false"
-                                        />
-                                      </div>
-                                      <div className="column one">
-                                        <input
-                                          placeholder="Size of Group"
-                                          type="text"
-                                          name="group"
-                                          id="group"
-                                          size={40}
-                                          aria-invalid="false"
-                                        />
-                                      </div>
-                                      <div className="column one">
-                                        <textarea
-                                          placeholder="Additional Notes"
-                                          name="body"
-                                          id="body"
-                                          style={{ width: "100%" }}
-                                          rows={4}
-                                          aria-invalid="false"
-                                          defaultValue={""}
-                                        />
-                                      </div>
-                                      <div className="column one">
-                                        <input
-                                          type="button"
-                                          defaultValue="Submit"
-                                          id="submit"
-                                          onclick="return check_values();"
-                                        />
-                                      </div>
-                                    </form>
-                                  </div>
-                                  <div id="contactWrapper2" style={{ display: "none" }}>
-                                    <h2>Venue Reservation</h2>
-                                    <form id="contactform">
-                                      {/* One Second (1/2) Column */}
-                                      <div className="column one-second">
-                                        <input
-                                          placeholder="Your FACE"
-                                          type="text"
-                                          name="name"
-                                          id="name"
-                                          size={40}
-                                          aria-required="true"
-                                          aria-invalid="false"
-                                        />
-                                      </div>
-                                      {/* One Second (1/2) Column */}
-                                      <div className="column one-second">
-                                        <input
-                                          placeholder="Your phone number"
-                                          type="email"
-                                          name="email"
-                                          id="email"
-                                          size={40}
-                                          aria-required="true"
-                                          aria-invalid="false"
-                                        />
-                                      </div>
-                                      <div className="column one">
-                                        <input
-                                          placeholder="Time"
-                                          type="text"
-                                          name="subject"
-                                          id="subject"
-                                          size={40}
-                                          aria-invalid="false"
-                                        />
-                                      </div>
-                                      <div className="column one">
-                                        <textarea
-                                          placeholder="Message"
-                                          name="body"
-                                          id="body"
-                                          style={{ width: "100%" }}
-                                          rows={10}
-                                          aria-invalid="false"
-                                          defaultValue={""}
-                                        />
-                                      </div>
-                                      <div className="column one">
-                                        {/* BRAINTREE */}
-                                        <input
-                                          type="button"
-                                          defaultValue="Submit"
-                                          id="submit"
-                                          onclick="return check_values();"
-                                        />
-                                      </div>
-                                    </form>
+                                  <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+                                    <div className="form-group">
+                                      <label htmlFor="name"></label>
+                                      <input type="text" placeholder="Enter your name" className="form-control" value={this.state.name} onChange={this.onNameChange.bind(this)} />
+                                    </div>
+                                    <div className="form-group">
+                                      <label htmlFor="exampleInputEmail1"></label>
+                                      <input type="email" placeholder="Enter your phone number" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
+                                    </div>
+                                    <div className="form-group">
+                                      <label htmlFor="group"></label>
+                                      <input type="text" placeholder="Group size" className="form-control" value={this.state.group} onChange={this.onGroupChange.bind(this)} />
+                                    </div>
+                                    <div className="form-group">
+                                      <label htmlFor="time"></label>
+                                      <input type="text" placeholder="Time of Arrival" className="form-control" value={this.state.time} onChange={this.onTimeChange.bind(this)} />
+                                    </div>
+                                    <div className="form-group">
+                                      <label htmlFor="message"></label>
+                                      <textarea className="form-control"  placeholder="Additional notes" rows="5" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
+                                    </div>
+                                    <button type="submit" className="btn btn-primary">Submit</button>
+                                  </form>
                                   </div>
                                 </div>
-                                <title>toggle switch</title>
-                                <style
-                                  dangerouslySetInnerHTML={{
-                                    __html:
-                                      "\n                                                    h1 {\n                                                        text-align: center;\n                                                        color: rgb(65, 156, 136);\n                                                    }\n                                                            \n                                                    /* toggle in label designing */\n                                                    .toggle {\n                                                      \n                                                     left: 50%;\n                                                     margin-right: -50%;\n                                                     transform: translate(-50%, -50%);\n                                                        position : absolute ;\n                                                        display : inline-block;\n                                                        width : 50px;\n                                                        height : 27px;\n                                                        background-color: rgb(0, 225, 255);\n                                                        border-radius: 30px;\n                                                        border: 2px solid rgb(0, 0, 0);\n                                                    }\n                                                            \n                                                    /* After slide changes */\n                                                    .toggle:after {\n                                                        \n                                                        content: '';\n                                                        position: absolute;\n                                                        width: 25px;\n                                                        height: 25px;\n                                                        border-radius: 50%;\n                                                        background-color: rgb(167, 61, 0);\n                                                        top: 1px; \n                                                        left: 1px;\n                                                        transition:  all 0.5s;\n                                                    }\n                                                            \n                                                    /* Toggle text */\n                                                    p {\n                                                        text-align: center;\n                               \n                                                        font-family: Arial, Helvetica, sans-serif;\n                                                        font-weight: bold;\n                                                    }\n                                                            \n                                                    /* Checkbox checked effect */\n                                                    .checkbox:checked + .toggle::after {\n                                                        left : 23px; \n                                                    }\n                                                            \n                                                    /* Checkbox checked toggle label bg color */\n                                                    .checkbox:checked + .toggle {\n                                                        \n                                                        background-color: rgb(17, 188, 255);\n                                                    }\n                                                            \n                                                    /* Checkbox vanished */\n                                                    .checkbox { \n                                                        display : none;\n                                                    }\n                                                "
-                                  }}
-                                />
-                                <h1>Reservation Switch </h1>
-                                <p>Toggle switch to change Reservations Type</p>
-                                <br />
-                                <br />
-                                <input type="checkbox" id="flap" className="checkbox" />
-                                <label htmlFor="flap" className="toggle"></label>
                               </div>
                             </div>
                           </div>
@@ -473,5 +386,26 @@ class Contact extends React.Component{
           </div>
             )
         }
-    }
+
+  onNameChange(event) {
+    this.setState({name: event.target.value})
+  }
+  onEmailChange(event) {
+    this.setState({email: event.target.value})
+  }
+  onTimeChange(event) {
+    this.setState({time: event.target.value})
+  }
+  onGroupChange(event) {
+    this.setState({group: event.target.value})
+  }
+  onMessageChange(event) {
+    this.setState({message: event.target.value})
+  }
+
+  handleSubmit( event ) {
+    event.preventDefault();
+    alert(JSON.stringify(this.state));
+  }
+}
     export default Contact
