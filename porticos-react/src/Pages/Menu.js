@@ -87,40 +87,29 @@ class Menu extends React.Component{
         <div className="content_wrapper clearfix">
           <div className="sections_group">
             <div className="entry-content">
-              <div
-                className="section mcb-section"
-                style={{ paddingTop: 220, paddingBottom: 250 }}
-                data-parallax="3d"
-              >
-                <img
-                  className="mfn-parallax"
-                  src="/assets/content/restaurant2/images/home_restaurant2_sectionbg9.jpg"
-                  alt="Porticos Mural Banner"
-                />
-                <div className="section_wrapper mcb-section-inner">
-                  <div className="wrap mcb-wrap one  valign-top clearfix">
-                    <div className="mcb-wrap-inner">
-                      <div className="column mcb-column one-fourth column_placeholder">
-                        <div className="placeholder">&nbsp;</div>
-                      </div>
-                      <div className="column mcb-column one column_column ">
-                        <div
-                          className="column_attr clearfix align_center"
-                          style={{
-                            backgroundColor: "rgb(48, 48, 48)",
-                            padding: "30px 20px 20px"
-                          }}
-                        >
-                          <h3 style={{ color: "#92d8cd" }}>
-                            {" "}
-                            El Sabor del Caribe
-                          </h3>
+            <div class="mfn-main-slider" id="mfn-rev-slider">
+                    <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery" style={{"margin":"0px auto","backgroundColor":"transparent","padding":"0px","marginTop":"0px","marginBottom":"0px"}}>
+                    <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style={{"display":"none", "data-version=": "5.3.1.5"}}>
+                    <ul>
+                                <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                    <img src="/assets/content/restaurant2/images/home_restaurant2_about_slider1.jpg" alt="" title="home_restaurant2_about_slider1" width="1920" height="720" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
+                                </li>
+                                <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                    <img src="/assets/content/restaurant2/images/home_restaurant2_about_slider2.png" alt="" title="home_restaurant2_about_slider2" width="1920" height="720" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
+                                </li>
+                            </ul> 
+                            <div class="tp-static-layers">
+                                <div class="tp-caption   tp-resizeme tp-static-layer" id="slider-1-layer-3" data-x="center" data-hoffset="" data-y="center" data-voffset="20" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-startslide="0" data-endslide="2" data-frames='[{"delay":260,"speed":700,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style={{"zIndex":"6","whiteSpace":"nowrap","fontSize":"48px","lineHeight":"58px","fontWeight":"400","color":"#0f13fcec","fontFamily":"Arial"}}>
+                                    <h1 style={{"font-size": "90px", opacity: 1, color:"#98dace"}}> 
+                                        Enjoy Our Fusion Of Cultural Plates.
+                                     </h1>
+                                </div>
+                            </div>
+                            <div class="tp-bannertimer tp-bottom" style={{"visibility":"hidden !important"}}></div>             
+
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div
                 className="section mcb-section"
                 style={{
