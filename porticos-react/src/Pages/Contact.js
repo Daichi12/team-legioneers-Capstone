@@ -37,6 +37,8 @@ class Contact extends React.Component{
   // }
 
   render(){
+    const isValidName = this.state.name.length > 3;
+  const isValidEmail = this.state.email.length > 3;
         return(
             <div className="page color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky">
             <div id="Wrapper">
@@ -260,6 +262,7 @@ class Contact extends React.Component{
                               marginTop: 220
                             }}
                           >
+
                             <div className="mcb-wrap-inner">
                               <div className="column mcb-column one column_column">
                                 <div className="column_attr clearfix align_center">
@@ -280,12 +283,13 @@ class Contact extends React.Component{
                                     </div>
                                     <div className="form-group">
                                       <label htmlFor="group"></label>
-                                      <input type="text" placeholder="Group size" className="form-control" id="group" value={this.state.group} onChange={this.onGroupChange.bind(this)} />
+                                      <input type="number" placeholder="Group size" className="form-control" id="group" value={this.state.group} onChange={this.onGroupChange.bind(this)} />
                                     </div>
-                                    <div className="form-group">
+                                   <div className="form-group">
                                       <label htmlFor="time"></label>
-                                      <input type="text" placeholder="Time of Arrival" className="form-control" id="time" value={this.state.time} onChange={this.onTimeChange.bind(this)} />
-                                    </div>
+                                      <input type="datetime-local" placeholder="Time of Arrival" className="form-control" id="time" value={this.state.time} onChange={this.onTimeChange.bind(this)} /> </div>
+
+                                    
                                     <div className="form-group">
                                       <label htmlFor="message"></label>
                                       <textarea className="form-control"  placeholder="Additional message" rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
@@ -294,6 +298,7 @@ class Contact extends React.Component{
                                     <button type="submit" className="btn btn-primary">Submit</button>
                                   </form>
                                   </div>
+                                  
                                 </div>
                               </div>
                             </div>
@@ -402,8 +407,13 @@ class Contact extends React.Component{
     this.setState({email: event.target.value})
   }
   onTimeChange(event) {
-    this.setState({time: event.target.value})
+    this.setState({time: event.target.value})}
+  /*onStartTimeChange(event) {
+    this.setState({starttime: event.target.value})
   }
+  onEndTimeChange(event) {
+    this.setState({endtime: event.target.value})
+  }*/
   onGroupChange(event) {
     this.setState({group: event.target.value})
   }
