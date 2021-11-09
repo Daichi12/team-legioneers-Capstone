@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Calendar from 'react-awesome-calendar';
+//import Calendar from 'react-awesome-calendar';
 
 const events = [{
     id: 1,
