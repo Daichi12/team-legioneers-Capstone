@@ -23,10 +23,17 @@ class Contact extends React.Component{
   //     if (response.data.status === 'success') {
   //       alert("Message Sent.");
   //       this.resetForm()
+
+  // .append('<div class="success"><h4>Table Reservation Successful!</h4><br><p>See you soon!<strong>'+decodeURIComponent(name)+'</strong>! Thank you for your reservation! </p></div>');
+
   //     } else if (response.data.status === 'fail') {
   //       alert("Message failed to send.")
   //     }
   //   })
+  // }
+
+  // resetForm(){
+  //   this.setState({name: ‘’, email: ‘’, message: ‘’})
   // }
 
   render(){
@@ -265,24 +272,25 @@ class Contact extends React.Component{
                                   <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                                     <div className="form-group">
                                       <label htmlFor="name"></label>
-                                      <input type="text" placeholder="Enter your name" className="form-control" value={this.state.name} onChange={this.onNameChange.bind(this)} />
+                                      <input type="text" placeholder="Enter your name" className="form-control" id="name" value={this.state.name} onChange={this.onNameChange.bind(this)} />
                                     </div>
                                     <div className="form-group">
                                       <label htmlFor="exampleInputEmail1"></label>
-                                      <input type="email" placeholder="Enter your phone number" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
+                                      <input type="email" placeholder="Enter your phone number" className="form-control" id="phone" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
                                     </div>
                                     <div className="form-group">
                                       <label htmlFor="group"></label>
-                                      <input type="text" placeholder="Group size" className="form-control" value={this.state.group} onChange={this.onGroupChange.bind(this)} />
+                                      <input type="text" placeholder="Group size" className="form-control" id="group" value={this.state.group} onChange={this.onGroupChange.bind(this)} />
                                     </div>
                                     <div className="form-group">
                                       <label htmlFor="time"></label>
-                                      <input type="text" placeholder="Time of Arrival" className="form-control" value={this.state.time} onChange={this.onTimeChange.bind(this)} />
+                                      <input type="text" placeholder="Time of Arrival" className="form-control" id="time" value={this.state.time} onChange={this.onTimeChange.bind(this)} />
                                     </div>
                                     <div className="form-group">
                                       <label htmlFor="message"></label>
-                                      <textarea className="form-control"  placeholder="Additional notes" rows="5" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
+                                      <textarea className="form-control"  placeholder="Additional message" rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
                                     </div>
+                                    <br></br>
                                     <button type="submit" className="btn btn-primary">Submit</button>
                                   </form>
                                   </div>
