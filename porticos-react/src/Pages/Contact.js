@@ -7,9 +7,9 @@ class Contact extends React.Component{
     this.state = {
       name: '',
       email: '',
-      message: '',
       group: '',
-      time: ''
+      time: '',
+      message: ''
     }
   }
 
@@ -272,23 +272,23 @@ class Contact extends React.Component{
                                   <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                                     <div className="form-group">
                                       <label htmlFor="name"></label>
-                                      <input type="text" placeholder="Enter your name" className="form-control" id="name" value={this.state.name} onChange={this.onNameChange.bind(this)} />
+                                      <input type="text" placeholder="Enter your name" className="form-control" id="name" value={this.state.name} onChange={this.onNameChange.bind(this)} required />
                                     </div>
                                     <div className="form-group">
-                                      <label htmlFor="exampleInputEmail1"></label>
-                                      <input type="email" placeholder="Enter your phone number" className="form-control" id="phone" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
+                                      <label htmlFor="phone"></label>
+                                      <input type="tel" pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}" title="Please enter a valid phone number" placeholder="Enter your phone number" className="form-control" id="phone" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} required/>
                                     </div>
                                     <div className="form-group">
                                       <label htmlFor="group"></label>
-                                      <input type="text" placeholder="Group size" className="form-control" id="group" value={this.state.group} onChange={this.onGroupChange.bind(this)} />
+                                      <input type="number" placeholder="Group size" className="form-control" id="group" value={this.state.group} onChange={this.onGroupChange.bind(this)} required />
                                     </div>
                                     <div className="form-group">
                                       <label htmlFor="time"></label>
-                                      <input type="text" placeholder="Time of Arrival" className="form-control" id="time" value={this.state.time} onChange={this.onTimeChange.bind(this)} />
+                                      <input type="text" placeholder="Time of Arrival" className="form-control" id="time" value={this.state.time} onChange={this.onTimeChange.bind(this)} required />
                                     </div>
                                     <div className="form-group">
                                       <label htmlFor="message"></label>
-                                      <textarea className="form-control"  placeholder="Additional message" rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
+                                      <textarea className="form-control"  placeholder="Additional message" rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} required />
                                     </div>
                                     <br></br>
                                     <button type="submit" className="btn btn-primary">Submit</button>
