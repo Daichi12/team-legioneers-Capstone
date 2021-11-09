@@ -1,9 +1,9 @@
 
 var $j = jQuery.noConflict();
-
 var http = createRequestObject();
 var areal = Math.random() + "";
 var real = areal.substring(2,6);
+var fetch = require("node-fetch");
 
 function createRequestObject() {
 	var xmlhttp;
@@ -25,6 +25,8 @@ function createRequestObject() {
 	return  xmlhttp;
 }
 
+// After table reservation parameters have been validated,
+// Send HTTP POST request to server table reservation endpoint (routes)
 function sendRequest() {
 	
 	var rnd = Math.random();
@@ -34,17 +36,37 @@ function sendRequest() {
 	var body = document.getElementById("body").value;
 
 	try{
-    http.open('POST',  'php/contactform.php');
-    http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    http.onreadystatechange = handleResponse;
-		http.send('name='+name+'&email='+email+'&subject='+subject+'&body='+body+'&rnd='+rnd);
+    // http.open('POST',  '/table_reservations');
+    // http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    // http.onreadystatechange = handleResponse;
+	// 	http.send('name='+name+'&email='+email+'&subject='+subject+'&body='+body+'&rnd='+rnd);
+	const options = {
+		method: 'POST',
+		headers: {'Content-Type':'application/json'},
+		body: JSON.stringify({name:name, phone:email, subject:subject, body:body})
+	};
+	fetch('http://localhost:3000/table_reservations', options)
+		.then(response => response.json())
+		.then(data => this.setState({postId:data.id}));
 	}
-	catch(e){}
+	catch(e){
+		console.log("Table Reservation has failed...")
+	}
 	finally{
 	jQuery('#contactform').slideUp("slow").hide();
-	jQuery('#contactWrapper').append('<div class="success"><h4>Email Successfully Sent!</h4><br><p>Thank you for using our contact form <strong>'+decodeURIComponent(name)+'</strong>! Your email was successfully sent and we&#39;ll be in touch with you soon.</p></div>');
+	jQuery('#contactWrapper').append('<div class="success"><h4>Table Reservation Successful!</h4><br><p>See you soon!<strong>'+decodeURIComponent(name)+'</strong>! Thank you for your reservation! </p></div>');
 	}
 }
+
+// // render(){
+// 	const {postId} = this.state;
+// 	return (
+// 		<div className="text-center">
+// 			<h3 className="p-3"> HTTP POST Response</h3>
+// 			<div> Response: {postId} </div>
+// 		</div>
+// 	):
+// }
 
 function validate_email(address) {
    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
