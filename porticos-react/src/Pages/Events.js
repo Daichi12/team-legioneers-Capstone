@@ -1,34 +1,39 @@
-import React, {Component} from 'react';
-import Calendar from 'react-awesome-calendar';
+import React from "react";
+import Calendar from "@ericz1803/react-google-calendar";
+import { css } from "@emotion/react";
 
-const events = [{
-    id: 1,
-    color: '#000',
-    from: '2021-11-09T10:30:00+00:00',
-    to: '2021-11-09T13:00:00+00:00',
-    title: 'Asamblea de estudiantes'
-}, {
-    id: 2,
-    color: '#1ccb9e',
-    from: '2019-05-01T13:00:00+00:00',
-    to: '2019-05-05T14:00:00+00:00',
-    title: 'This is another event'
-}, {
-    id: 3,
-    color: '#3694DF',
-    from: '2019-05-05T13:00:00+00:00',
-    to: '2019-05-05T20:00:00+00:00',
-    title: 'This is also another event'
-}];
+const API_KEY = "AIzaSyDXq8Qiqbq0KlUNqgqqmZrXgVj4kr60V2c";
+let calendars = [
+  {calendarId: "984258349234-4u1n922i23rh3t471pp3g655suo1h6td.apps.googleusercontent.com"},
+  {
+    calendarId: "984258349234-4u1n922i23rh3t471pp3g655suo1h6td.apps.googleusercontent.com",
+    color: "#98dace" //optional, specify color of calendar 2 events
+  }
+];
+let styles = {
+    //you can use object styles (no import required)
+    calendar: {
+      borderWidth: "50px", //make outer edge of calendar thicker
+      borderColor: "#98dace"
+    },
+    
+    //you can also use emotion's string styles
+    today: css`
+     /* highlight today by making the text red and giving it a red border */
+      color: black;
+      border: 1px solid blue;
+    `
+  }
+
 
 class Events extends React.Component{
 
     render(){
         return(
 
-            <Calendar
-                events={events}
-            />
+            <div>
+            <Calendar apiKey={API_KEY} calendars={calendars} styles={styles} />
+          </div>
     //         <div class="blog color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky">
     // <div id="Wrapper">
     //     <div id="Header_wrapper">
