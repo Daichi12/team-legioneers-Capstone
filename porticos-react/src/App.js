@@ -1,17 +1,51 @@
 //import logo from './logo.svg';
-import React from 'react';
+import React, { Fragment, useState, useEffect } from "react";
 import './App.css';
 import Home from './Pages/Home';
 import Menu from './Pages/Menu';
 import AboutUs from './Pages/AboutUs';
 import Events from './Pages/Events';
 import Contact from './Pages/Contact';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
+import { toast } from "react-toastify";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
+import Dashboard from "./Pages/Dashboard";
+
+toast.configure();
 
 function App() {
-  //document.body.classList.add("home page template-slider color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky");
+
+  const checkAuthenticated = async () => {
+    try {
+      const res = await fetch("http://localhost:3000/authentication/verify", {
+        method: "POST",
+        headers: { jwt_token: localStorage.token }
+      });
+
+      const parseRes = await res.json();
+
+      parseRes === true ? setIsAuthenticated(true) : setIsAuthenticated(false);
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
+
+  useEffect(() => {
+    checkAuthenticated();
+  }, []);
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const setAuth = boolean => {
+    setIsAuthenticated(boolean);
+  };
+
+
   return (
+    
     <Router>
+   
         <Routes> 
           <Route path="" element={<Home/>} />
           <Route path="/Home" element={<Home/>} />
@@ -19,8 +53,46 @@ function App() {
           <Route path="/AboutUs" element={<AboutUs/>} />
           <Route path="/Events" element={<Events/>} />
           <Route path="/Contact" element={<Contact/>} />
+          
+          
+          
+          <Route path="/login" 
+          render={props =>
+            isAuthenticated ? (
+              <Dashboard {...props} setAuth={setAuth} />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+          element={<Dashboard/>} />
+         
+         
+          <Route path="/dashboard" 
+          render={props =>
+            isAuthenticated ? (
+              <Dashboard {...props} setAuth={setAuth} />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+          element={<Login/>} />
+
+
+          <Route path="/register" 
+           render={props =>
+            !isAuthenticated ? (
+              <Register {...props} setAuth={setAuth} />
+            ) : (
+              <Navigate to="/dashboard" />
+            )
+          }
+          element={<Dashboard/>} />
+
+          
         </Routes>
-    </Router>
+
+</Router>
+
   );
 }
 export default App;

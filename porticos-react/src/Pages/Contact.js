@@ -3,19 +3,16 @@ import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 
 
-// export default GoogleApiWrapper({
-//   apiKey: 'AIzaSyAXkkWkxcA5waXDYJsHqatO1FO4dMA4KLI'
-// })(MapContainer);
 
 
-const mapStyles = {
-  width: '110%',
-  height: '867%',
-};
+// const mapStyles = {
+//   width: '110%',
+//   height: '867%',
+// };
 
 
 
-export class Contact extends React.Component{
+class Contact extends React.Component{
 
     render(){
         return(
@@ -118,9 +115,9 @@ export class Contact extends React.Component{
                             </ul> 
                             <div class="tp-static-layers">
                                 <div class="tp-caption   tp-resizeme tp-static-layer" id="slider-1-layer-3" data-x="center" data-hoffset="" data-y="center" data-voffset="20" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-startslide="0" data-endslide="2" data-frames='[{"delay":260,"speed":700,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style={{"zIndex":"6","whiteSpace":"nowrap","fontSize":"48px","lineHeight":"58px","fontWeight":"400","color":"#0f13fcec","fontFamily":"Arial"}}>
-                                    <h1 style={{"font-size": "90px", opacity: 1, color:"#98dace"}}> 
+                                    <p2 style={{"font-size": "90px", opacity: 1, color:"#98dace"}}> 
                                         Join Us For A Unique Cultural Experience
-                                     </h1>
+                                     </p2>
                                 </div>
                             </div>
                             <div class="tp-bannertimer tp-bottom" style={{"visibility":"hidden !important"}}></div>             
@@ -207,14 +204,24 @@ export class Contact extends React.Component{
                             <div className="mcb-wrap-inner">
                               <div className="column mcb-column one column_map ">
                                 <div className="column mcb-column one align-right column_column">
-                                <Map
+                                <div className="google-map-wrapper">
+                                    <div
+                                      className="google-map"
+                                      id="google-map-area-58aa3de9b18db"
+                                      style={{ width: 530, height: 530 }}
+                                    >
+                                      &nbsp;
+                                    </div>
+                                  </div>
+                                  {/* Map code using APIKEY, wont work without billing account. */}
+                                {/* <Map
           google={this.props.google}
           zoom={3}
           style={mapStyles}
           initialCenter={{ lat: 47.444, lng: -122.176}}
         >
           <Marker position={{ lat: 48.00, lng: -122.00}} />
-        </Map>
+        </Map> */ }
                                 </div>
                               </div>
                             </div>
@@ -389,7 +396,7 @@ export class Contact extends React.Component{
                                   //   __html:
                                   // }}
                                 />
-                                <h1>Reservation Switch </h1>
+                                <p2>Reservation Switch </p2>
                                 <p>Toggle switch to change Reservations Type</p>
                                 <br />
                                 <br />
@@ -495,6 +502,8 @@ export class Contact extends React.Component{
             )
         }
     }
-    export default GoogleApiWrapper({
-        apiKey: 'AIzaSyAXkkWkxcA5waXDYJsHqatO1FO4dMA4KLI'
-      })(Contact);
+
+    export default Contact
+    // export default GoogleApiWrapper({
+    //     apiKey: 'AIzaSyAXkkWkxcA5waXDYJsHqatO1FO4dMA4KLI'
+    //   })(Contact);
