@@ -2,9 +2,6 @@ import React from "react";
 import Calendar from "@ericz1803/react-google-calendar";
 import { css } from "@emotion/react";
 
-
-
-
 const API_KEY = "AIzaSyAXkkWkxcA5waXDYJsHqatO1FO4dMA4KLI";
 let calendars = [
   {calendarId: "porticos1606@gmail.com"},
@@ -85,13 +82,13 @@ class Events extends React.Component{
                         <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style={{"display":"none", "data-version":"5.3.1.5"}}>
                             <ul>
                                 <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                                    <img src="assets/content/restaurant2/images/home_restaurant2_slider_slide1.png" alt="" title="home_restaurant2_slider_slide1" width="1920" height="820" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
+                                    <img src="assets/content/restaurant2/images/home_restaurant2_about_slider10.jpg" alt="" title="home_restaurant2_slider_slide10" width="1920" height="820" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
                                 </li>
                                 <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                                    <img src="assets/content/restaurant2/images/home_restaurant2_slider_slide2.jpg" alt="" title="home_restaurant2_slider_slide2" width="1920" height="862" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
+                                    <img src="assets/content/restaurant2/images/home_restaurant2_about_slider11.jpg" alt="" title="home_restaurant2_slider_slide11" width="1920" height="862" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
                                 </li>
                                 <li data-index="rs-3" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                                    <img src="assets/content/restaurant2/images/home_restaurant2_slider_slide3.jpg" alt="" title="home_restaurant2_slider_slide3" width="1920" height="862" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
+                                    <img src="assets/content/restaurant2/images/home_restaurant2_about_slider12.jpg" alt="" title="home_restaurant2_slider_slide12" width="1920" height="862" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
                                 </li>
                             </ul>
                             <div class="tp-static-layers">
