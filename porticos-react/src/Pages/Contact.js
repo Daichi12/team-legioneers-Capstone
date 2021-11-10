@@ -37,8 +37,6 @@ class Contact extends React.Component{
   // }
 
   render(){
-    const isValidName = this.state.name.length > 3;
-  const isValidEmail = this.state.email.length > 3;
         return(
             <div className="page color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky">
             <div id="Wrapper">
@@ -400,6 +398,7 @@ class Contact extends React.Component{
             )
         }
 
+  // Table Reservation Form Listeners //
   onNameChange(event) {
     this.setState({name: event.target.value})
   }
@@ -408,12 +407,7 @@ class Contact extends React.Component{
   }
   onTimeChange(event) {
     this.setState({time: event.target.value})}
-  /*onStartTimeChange(event) {
-    this.setState({starttime: event.target.value})
-  }
-  onEndTimeChange(event) {
-    this.setState({endtime: event.target.value})
-  }*/
+
   onGroupChange(event) {
     this.setState({group: event.target.value})
   }
@@ -421,9 +415,17 @@ class Contact extends React.Component{
     this.setState({message: event.target.value})
   }
 
+  // Venue Reservation Form Listeners //
+  /*onStartTimeChange(event) {
+    this.setState({starttime: event.target.value})
+  }
+  onEndTimeChange(event) {
+    this.setState({endtime: event.target.value})
+  }*/
+
   handleSubmit( event ) {
     event.preventDefault();
     alert(JSON.stringify(this.state));
   }
 }
-    export default Contact
+  export default Contact
