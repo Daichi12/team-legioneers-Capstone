@@ -85,22 +85,22 @@ class AboutUs extends React.Component{
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column two-third column_column ">
                                             <div class="column_attr clearfix" style={{"padding":"0 7% 0 0"}}>
-                                                <h6 style={{"letterSpacing":"4px"}}>CURABITUR TEMPOR</h6>
-                                                <h3>Donec erat eu odio imperdiet urna lobortis</h3>
+                                                <h6 style={{"letterSpacing":"4px"}}>Porticos1606</h6>
+                                                <h4>PÓRTICOS 1606 is a restaurant with a bar that offers customers a unique and authentic experience in a cozy and quiet environment. Here, you can enjoy our land's flavor and typical seasoning through a Gallery of Caribbean Fusions to your delight and our satisfaction. We are history and a sense of belonging. We are San Germán.</h4>
                                                 <hr class="no_line" style={{"margin":"0 auto 20px"}}/>
-                                                <h6> Morbi laoreet, lacus egestas at, bibendum nulla. Nullam risus et ultrices posuere cubilia Curae, Nullam aliquet, arcu sed ante ligula nulla, egestas at, venenatis interdum, diam in faucibus quis, convallis justo. Donec blandit, quam. Ut id elementum vitae, sollicitudin justo. Pellentesque fringilla eget, condimentum justo ac lacus. Nulla nec odio et ultrices posuere sit amet felis adipiscing dictum enim. Suspendisse ut vehicula faucibus, justo iaculis odio, in faucibus orci fermentum lobortis laoreet ultricies accumsan.</h6>
+                                                <h6> </h6>
                                             </div>
                                         </div>
                                         <div class="column mcb-column one-third column_column ">
                                             <div class="column_attr clearfix">
-                                                <h6 style={{"letterSpacing":"4px"}}>NULLAM JUSTO</h6>
+                                                <h6 style={{"letterSpacing":"4px"}}>Placeholder title</h6>
                                                 <p>
-                                                    Lorem ipsum dolor sit amet mauris non sem. In urna. Sed sed molestie sagittis. Nullam viverra justo.
+                                                    Porticos placeholdertext
                                                 </p>
                                                 <hr class="no_line" style={{"margin":"0 auto 20px"}}/>
-                                                <h6 style={{"letterSpacing":"4px"}}>SODALES</h6>
+                                                <h6 style={{"letterSpacing":"4px"}}>Placeholder Title</h6>
                                                 <p>
-                                                    Quisque justo augue commodo est congue porta, erat volutpat. Curabitur enim. Duis vulputate quam. Proin scelerisque rhoncus eu, fringilla enim. Quisque at nunc pede placerat elementum congue, aliquet elit odio, fermentum facilisis. Nulla vehicula neque. Praesent ante.
+                                                    Placeholdertext
                                                 </p>
                                             </div>
                                         </div>
@@ -120,7 +120,7 @@ class AboutUs extends React.Component{
                                                 </div>
                                                 <hr class="no_line" style={{"margin":"0 auto 40px"}}/>
                                                 <p>
-                                                    <h5> Fusce eu orci. Integer non diam. Vestibulum nibh. Duis ornare elementum dui. Pellentesque tellus. Praesent tortor. In euismod orci orci, blandit quam nulla, faucibus orci luctus laoreet. Vestibulum non nisl sapien dui lectus. </h5>
+                                                    <h5> Placeholder </h5>
                                                 </p>
                                             </div>
                                         </div>
@@ -154,11 +154,11 @@ class AboutUs extends React.Component{
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_column">
                                             <div class="column_attr clearfix align_center">
-                                                <h3>Morbi accumsan
+                                                <h3>COVID19
 													<br />
-													convallis</h3>
+													Regulations</h3>
                                                 <hr class="no_line" style={{"margin":"0 auto 15px"}}/>
-                                                <h5>Donec nec nunc ut lacus egestas dignissim, sapien mauris sed eros quis justo. Donec non ligula enim molestie a, tortor. Sed vehicula sed, pretium wisi. Sed eros. Mauris ut tortor ante libero posuere eu, semper facilisis felis interdum eu rhoncus eget enim.</h5>
+                                                <h5>For the benefit, safety and well-being of our guests and associates of PORTICOS 1606, we have made a moderate accommodation according to the Self-certification already obtained and the protocol of PROSHA and the "National Restaurant Association", thus complying with the requirements of distance, cleanliness and a safe service, but with a unique and authentic experience. </h5>
                                                 <hr class="no_line" style={{"margin":"0 auto 20px"}}/>
                                                 <a class="button  button_size_2 button_js" href="contact.html"><span class="button_label">Contact us</span></a>
                                             </div>

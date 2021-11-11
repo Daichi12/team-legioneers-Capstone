@@ -12,6 +12,9 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Dashboard from "./Pages/Dashboard";
 
+
+
+
 toast.configure();
 
 function App() {
