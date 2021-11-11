@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+//import '../Form.css';
 class Contact extends React.Component{
 
   constructor(props) {
@@ -260,7 +261,6 @@ class Contact extends React.Component{
                               marginTop: 220
                             }}
                           >
-
                             <div className="mcb-wrap-inner">
                               <div className="column mcb-column one column_column">
                                 <div className="column_attr clearfix align_center">
@@ -286,8 +286,6 @@ class Contact extends React.Component{
                                    <div className="form-group">
                                       <label htmlFor="time"></label>
                                       <input type="datetime-local" placeholder="Time of Arrival" className="form-control" id="time" value={this.state.time} onChange={this.onTimeChange.bind(this)} /> </div>
-
-                                    
                                     <div className="form-group">
                                       <label htmlFor="message"></label>
                                       <textarea className="form-control"  placeholder="Additional message" rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} required />
@@ -295,8 +293,7 @@ class Contact extends React.Component{
                                     <br></br>
                                     <button type="submit" className="btn btn-primary">Submit</button>
                                   </form>
-                                  </div>
-                                  
+                                  </div>  
                                 </div>
                               </div>
                             </div>
