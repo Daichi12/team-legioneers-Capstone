@@ -59,9 +59,9 @@ function App() {
           <Route path="/login" 
           render={props =>
             isAuthenticated ? (
-              <Dashboard {...props} setAuth={setAuth} />
+              <Login {...props} setAuth={setAuth} />
             ) : (
-              <Navigate to="/login" />
+              <Navigate to="/dashboard" />
             )
           }
           element={<Dashboard/>} />
