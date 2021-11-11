@@ -1,7 +1,82 @@
+<<<<<<< Updated upstream
 import React, {Component} from 'react';
 class Contact extends React.Component{
 
     render(){
+=======
+import React from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom'
+//import '../Form.css';
+//import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
+
+// const mapStyles = {
+//   width: '110%',
+//   height: '867%',
+// };
+
+class Contact extends React.Component{
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      phone: '',
+      group: '',
+      time: '',
+      message: '',
+      Venuename:'',
+      Venuephone:'',
+      Venueemail:'',
+      starttime:'',
+      endtime:'',
+      Venuegroup:'',
+      Venuemessage:''
+
+    }
+   
+  }
+
+  // handleSubmit(e){
+  //   e.preventDefault();
+  //   axios({
+  //     method: "POST",
+  //     url:"http://localhost:3002/send",
+  //     data:  this.state
+  //   }).then((response)=>{
+  //     if (response.data.status === 'success') {
+  //       alert("Message Sent.");
+  //       this.resetForm()
+
+  // .append('<div class="success"><h4>Table Reservation Successful!</h4><br><p>See you soon!<strong>'+decodeURIComponent(name)+'</strong>! Thank you for your reservation! </p></div>');
+
+  //     } else if (response.data.status === 'fail') {
+  //       alert("Message failed to send.")
+  //     }
+  //   })
+  // }
+
+  // resetForm(){
+  //   this.setState({name: ‘’, email: ‘’, message: ‘’})
+  // }
+
+  render(){
+    
+   function sayHello() {
+    var div = document.getElementById('contactWrapper');
+    var div2 = document.getElementById('contactWrapper2');
+    if (div2.style.display !== 'none') {
+        div2.style.display = 'none';
+        div.style.display = 'block';
+    }
+    else {
+        div2.style.display = 'block';
+        div.style.display = 'none';
+
+    }
+}
+
+>>>>>>> Stashed changes
         return(
             <div className="page color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky">
             <div id="Wrapper">
@@ -220,20 +295,30 @@ class Contact extends React.Component{
                           <div
                             className="wrap mcb-wrap two-third  valign-top clearfix"
                             style={{
+<<<<<<< Updated upstream
                               padding: "30px 60px 20px",
+=======
+                              padding: "1px 50px 1px",
+>>>>>>> Stashed changes
                               backgroundColor: "#98dace",
-                              marginTop: 220
+                              marginTop: 220,
+                              height: "525px",
+                     
+                            
                             }}
                           >
+
                             <div className="mcb-wrap-inner">
                               <div className="column mcb-column one column_column">
                                 <div className="column_attr clearfix align_center">
-                                  <h2>Make a Reservation</h2>
+                             
                                   <hr
                                     className="no_line"
-                                    style={{ margin: "0 auto 25px" }}
+                                    style={{ margin: "0 auto"}}
                                   />
+                                    <h2 id="text1" style={{display:'none', position:'absolute', left:'75px', top:'230px'}}>Succesful Table Reservation</h2>
                                   <div id="contactWrapper">
+<<<<<<< Updated upstream
                                     <h2>Table Reservation</h2>
                                     <form id="contactform">
                                       {/* One Second (1/2) Column */}
@@ -359,6 +444,108 @@ class Contact extends React.Component{
                                         />
                                       </div>
                                     </form>
+=======
+                                  <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+                                  <h2 style={{marginBottom:"40px"}}>Table Reservation</h2>
+                                
+                                    <div className="form-group">
+                                      <label htmlFor="name"></label>
+                                      <input type="text" placeholder="Enter your name" style={{ width: "200px", textAlign: "center",  borderColor: "black",borderWidth: "2px", float:"left"
+        }} className="form-control" id="name" value={this.state.name} onChange={this.onNameChange.bind(this)} required/>
+                                    </div>
+                                    <div className="form-group">
+                                      <label htmlFor="phone"></label>
+                                      <input type="tel" pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}" style={{borderColor: "black",borderWidth: "2px",width: "200px", textAlign: "center", float:"left", marginLeft:"11.7px"
+        }} title="Please enter a valid phone number" placeholder="Enter your phone number" className="form-control" id="phone" aria-describedby="emailHelp" value={this.state.phone} onChange={this.onPhoneChange.bind(this)} required/>
+                                    </div>
+                                    
+                                   <div className="form-group">
+                                      <label htmlFor="time"></label>
+                                      <input type="datetime-local" style={{ height:"37px",width: "192px", textAlign: "center", borderColor: "black",borderWidth: "2px", float:"left", marginBottom:"11.7px", marginLeft:"11.7px",float:"left", marginLeft:"11.7px"
+        }} placeholder="Time of Arrival" className="form-control" id="time"  value={this.state.time} onChange={this.onTimeChange.bind(this)} /> </div>
+
+                                     <div className="form-group">
+                                      <label htmlFor="group"></label>
+                                      <input type="number"  style={{ height:"41.5px", width: "110px",  borderColor: "black",borderWidth: "2px",marginBottom:"11.7px", margin:"0 auto"}} min="1" max="1000" required value=">0" placeholder="Group size"className="form-control" id="group" value={this.state.group} onChange={this.onGroupChange.bind(this)} />
+                                    </div>
+                                    
+                                    <div className="form-group">
+                                      <label htmlFor="message"></label>
+                                      <textarea className="form-control"  placeholder="Additional message" style={{height:"192.3px",margin: "auto", marginleft: "auto", marginright: "auto", borderColor: "black",borderWidth: "2px"
+        }} rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} required />
+                                    </div>
+                                    <br></br>
+                                  
+                                    <button style={{color:'white',cursor:"pointer",width:"625px",position:'absolute', left:'55px', top:'460px'}} type="button" id='stuff' onClick={sayHello}>Venue Reservation</button>;
+                                    <button style={{cursor:"pointer",width:"625px",position:'absolute', left:'55px', top:'410px'}} type="submit" className="btn btn-primary">Submit</button>
+                                  </form>
+                                  </div>
+                                </div>
+                              </div>
+                              </div>
+
+                              <div className="mcb-wrap-inner">
+                              <div className="column mcb-column one column_column">
+                                <div className="column_attr clearfix align_center">
+                                  
+                                  <hr
+                                    className="no_line"
+                                    style={{ margin: "0 auto -40px" }}
+                                  />
+                                   <h2 id="text2" style={{display:'none', position:'absolute', left:'65px', top:'230px'}}>Succesful Venue Reservation</h2>
+                                   <Link to="/Payment" type="button" id="link" className="btn btn-primary" style={{ backgroundColor: "gold", color: "blue", borderColor: "black" ,border: '1px solid rgba(0,0,0,1)',display: "none", display:'none', position:'absolute', left:'65px', top:'290px',verticalAlign:"middle" ,shape:'rect',height:"50px", width:"700px",position:'absolute', left:'15px', top:'350px', backgroundColor: "gold", color: "blue", borderColor: "black" ,border: '1px solid rgba(0,0,0,1)',fontSize:"20px", textAlign:"center" }}> PayPal Venue Payment</Link>
+                            
+                                  <div id="contactWrapper2" style={{ display:"none",margin:"auto"}}>
+                                  <form id="contact-form" onSubmit={this.VenuehandleSubmit.bind(this)} method="POST">
+                                  <h2 style={{marginBottom:"40px"}}>Venue Reservation</h2>
+                                  <h2 id="text2" style={{fontSize:'40', display:'none'}}>WHAT IS UP</h2>
+                                  <p style={{color:'black', position:'absolute', left:'335px', top:'160px'}}>Start Time</p>
+                                  <p style={{color:'black', position:'absolute', left:'545px', top:'160px'}}>End Time</p>
+                                    <div className="form-group">
+                                      <label htmlFor="name"></label>
+                                      <input type="text" placeholder="Enter your name" style={{marginLeft:"0px", width: "200px", textAlign: "center",  borderColor: "black",borderWidth: "2px", float:"left"
+        }} className="form-control" id="name" value={this.state.Venuename} onChange={this.onVenueNameChange.bind(this)} required/>
+                                    </div>
+                                    <div className="form-group">
+                                      <label htmlFor="phone"></label>
+                                      <input type="tel" pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}" style={{borderColor: "black",borderWidth: "2px",width: "200px", textAlign: "center", float:"left", marginLeft:"11.7px", 
+        }} title="Please enter a valid phone number" placeholder="Enter your phone number" className="form-control" id="phone" aria-describedby="emailHelp" value={this.state.Venuephone} onChange={this.onVenuePhoneChange.bind(this)} required/>
+                                    </div>
+                                    <div className="form-group">
+                                      <label htmlFor="email"></label>
+                                      <input type="email" pattern="+@+" style={{borderColor: "black",borderWidth: "2px",width: "190px", textAlign: "center", float:"left", marginLeft:"11.7px", marginBottom:"45px"
+        }} title="Please enter a valid email" placeholder="Enter your email" className="form-control" id="email" aria-describedby="emailHelp" value={this.state.Venueemail} onChange={this.onVenueEmailChange.bind(this)} required/>
+                                    </div>
+                                    <div className="form-group">
+                                      <label htmlFor="group"></label>
+                                      <input type="number" placeholder="Group size" min="1" max="1000" required value=">0" style={{ height:"41.5px", width: "110px", textAlign: "center", borderColor: "black",borderWidth: "2px",  float:"left", marginLeft:"45px"
+        }}className="form-control" id="group" value={this.state.Venuegroup} onChange={this.onVenueGroupChange.bind(this)} />
+                                    </div>
+                                   <div className="form-group">
+                                      <label htmlFor="time"></label>
+                                      <input type="datetime-local" style={{ height:"37px",width: "195px", textAlign: "center", borderColor: "black",borderWidth: "2px", float:"left", marginBottom:"11.7px", marginLeft:"57px"
+        }} placeholder="Time of Arrival" className="form-control" id="time" value={this.state.starttime} onChange={this.onStartTimeChange.bind(this)} /> </div>
+
+<div className="form-group">
+                                      <label htmlFor="time"></label>
+                                      <input type="datetime-local" style={{ height:"37px",width: "190px", textAlign: "center", borderColor: "black",borderWidth: "2px", float:"left", marginBottom:"11.7px", marginLeft:"11.7px"
+        }} placeholder="Time of Departure" className="form-control" id="time" value={this.state.endtime} onChange={this.onEndTimeChange.bind(this)} /> </div>
+
+
+                                    
+                                    <div className="form-group">
+                                      <label htmlFor="message"></label>
+                                      <textarea className="form-control"  placeholder="Additional message" style={{ width:"800px",height:"135px", margin: "auto", marginleft: "auto", marginright: "auto", borderColor: "black",borderWidth: "2px"
+        }} rows="5" id="message" value={this.state.Venuemessage} onChange={this.onVenueMessageChange.bind(this)} required />
+                                    </div>
+                                    <br></br>
+  
+                                    
+                                    
+                                    <button style={{backgroundcolor:'#4CAF50',color:'white',cursor:"pointer",width:"625px",position:'absolute', left:'55px', top:'460px'}} type="button" id='stuff' onClick={sayHello}>Table Reservation</button>;
+                                    <button style={{cursor:"pointer",width:"625px",position:'absolute', left:'55px', top:'410px'}} type="submit" className="btn btn-primary">Submit</button>
+                                  </form>
+>>>>>>> Stashed changes
                                   </div>
                                 </div>
                                 <title>toggle switch</title>
@@ -383,6 +570,7 @@ class Contact extends React.Component{
                   </div>
                 </div>
               </div>
+
               <footer id="Footer" className="clearfix">
                 <div className="widgets_wrapper" style={{ padding: "120px 0 105px" }}>
                   <div className="container">
@@ -473,5 +661,75 @@ class Contact extends React.Component{
           </div>
             )
         }
+<<<<<<< Updated upstream
     }
     export default Contact
+=======
+
+  // Table Reservation Form Listeners //
+  onNameChange(event) {
+    this.setState({name: event.target.value})
+  }
+  onEmailChange(event) {
+    this.setState({email: event.target.value})
+  }
+  onTimeChange(event) {
+    this.setState({time: event.target.value})}
+
+  onGroupChange(event) {
+    this.setState({group: event.target.value})
+  }
+  onMessageChange(event) {
+    this.setState({message: event.target.value})
+  }
+
+  onVenueNameChange(event) {
+    this.setState({Venuename: event.target.value})
+  }
+  onVenuePhoneChange(event) {
+    this.setState({Venuephone: event.target.value})
+  }
+    onVenueEmailChange(event) {
+      this.setState({Venueemail: event.target.value})
+    }
+    
+  onStartTimeChange(event) {
+    this.setState({starttime: event.target.value})
+  }
+  onEndTimeChange(event) {
+    this.setState({endtime: event.target.value})
+  }
+  onVenueGroupChange(event) {
+    this.setState({Venuegroup: event.target.value})
+  }
+  onVenueMessageChange(event) {
+    this.setState({Venuemessage: event.target.value})
+  }
+  VenuehandleSubmit( event ) {
+    var div2 = document.getElementById('contactWrapper2');
+    var text2= document.getElementById('text2');
+    var link= document.getElementById('link');
+    div2.style.display='none';
+    text2.style.display='block';
+    link.style.display='block';
+    event.preventDefault();
+    alert(JSON.stringify(this.state));
+    
+  }
+
+  handleSubmit( event ) {
+    var div = document.getElementById('contactWrapper');
+    var text1= document.getElementById('text1');
+    div.style.display='none';
+    text1.style.display='block';
+    event.preventDefault();
+    alert(JSON.stringify(this.state));
+    
+  }
+}
+  export default Contact
+
+    // // export default GoogleApiWrapper({
+    // //     apiKey: 'AIzaSyAXkkWkxcA5waXDYJsHqatO1FO4dMA4KLI'
+    // //   })(Contact);
+>>>>>>> Stashed changes
