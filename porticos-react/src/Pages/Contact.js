@@ -3,16 +3,10 @@ import axios from 'axios';
 //import '../Form.css';
 //import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
-
-
-
-
 // const mapStyles = {
 //   width: '110%',
 //   height: '867%',
 // };
-
-
 
 class Contact extends React.Component{
 
@@ -454,7 +448,7 @@ class Contact extends React.Component{
     alert(JSON.stringify(this.state));
   }
 }
-    // export default Contact
+export default Contact
     // // export default GoogleApiWrapper({
     // //     apiKey: 'AIzaSyAXkkWkxcA5waXDYJsHqatO1FO4dMA4KLI'
     // //   })(Contact);
