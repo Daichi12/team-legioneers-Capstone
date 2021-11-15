@@ -11,6 +11,7 @@ import { toast } from "react-toastify";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Dashboard from "./Pages/Dashboard";
+import Payment from "./Pages/Payment";
 
 
 
@@ -56,8 +57,8 @@ function App() {
           <Route path="/AboutUs" element={<AboutUs/>} />
           <Route path="/Events" element={<Events/>} />
           <Route path="/Contact" element={<Contact/>} />
-          
-          
+          <Route path="/Payment" element={<Payment/>} />
+        
           
           <Route path="/login" 
           render={props =>
