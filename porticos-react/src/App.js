@@ -12,15 +12,18 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Dashboard from "./Pages/Dashboard";
 
-toast.configure();
+//toast.configure();
 
 function App() {
-
-  const checkAuthenticated = async () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+   const setAuth = (boolean) => {
+     setIsAuthenticated(boolean);
+   };
+  async function checkAuthenticated(){
     try {
-      const res = await fetch("http://localhost:3000/authentication/verify", {
-        method: "POST",
-        headers: { jwt_token: localStorage.token }
+      const res = await fetch("http://localhost:5000/account/is_verified", {
+        method: "GET",
+        headers: {token: localStorage.token }
       });
 
       const parseRes = await res.json();
@@ -35,17 +38,13 @@ function App() {
     checkAuthenticated();
   }, []);
 
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  const setAuth = boolean => {
-    setIsAuthenticated(boolean);
-  };
+  
+  
 
 
   return (
-    
-    <Router>
-   
+   <Fragment>
+   <Router>
         <Routes> 
           <Route path="" element={<Home/>} />
           <Route path="/Home" element={<Home/>} />
@@ -56,43 +55,29 @@ function App() {
           
           
           
-          <Route path="/login" 
-          render={props =>
-            isAuthenticated ? (
-              <Dashboard {...props} setAuth={setAuth} />
-            ) : (
-              <Navigate to="/login" />
-            )
-          }
-          element={<Dashboard/>} />
+
+          <Route exact path="/login" 
+          element={!isAuthenticated?
+          (<Login setAuth={setAuth}/>):
+          (<Navigate to="/dashboard"/>) } />
          
          
-          <Route path="/dashboard" 
-          render={props =>
-            isAuthenticated ? (
-              <Dashboard {...props} setAuth={setAuth} />
-            ) : (
-              <Navigate to="/login" />
-            )
-          }
-          element={<Login/>} />
+          <Route exact path="/dashboard" 
+          element={isAuthenticated?
+          (<Dashboard setAuth={setAuth}/>):
+          (<Navigate to="/login"/>)} />
 
 
-          <Route path="/register" 
-           render={props =>
-            !isAuthenticated ? (
-              <Register {...props} setAuth={setAuth} />
-            ) : (
-              <Navigate to="/dashboard" />
-            )
-          }
-          element={<Dashboard/>} />
+          <Route exact path="/register" 
+          element={!isAuthenticated?
+          (<Register setAuth={setAuth}/>):
+          (<Navigate to="/dashboard"/>)} />
 
           
         </Routes>
 
 </Router>
-
+</Fragment>
   );
 }
 export default App;

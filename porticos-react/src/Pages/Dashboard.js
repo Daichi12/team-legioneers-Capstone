@@ -1,29 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
-const Dashboard = ({ setAuth }) => {
+const Dashboard = ( {setAuth} ) => {
   const [name, setName] = useState("");
 
   const getProfile = async () => {
     try {
-      const res = await fetch("http://localhost:3000/dashboard/", {
-        method: "POST",
-        headers: { jwt_token: localStorage.token }
+      const res = await fetch("http://localhost:5000/dashboard/", {
+        method: "GET",
+        headers: { token: localStorage.token }
       });
 
       const parseData = await res.json();
-      setName(parseData.user_name);
+      setName(parseData.Employee_UserName);
     } catch (err) {
       console.error(err.message);
     }
   };
 
-  const logout = async e => {
+  const logout = (e) => {
     e.preventDefault();
     try {
       localStorage.removeItem("token");
       setAuth(false);
-      toast.success("Logout successfully");
+      //toast.success("Logout successfully");
     } catch (err) {
       console.error(err.message);
     }
