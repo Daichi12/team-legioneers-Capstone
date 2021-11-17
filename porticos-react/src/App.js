@@ -43,7 +43,7 @@ function App() {
 
 
   return (
-   <Fragment>
+   
    <Router>
         <Routes> 
           <Route path="" element={<Home/>} />
@@ -77,7 +77,6 @@ function App() {
         </Routes>
 
 </Router>
-</Fragment>
   );
 }
 export default App;
