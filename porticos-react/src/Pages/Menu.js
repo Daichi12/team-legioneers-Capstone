@@ -1,7 +1,9 @@
 import React from 'react';
-class Menu extends React.Component{
 
-    render(){
+
+const Menu = ({ items }) => {
+
+   
         return(
           <>
     <div className="page color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky">
@@ -112,8 +114,28 @@ class Menu extends React.Component{
 
                                 </div>
                             </div>
-                        </div>
-              <div
+                        </div> 
+
+
+                        <div className="section-center">
+      {items.map((menuItem) => {
+        const { id, title, img, price, desc } = menuItem
+        return (
+          <article key={id} className="menu-item">
+            <img src={img} alt={title} className="photo" />
+            <div className="item-info">
+              <header>
+                <h4>{title}</h4>
+                <h4 className="price">N{price}</h4>
+              </header>
+              <p className="item-text">{desc}</p>
+            </div>
+          </article>
+        )
+      })}
+    </div>
+  
+              {/* <div
                 className="section mcb-section"
                 style={{
                   paddingTop: 25,
@@ -783,13 +805,13 @@ class Menu extends React.Component{
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div> 
   <footer id="Footer" className="clearfix">
     <div className="widgets_wrapper" style={{ padding: "120px 0 105px" }}>
       <div className="container">
@@ -881,6 +903,6 @@ class Menu extends React.Component{
         )
 
     }
-}
+
 
 export default Menu
