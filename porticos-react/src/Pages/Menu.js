@@ -90,7 +90,7 @@ const Menu = ({ items }) => {
           <div className="sections_group">
             <div className="entry-content">
             <div class="mfn-main-slider" id="mfn-rev-slider">
-                    <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery" style={{"margin":"0px auto","backgroundColor":"transparent","padding":"0px","marginTop":"0px","marginBottom":"0px"}}>
+                    <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery" style={{"margin":"0px auto","backgroundColor":"transparent","padding":"0px","marginTop":"0px","marginBottom":"150px"}}>
                     <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style={{"display":"none", "data-version=": "5.3.1.5"}}>
                     <ul>
                                 <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -116,7 +116,6 @@ const Menu = ({ items }) => {
                             </div>
                         </div> 
 
-
                         <div className="section-center">
       {items.map((menuItem) => {
         const { id, title, img, price, desc } = menuItem
@@ -126,7 +125,7 @@ const Menu = ({ items }) => {
             <div className="item-info">
               <header>
                 <h4>{title}</h4>
-                <h4 className="price">N{price}</h4>
+                <h4 className="price">{price}</h4>
               </header>
               <p className="item-text">{desc}</p>
             </div>

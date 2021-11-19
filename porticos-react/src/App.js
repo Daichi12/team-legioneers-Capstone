@@ -66,6 +66,7 @@ function App() {
           <Route path="/Menu" className="Menu" 
         
           element={<> <Menu items={menuItems}/> 
+          
           <MenuCategories categories={categories} filterItems={filterItems}/> </> } />
           
         
