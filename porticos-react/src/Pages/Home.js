@@ -98,15 +98,15 @@ class Home extends React.Component{
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_column  column-margin-20px">
                                             <div class="column_attr clearfix">
-                                                <h3>We create
+                                                <h3>El Sabor
 													<br />
-													flavour</h3>
+													Del Caribe</h3>
                                                 <hr class="no_line" style={{"margin": "0 auto 15px"}}/>
                                                 <h5>Disfruta de la sazón típica de nuestra tierra con una diversidad de platos fusionados.  </h5>
                                             </div>
                                         </div>
                                         <div class="column mcb-column one column_button">
-                                            <a class="button  button_size_2 button_theme button_js" href="content/restaurant2/restaurant.html"><span class="button_label">ABOUT US</span></a>
+                                            <a class="button  button_size_2 button_theme button_js" href="/AboutUs"><span class="button_label">ABOUT US</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -151,7 +151,7 @@ class Home extends React.Component{
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_column ">
                                             <div class="column_attr clearfix">
-                                                <h2 style={{"color": "#fff"}}>Chef's Recommended</h2>
+                                                <h2 style={{"color": "#fff"}}>Chef's Recommendation</h2>
                                                 <hr class="no_line" style={{"margin":"0 auto 15px"}}/>
                                                 <h5 style={{"color": "#fff", position: "relative", "padding-right": "50px"}}>Dale que es tarde <span style={{position:"absolute", top: 0, right: 0}}>$38</span></h5>
                                                 <p style={{"color": "#fff"}}>

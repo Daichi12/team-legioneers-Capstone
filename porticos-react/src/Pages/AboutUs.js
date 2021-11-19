@@ -160,7 +160,7 @@ class AboutUs extends React.Component{
                                                 <hr class="no_line" style={{"margin":"0 auto 15px"}}/>
                                                 <h5>For the benefit, safety and well-being of our guests and associates of PORTICOS 1606, we have made a moderate accommodation according to the Self-certification already obtained and the protocol of PROSHA and the "National Restaurant Association", thus complying with the requirements of distance, cleanliness and a safe service, but with a unique and authentic experience. </h5>
                                                 <hr class="no_line" style={{"margin":"0 auto 20px"}}/>
-                                                <a class="button  button_size_2 button_js" href="contact.html"><span class="button_label">Contact us</span></a>
+                                                <a class="button  button_size_2 button_js" href="/Contact"><span class="button_label">Contact us</span></a>
                                             </div>
                                         </div>
                                     </div>
