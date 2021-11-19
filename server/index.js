@@ -5,10 +5,11 @@ const cors = require("cors");
 const pool = require("./db");
 const jwtAuth = require("./routes/jwtAuth");
 const authorization = require("./middleware/authorization");
+//var bodyParser = require('body-parser');
 //middleware
 app.use(cors());
 app.use(express.json());
-
+//app.use(bodyParser.json())
 //register and login routes
 app.use("/account", jwtAuth);
 
@@ -104,7 +105,7 @@ app.delete("/account/:id", async (req, res) => {
 app.post("/event_reservations", async (req, res)=> {
     try{
         const newEventReservation = await pool.query("INSERT INTO event_reservations (reservation_name, group_size, phone, email, event_start_time, event_end_time, notes) VALUES($1,$2,$3,$4,$5,$6,$7) RETURNING *", 
-        [req.body.Reservation_Name, req.body.Group_Size, req.body.Phone, req.body.Email, req.body.Event_Start_Time, req.body.Event_End_Time, req.body.Notes]);
+        [req.body.Venuename, req.body.Venuegroup, req.body.Venuephone, req.body.Venueemail, req.body.starttime, req.body.endtime, req.body.Venuemessage]);
     res.json(newEventReservation.rows[0]);
     res.status(200).json({'message':'Created Reservation'})
     } catch (err) {
@@ -148,7 +149,7 @@ app.put("/event_reservations/:id", async (req, res) => {
     const getEventReservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);   
     if(getEventReservation.rows.length){
         const updateEventReservation = await pool.query("UPDATE event_reservations SET (reservation_name, group_size, phone, email, event_start_time, event_end_time, notes) = ($1,$2,$3,$4,$5,$6,$7) WHERE reservation_id = $8",
-    [req.body.Reservation_Name, req.body.Group_Size, req.body.Phone, req.body.Email, req.body.Event_Start_Time, req.body.Event_End_Time, req.body.Notes, req.body.id]);
+    [req.body.Venuename, req.body.Venuegroup, req.body.Venuephone, req.body.Venueemail, req.body.starttime, req.body.endtime, req.body.Venuemessage, req.body.id]);
     res.status(200).json({'message':'Event Reservation was updated'}) 
     
         }
@@ -166,7 +167,7 @@ app.put("/event_reservations/reservation_name/:id", async (req, res) => {
     const getEventReservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);   
     if(getEventReservation.rows.length){
     const updateEventReservationName = await pool.query("UPDATE event_reservations SET reservation_name = $1 WHERE reservation_id = $2",
-    [req.body.Reservation_Name,req.body.id]);
+    [req.body.Venuename,req.body.id]);
     res.status(200).json({'message':'Event Reservation Name was updated'}) 
         }
         else{
@@ -181,7 +182,7 @@ app.put("/event_reservations/group_size/:id", async (req, res) => {
         const getEventReservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);   
     if(getEventReservation.rows.length){
         const updateEventGroupSize = await pool.query("UPDATE event_reservations SET group_size = $1 WHERE reservation_id = $2",
-        [req.body.Group_Size,req.body.id]);
+        [req.body.Venuegroup,req.body.id]);
     res.status(200).json({'message':'Event Reservation Group Size was updated'}) 
         }
         else{
@@ -196,7 +197,7 @@ app.put("/event_reservations/phone/:id", async (req, res) => {
         const getEventReservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);   
     if(getEventReservation.rows.length){
         const updateEventPhone = await pool.query("UPDATE event_reservations SET phone = $1 WHERE reservation_id = $2",
-    [req.body.Phone,req.body.id]);
+    [req.body.Venuephone,req.body.id]);
     res.status(200).json({'message':'Event Reservation Name was updated'}) 
         }
         else{
@@ -214,7 +215,7 @@ app.put("/event_reservations/email/:id", async (req, res) => {
         const getEventReservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);   
     if(getEventReservation.rows.length){
         const updateEventEmail = await pool.query("UPDATE event_reservations SET email = $1 WHERE reservation_id = $2",
-    [req.body.Email,req.body.id]);
+    [req.body.Venueemail,req.body.id]);
     res.status(200).json({'message':'Event Reservation Email was updated'}) 
         }
         else{
@@ -229,7 +230,7 @@ app.put("/event_reservations/event_start_time/:id", async (req, res) => {
         const getEventReservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);   
     if(getEventReservation.rows.length){
         const updateEventStartTime = await pool.query("UPDATE event_reservations SET event_start_time = $1 WHERE reservation_id = $2",
-    [req.body.Event_Start_Time,req.body.id]);
+    [req.body.starttime,req.body.id]);
     res.status(200).json({'message':'Event Reservation Start Time was updated'}) 
         }
         else{
@@ -244,7 +245,7 @@ app.put("/event_reservations/event_end_time/:id", async (req, res) => {
         const getEventReservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);   
     if(getEventReservation.rows.length){
         const updateEventEndTime = await pool.query("UPDATE event_reservations SET event_end_time = $1 WHERE reservation_id = $2",
-    [req.body.Event_End_Time,req.body.id]);
+    [req.body.endtime,req.body.id]);
     res.status(200).json({'message':'Event Reservation End Time was updated'}) 
         }
         else{
@@ -259,7 +260,7 @@ app.put("/event_reservations/notes/:id", async (req, res) => {
         const getEventReservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);   
         if(getEventReservation.rows.length){
             const updateEventNotes = await pool.query("UPDATE event_reservations SET notes = $1 WHERE reservation_id = $2",
-    [req.body.Notes,req.body.id]);
+    [req.body.Venuemessage,req.body.id]);
         res.status(200).json({'message':'Event Reservation Notes was updated'}) 
             }
             else{
@@ -539,9 +540,9 @@ app.post("/table_reservations", async (req, res)=> {
     try{
         
     const newTableReservation = await pool.query("INSERT INTO table_reservations (reservation_name, reservation_time, group_size, phone, notes) VALUES($1,$2,$3,$4,$5) RETURNING *", 
-    [req.body.Reservation_Name, req.body.Reservation_Time, req.body.Group_Size, req.body.Phone, req.body.Notes]);
+    [req.body.name, req.body.time, req.body.group, req.body.phone, req.body.message]);
     res.json(newTableReservation.rows[0]);
-    res.status(200).json({'message':'Created Table Reservation'})
+    res.status(200).send({message:'Created Table Reservation'})
     } catch (err) {
         res.status(500).json(err.message);    }
 });
@@ -553,7 +554,7 @@ app.get("/table_reservations", async(req, res) =>{
         res.status(200).json({'message':'Returned all Table Reservations'})
      }
         catch(err){
-            res.status(500).json(err.message);        }
+            res.status(500).send(err.message);        }
     });
 //get a table reservation
 app.get("/table_reservations/:id", async (req, res) => {
@@ -575,7 +576,7 @@ app.put("/table_reservations/:id", async (req, res) => {
         const table_reservation = await pool.query("SELECT * FROM table_reservations WHERE reservation_id = $1", [req.body.id]);
         if(table_reservation.rows.length){
             const updateTableReservation = await pool.query("UPDATE table_reservations SET (reservation_name, reservation_time, group_size, phone, notes) = ($1,$2,$3,$4,$5) WHERE reservation_id = $6",
-    [req.body.Reservation_Name, req.body.Reservation_Time, req.body.Group_Size, req.body.Phone, req.body.Notes, req.body.id]);
+    [req.body.name, req.body.time, req.body.group, req.body.phone, req.body.message, req.body.id]);
             res.status(200).json({'message':'Table Reservation was updated'})
             }
             else{      
@@ -590,7 +591,7 @@ app.put("/table_reservations/reservation_name/:id", async (req, res) => {
         const table_reservation = await pool.query("SELECT * FROM table_reservations WHERE reservation_id = $1", [req.body.id]);
         if(table_reservation.rows.length){
             const updateTableReservationName = await pool.query("UPDATE table_reservations SET reservation_name = $1 WHERE reservation_id = $2",
-            [req.body.Reservation_Name,req.body.id]);
+            [req.body.name,req.body.id]);
             res.status(200).json({'message':'Table Reservation Name was updated'})
             }
             else{      
@@ -605,7 +606,7 @@ app.put("/table_reservations/reservation_time/:id", async (req, res) => {
         const table_reservation = await pool.query("SELECT * FROM table_reservations WHERE reservation_id = $1", [req.body.id]);
         if(table_reservation.rows.length){
             const updateTableReservationTime = await pool.query("UPDATE table_reservations SET reservation_time = $1 WHERE reservation_id = $2",
-    [req.body.Reservation_Time,req.body.id]);
+    [req.body.time,req.body.id]);
             res.status(200).json({'message':'Table Reservation Time was updated'})
             }
             else{      
@@ -652,7 +653,7 @@ app.put("/table_reservations/notes/:id", async (req, res) => {
         const table_reservation = await pool.query("SELECT * FROM table_reservations WHERE reservation_id = $1", [req.body.id]);
         if(table_reservation.rows.length){
             const updateTableNotes = await pool.query("UPDATE table_reservations SET notes = $1 WHERE reservation_id = $2",
-    [req.body.Notes,req.body.id]);
+    [req.body.message,req.body.id]);
             res.status(200).json({'message':'Table Reservation Notes was updated'})
             }
             else{      
