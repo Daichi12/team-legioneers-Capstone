@@ -1,4 +1,3 @@
-//import logo from './logo.svg';
 import React, { Fragment, useState, useEffect } from "react";
 import './App.css';
 import Home from './Pages/Home';
@@ -12,9 +11,10 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Dashboard from "./Pages/Dashboard";
 import Payment from "./Pages/Payment";
+import MenuCategories from './Pages/MenuCategories';
+import items from './Pages/MenuData';
 
-
-
+const allCategories = ['all', ...new Set(items.map((item) => item.category))]
 
 toast.configure();
 
@@ -45,15 +45,32 @@ function App() {
     setIsAuthenticated(boolean);
   };
 
+  const [menuItems, setMenuItems] = useState(items)
+  const [categories, setCategories] = useState(allCategories)
 
-  return (
-    
+  const filterItems = (category) => {
+    if (category === 'all') {
+      setMenuItems(items)
+      return
+    }
+    const newItems = items.filter((item) => item.category === category)
+    setMenuItems(newItems)
+  }
+
+
+  return (    
     <Router>
-   
         <Routes> 
           <Route path="" element={<Home/>} />
           <Route path="/Home" element={<Home/>} />
-          <Route path="/Menu" element={<Menu/>} />
+        
+          <Route path="/Menu" className="Menu" 
+        
+          element={<> <Menu items={menuItems}/> 
+          
+          <MenuCategories categories={categories} filterItems={filterItems}/> </> } />
+          
+        
           <Route path="/AboutUs" element={<AboutUs/>} />
           <Route path="/Events" element={<Events/>} />
           <Route path="/Contact" element={<Contact/>} />
