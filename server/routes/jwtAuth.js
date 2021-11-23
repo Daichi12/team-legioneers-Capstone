@@ -22,7 +22,7 @@ router.post("/register", validinfo, async (req, res) =>{
             Employee_UserName
         ]);
         if (account.rows.length != 0){
-            return res.status(401).send("User already exists");
+            return res.status(401).json("User already exists");
         }
         //3. Bcrypt the account password
         const saltRound = 10; //Depicts how encrypted is going to be
@@ -77,7 +77,7 @@ router.post("/login", validinfo, async(req, res)=> {
     res.json({token});
  }   catch (err){
      console.error(err.message);
-     res.status(500).send("Server Error");
+     res.status(500).json("Server Error");
  }
 } )
 
@@ -86,7 +86,7 @@ router.get("/is_verified", authorization, async (req, res)=>{
     res.json(true);
     } catch (err) {
      console.error(err.message);
-     res.status(500).send("Server Error");
+     res.status(500).json("Server Error");
     }
 })
 

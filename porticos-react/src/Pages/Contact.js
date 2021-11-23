@@ -545,18 +545,20 @@ class Contact extends React.Component{
     event.preventDefault();
 
     // Send form to DB Venue Reservation Endpoint
-    // axios({
-    //   method: "POST",
-    //   url:"http://localhost:5000/event_reservations",
-    //   data:  this.state
-    // }).then((response)=>{
-    //   if (response.data.status === 'success') {
-    //     // Change form box into success message
-    //   } else if (response.data.status === 'fail') {
-    //     // Change form box into failure message
-    //     // possibly just an error alert()
-    //   }
-    // })
+    axios({
+      method: "POST",
+      url:"http://localhost:5000/event_reservations",
+      data:  this.state
+    }).then((response)=>{
+      if (response.data.status === 'success') {
+        // Change form box into success message
+        alert("Successful Event Submission");
+      } else if (response.data.status === 'fail') {
+        // Change form box into failure message
+        // possibly just an error alert()
+        alert("Malformed Event Submission");
+      }
+    })
     
     // JSON submit test
     alert(JSON.stringify(this.state));
@@ -574,18 +576,20 @@ class Contact extends React.Component{
     ///////////////////////
 
     // Send form to DB Table Reservation Endpoint
-    // axios({
-    //   method: "POST",
-    //   url:"http://localhost:5000/table_reservations",
-    //   data:  this.state
-    // }).then((response)=>{
-    //   if (response.data.status === 'success') {
-    //     // Change form box into success message
-    //   } else if (response.data.status === 'fail') {
-    //     // Change form box into failure message
-    //     // possibly just an error alert()
-    //   }
-    // })
+    axios({
+      method: "POST",
+      url:"http://localhost:5000/table_reservations",
+      data:  this.state
+    }).then((response)=>{
+      if (response.data.status === 'success') {
+        // Change form box into success message
+        alert("Successful Table Submission");
+      } else if (response.data.status === 'fail') {
+        // Change form box into failure message
+        // possibly just an error alert()
+        alert("Malformed Table Submission");
+      }
+    })
 
     // JSON submit test
     alert(JSON.stringify(this.state));

@@ -3,68 +3,69 @@ import { Link, Navigate } from "react-router-dom";
 
 import { toast } from "react-toastify";
 
-const Login = ({ setAuth }) => {
+const Login = ( {setAuth} ) => {
   const [inputs, setInputs] = useState({
-    email: "",
-    password: ""
+    Employee_UserName: "",
+    Employee_Password: ""
   });
 
-  const { email, password } = inputs;
+  const { Employee_UserName, Employee_Password } = inputs;
 
-  const onChange = e =>
+  const onChange = (e) =>
     setInputs({ ...inputs, [e.target.name]: e.target.value });
 
-  const onSubmitForm = async e => {
+  const onSubmitForm = async (e) => {
     e.preventDefault();
     try {
-      const body = { email, password };
+      const body = { Employee_UserName, Employee_Password };
       const response = await fetch(
-        "http://localhost:3000/authentication/login",
+        "http://localhost:5000/account/login",
         {
           method: "POST",
           headers: {
-            "Content-type": "application/json"
+            "Content-Type": "application/json"
           },
           body: JSON.stringify(body)
         }
       );
 
       const parseRes = await response.json();
-
-      if (parseRes.jwtToken) {
-        localStorage.setItem("token", parseRes.jwtToken);
-        setAuth(true);
+      console.log(parseRes);
+      if (parseRes.token) {
+        localStorage.setItem("token", parseRes.token);
+        setAuth(true)
         toast.success("Logged in Successfully");
       } else {
-        setAuth(false);
         toast.error(parseRes);
+        setAuth(false)
+       
       }
     } catch (err) {
       console.error(err.message);
     }
   };
-
+  
   return (
     <Fragment>
-      <h1 className="mt-5 text-center">Login</h1>
+      <h1 className="text-center my-5">Login</h1>
       <form onSubmit={onSubmitForm}>
         <input
           type="text"
-          name="email"
-          value={email}
+          name="Employee_UserName"
+          value={Employee_UserName}
           onChange={e => onChange(e)}
           className="form-control my-3"
         />
         <input
           type="password"
-          name="password"
-          value={password}
+          name="Employee_Password"
+          value={Employee_Password}
           onChange={e => onChange(e)}
           className="form-control my-3"
         />
         <button class="btn btn-success btn-block">Submit</button>
       </form>
-      <Link to="/register">register</Link>
+      <Link to="/register">Register</Link>
     </Fragment>
   );
 };
