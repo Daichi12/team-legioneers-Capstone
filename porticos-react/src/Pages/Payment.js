@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Link } from 'react-router-dom'
-
+import Contact from "./Contact";
+import { bill } from './Contact';
 const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
 
 
@@ -12,7 +13,7 @@ class Payment extends React.Component {
       purchase_units: [
         {
           amount: {
-            value: "300.00",
+            value: bill,
           },
         },
       ],

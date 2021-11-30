@@ -104,7 +104,7 @@ app.delete("/account/:id", async (req, res) => {
 //Create an Event Reservation
 app.post("/event_reservations", async (req, res)=> {
     try{
-        const newEventReservation = await pool.query("INSERT INTO event_reservations (reservation_name, group_size, phone, email, event_start_time, event_end_time, notes) VALUES($1,$2,$3,$4,$5,$6,$7) RETURNING *", 
+        const newEventReservation = await pool.query("INSERT INTO event_reservations (reservation_name, group_size, phone, email, event_start_time, event_duration, notes) VALUES($1,$2,$3,$4,$5,$6,$7) RETURNING *", 
         [req.body.Venuename, req.body.Venuegroup, req.body.Venuephone, req.body.Venueemail, req.body.starttime, req.body.endtime, req.body.Venuemessage]);
     res.json(newEventReservation.rows[0]);
     res.status(200).json({'message':'Created Reservation'})
@@ -148,7 +148,7 @@ app.put("/event_reservations/:id", async (req, res) => {
     try {
     const getEventReservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);   
     if(getEventReservation.rows.length){
-        const updateEventReservation = await pool.query("UPDATE event_reservations SET (reservation_name, group_size, phone, email, event_start_time, event_end_time, notes) = ($1,$2,$3,$4,$5,$6,$7) WHERE reservation_id = $8",
+        const updateEventReservation = await pool.query("UPDATE event_reservations SET (reservation_name, group_size, phone, email, event_start_time, event_duration, notes) = ($1,$2,$3,$4,$5,$6,$7) WHERE reservation_id = $8",
     [req.body.Venuename, req.body.Venuegroup, req.body.Venuephone, req.body.Venueemail, req.body.starttime, req.body.endtime, req.body.Venuemessage, req.body.id]);
     res.status(200).json({'message':'Event Reservation was updated'}) 
     
@@ -240,11 +240,11 @@ app.put("/event_reservations/event_start_time/:id", async (req, res) => {
         res.status(500).json(err.message);        }
     });
 //update event reservation end time
-app.put("/event_reservations/event_end_time/:id", async (req, res) => {
+app.put("/event_reservations/event_duration/:id", async (req, res) => {
     try {
         const getEventReservation = await pool.query("SELECT * FROM event_reservations WHERE reservation_id = $1", [req.body.id]);   
     if(getEventReservation.rows.length){
-        const updateEventEndTime = await pool.query("UPDATE event_reservations SET event_end_time = $1 WHERE reservation_id = $2",
+        const updateEventEndTime = await pool.query("UPDATE event_reservations SET event_duration = $1 WHERE reservation_id = $2",
     [req.body.endtime,req.body.id]);
     res.status(200).json({'message':'Event Reservation End Time was updated'}) 
         }
