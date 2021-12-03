@@ -299,7 +299,7 @@ class Contact extends React.Component{
                                 className="no_line"
                                 style={{ margin: "0 auto"}}
                               />
-                                <h2 id="text1" style={{textDecorationLine: "none",display:'none', position:'absolute', left:'0', top:'230px'}}>Thank you for your reservation, see you soon!</h2>
+                                <h2 id="text1" style={{textDecorationLine: "none",display:'none', position:'absolute', left:'0', top:'230px', padding: "1px 45px 1px"}}>Thank you for your reservation, see you soon!</h2>
                               <div id="contactWrapper">
                               <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                               <h2 style={{marginBottom:"40px",textDecorationLine: "none"}}>Table Reservation</h2>
@@ -343,7 +343,9 @@ class Contact extends React.Component{
                                 style={{ margin: "0 auto -40px" }}
                               />
                                 <h2 id="text2" style={{textDecorationLine: "none",display:'none', position:'absolute', left:'110px', top:'230px'}}>Succesful Venue Reservation</h2>
-                                <Link to="/Payment" type="button" id="link" className="btn btn-primary" style={{display: "none", position:'absolute', left:'65px', top:'290px',verticalAlign:"middle" ,shape:'rect',height:"50px", width:"700px",position:'absolute', left:'15px', top:'350px', backgroundColor: "#fac43e", color: "black",fontFamily:"futura", fontSize:"20px", textAlign:"center" }}> PayPal Venue Payment</Link>
+                                <Link to="/Payment" type="button" id="link" className="btn btn-primary" style={{display: "none", position:'absolute', left:'65px', top:'290px',verticalAlign:"middle" ,shape:'rect',height:"45px", width:"230px",position:'absolute', left:'250px', top:'350px', backgroundColor: "#fac43e", color: "black",fontFamily:"futura", fontSize:"20px", textAlign:"center" }}>
+                                <img src="https://www.paypalobjects.com/digitalassets/c/website/marketing/apac/C2/logos-buttons/44_Yellow_CheckOut_Pill_Button.png" alt="Check out with PayPal" />
+                                </Link>
                         
                               <div id="contactWrapper2" style={{ display:"none",margin:"auto"}}>
                               <form id="contact-form" onSubmit={this.VenuehandleSubmit.bind(this)} method="POST">
