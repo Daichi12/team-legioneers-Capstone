@@ -36,6 +36,11 @@ class Home extends React.Component{
                                             <li>
                                                 <a href="/Contact"><span>Contact</span></a>
                                             </li> 
+                                            <li>
+                          <a href="/Merchandise">
+                            <span>Merchandise Shop</span>
+                          </a>
+                        </li>
                                         </ul>
                                     </nav><a class="responsive-menu-toggle " href="/#"><i class="icon-menu-fine"></i></a>
                                 </div>
@@ -219,7 +224,7 @@ class Home extends React.Component{
                                 <div style={{"paddingRight":"20%"}}>
                                     <h4>Localization</h4>
                                     <div style={{"width":"30%","height":"1px","background":"#98dace"}}></div>
-                                    <hr class="no_line" style={{"margin":"0 auto 15px"}}/>
+                                    <hr class="no_line" style={{"margin":"0 auto -5px"}}/>
                                     <p>
                                         <br/> 
                                         <h5> Calle Dr. Santiago Veve #55

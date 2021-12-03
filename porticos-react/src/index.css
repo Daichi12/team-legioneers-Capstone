@@ -18,6 +18,12 @@
     font-size: 0.875rem;
     
   }
+  .merch_btn{
+  position: absolute;
+  right: 900px;
+  top: 935px;
+ 
+  }
   .section-center {
     /* dark shades of primary color*/
     --clr-primary-1: hsl(205, 86%, 17%);
@@ -206,6 +212,7 @@
     gap: 1rem 2rem;
     max-width: 25rem;
   }
+  
   .photo {
     object-fit: cover;
     height: 200px;
@@ -252,10 +259,25 @@
   }
 
   @media screen and (min-width: 2560px)  {
+    .merch_btn{
+    position: absolute;
+    right: 1200px;
+    top: 950px;
+    }
+  }
+
+  @media screen and (min-width: 2560px)  {
     .btn-container{
     position: absolute;
     right: 830px;
     top: 950px;
+    }
+  }
+
+  @media screen and (min-width: 3072px)  {
+    .btn-container{
+    position: absolute;
+    right: 1000px;
     }
   }
 

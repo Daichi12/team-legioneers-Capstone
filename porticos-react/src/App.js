@@ -13,6 +13,9 @@ import Dashboard from "./Pages/Dashboard";
 import Payment from "./Pages/Payment";
 import MenuCategories from './Pages/MenuCategories';
 import items from './Pages/MenuData';
+import items2 from './Pages/merchandisedata';
+import Merchandise from "./Pages/Merchandise";
+import { render } from "react-dom";
 
 const allCategories = ['all', ...new Set(items.map((item) => item.category))]
 
@@ -43,6 +46,7 @@ function App() {
   }, []);
 
   const [menuItems, setMenuItems] = useState(items)
+  const [merchandiseItems, setMerchandiseItems] = useState(items2)
   const [categories, setCategories] = useState(allCategories)
 
   const filterItems = (category) => {
@@ -54,7 +58,11 @@ function App() {
     setMenuItems(newItems)
   }
 
+
+
+
   return (    
+    
     <Router>
         <Routes> 
           <Route path="" element={<Home/>} />
@@ -65,11 +73,15 @@ function App() {
           element={<> <Menu items={menuItems}/> 
           
           <MenuCategories categories={categories} filterItems={filterItems}/> </> } />
+
+          <Route path="/Merchandise" className="Merchandise" element={<> <Merchandise items2={merchandiseItems}/> </>}/>
+       
           
         
           <Route path="/AboutUs" element={<AboutUs/>} />
           <Route path="/Events" element={<Events/>} />
           <Route path="/Contact" element={<Contact/>} />
+          
           <Route path="/Payment" element={<Payment/>} />
 
           <Route exact path="/login" 
@@ -92,6 +104,9 @@ function App() {
         </Routes>
 
 </Router>
+
   );
-}
+          }
+
+
 export default App;

@@ -1,11 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+const Merchandise = ({ items2 }) => {
 
-
-const Menu = ({ items }) => {
-
-   
-        return(
-          <>
+return(
+  <>
     <div className="page color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky">
     <div id="Wrapper">
       <div id="Header_wrapper">
@@ -122,8 +120,8 @@ const Menu = ({ items }) => {
                         </div> 
 
                         <div className="section-center" style={{ padding: "0px 0 40px" }}>
-      {items.map((menuItem) => {
-        const { id, title, img, price, desc } = menuItem
+      {items2.map((merchandiseItems) => {
+        const { id, title, img, price,desc} = merchandiseItems
         return (
           <article key={id} className="menu-item">
             <img src={img} alt={title} className="photo" />
@@ -132,11 +130,15 @@ const Menu = ({ items }) => {
                 <h4>{title}</h4>
                 <h4 className="price">{price}</h4>
               </header>
-              <p className="item-text">{desc}</p>
+              <p className="item-text">{desc} </p>
             </div>
           </article>
         )
       })}
+    </div>
+
+   <div className= "merch_btn">
+    <a class="button  button_size_2 button_js" href="https://porticos1606.myshopify.com/" target="_blank"> <span class="button_label">Merchandise Shop In Progress</span></a>
     </div>
             </div>
           </div>
@@ -237,4 +239,4 @@ const Menu = ({ items }) => {
     }
 
 
-export default Menu
+export default Merchandise

@@ -9,6 +9,7 @@ import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 //   width: '110%',
 //   height: '867%',
 // };
+
 var bill='0';
 
 class Contact extends React.Component{
@@ -28,18 +29,13 @@ class Contact extends React.Component{
       endtime:'',
       Venuegroup:'',
       Venuemessage:''
+      
 
     }
    
   }
 
-  
-  // resetForm(){
-  //   this.setState({name: ‘’, email: ‘’, message: ‘’})
-  // }
-
   render(){
-    
    function sayHello() {
     var div = document.getElementById('contactWrapper');
     var div2 = document.getElementById('contactWrapper2');
@@ -53,9 +49,7 @@ class Contact extends React.Component{
 
     }
 }
-
-
-    return(
+  return(
       <div className="page color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky">
       <div id="Wrapper">
         <div id="Header_wrapper">
@@ -123,6 +117,11 @@ class Contact extends React.Component{
                               <span>Contact</span>
                             </a>
                           </li>
+                          <li>
+                          <a href="/Merchandise">
+                            <span>Merchandise Shop</span>
+                          </a>
+                        </li>
                         </ul>
                       </nav>
                       <a className="responsive-menu-toggle " href="#">
@@ -266,7 +265,7 @@ class Contact extends React.Component{
                     className="section mcb-section"
                     style={{
                       paddingTop: 0,
-                      paddingBottom: 290,
+                      paddingBottom: 450,
                       backgroundImage: "url(/assets/content/restaurant2/images/home_restaurant2_sectionbg8.jpg)",
                     backgroundRepeat: "no-repeat",
                       backgroundPosition: "center top"
@@ -286,7 +285,7 @@ class Contact extends React.Component{
                         style={{
                           padding: "1px 50px 1px",
                           backgroundColor: "#98dace",
-                          marginTop: 200,
+                          marginTop: 300,
                           marginBottom: -100,
                           height: "525px",
                         }}
@@ -410,6 +409,8 @@ class Contact extends React.Component{
             </div>
           </div>
 
+         
+
           <footer id="Footer" className="clearfix">
             <div className="widgets_wrapper" style={{ padding: "120px 0 105px" }}>
               <div className="container">
@@ -421,7 +422,7 @@ class Contact extends React.Component{
                         <div
                           style={{ width: "30%", height: 1, background: "#98dace" }}
                         />
-                        <hr className="no_line" style={{ margin: "0 auto 15px" }} />
+                        <hr className="no_line" style={{ margin: "0 auto -20px" }} />
                         <p>
                           <br />{" "}
                         </p>
@@ -498,8 +499,11 @@ class Contact extends React.Component{
         </div>
         <div id="body_overlay" />
       </div>
+      
         )
     }
+   
+ 
 
   // Table Reservation Form Listeners //
   onNameChange(event) {
@@ -517,23 +521,21 @@ class Contact extends React.Component{
   onMessageChange(event) {
     this.setState({message: event.target.value})
   }
-
   onVenueNameChange(event) {
     this.setState({Venuename: event.target.value})
   }
   onVenuePhoneChange(event) {
     this.setState({Venuephone: event.target.value})
   }
-    onVenueEmailChange(event) {
-      this.setState({Venueemail: event.target.value})
-    }
-    
+  onVenueEmailChange(event) {
+    this.setState({Venueemail: event.target.value})
+  }
+  
   onStartTimeChange(event) {
     this.setState({starttime: event.target.value})
   }
   onEndTimeChange(event) {
     this.setState({endtime: event.target.value})
-   
   }
   onVenueGroupChange(event) {
     this.setState({Venuegroup: event.target.value})
@@ -586,12 +588,8 @@ class Contact extends React.Component{
         bill = '1200';
         break;
     }
-    
-  
-    
-  
-    event.preventDefault();
 
+    event.preventDefault();
 
     // Send form to DB Venue Reservation Endpoint
     axios({
@@ -608,9 +606,8 @@ class Contact extends React.Component{
         alert("Malformed Event Submission");
       }
     })
-    
-    // JSON submit test
-    alert(JSON.stringify(this.state));
+    // Print out JSON submission
+    // alert(JSON.stringify(this.state));
   }
 
   handleSubmit( event ) {
@@ -620,14 +617,10 @@ class Contact extends React.Component{
     text1.style.display='block';
     event.preventDefault();
 
-    ///////////////////////
-    // [Payment Process] //
-    ///////////////////////
-
     // Send form to DB Table Reservation Endpoint
     axios({
       method: "POST",
-      url:"http://localhost:5000/table_reservations",
+      url:"http://host.docker.internal:5000/table_reservations",
       data:  this.state
     }).then((response)=>{
       if (response.data.status === 'success') {
@@ -639,12 +632,10 @@ class Contact extends React.Component{
         alert("Malformed Table Submission");
       }
     })
-
-    // JSON submit test
-    alert(JSON.stringify(this.state));
+    // Print out JSON submission
+    // alert(JSON.stringify(this.state));
   }
 }
-
 export {bill}
 export default Contact
 
