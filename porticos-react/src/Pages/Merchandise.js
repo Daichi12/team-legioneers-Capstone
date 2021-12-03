@@ -1,16 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-
-
-
-  
-
-
 const Merchandise = ({ items2 }) => {
 
-   
-        return(
-          <>
+return(
+  <>
     <div className="page color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky">
     <div id="Wrapper">
       <div id="Header_wrapper">
@@ -145,9 +138,8 @@ const Merchandise = ({ items2 }) => {
     </div>
 
    <div className= "merch_btn">
-    <a class="button  button_size_2 button_js" href="https://9xaj4ushwzsepmzy-60837691598.shopifypreview.com/" target="_blank"> <span class="button_label">Merchandise Shop In Progress</span></a>
+    <a class="button  button_size_2 button_js" href="https://porticos1606.myshopify.com/" target="_blank"> <span class="button_label">Merchandise Shop In Progress</span></a>
     </div>
-
             </div>
           </div>
         </div>
