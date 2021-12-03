@@ -299,10 +299,10 @@ class Contact extends React.Component{
                                 className="no_line"
                                 style={{ margin: "0 auto"}}
                               />
-                                <h2 id="text1" style={{display:'none', position:'absolute', left:'75px', top:'230px'}}>Thank you for your reservation, see you soon!</h2>
+                                <h2 id="text1" style={{textDecorationLine: "none",display:'none', position:'absolute', left:'0', top:'230px'}}>Thank you for your reservation, see you soon!</h2>
                               <div id="contactWrapper">
                               <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-                              <h2 style={{marginBottom:"40px"}}>Table Reservation</h2>
+                              <h2 style={{marginBottom:"40px",textDecorationLine: "none"}}>Table Reservation</h2>
                                 <div className="form-group">
                                   <label htmlFor="name"></label>
                                   <input type="text" placeholder="Enter your name" style={{ width: "200px", textAlign: "center",  borderColor: "black",borderWidth: "2px", float:"left"
@@ -342,13 +342,13 @@ class Contact extends React.Component{
                                 className="no_line"
                                 style={{ margin: "0 auto -40px" }}
                               />
-                                <h2 id="text2" style={{display:'none', position:'absolute', left:'100px', top:'230px'}}>Succesful Venue Reservation</h2>
-                                <Link to="/Payment" type="button" id="link" className="btn btn-primary" style={{ backgroundColor: "gold", color: "blue", borderColor: "black" ,border: '1px solid rgba(0,0,0,1)',display: "none", display:'none', position:'absolute', left:'65px', top:'290px',verticalAlign:"middle" ,shape:'rect',height:"50px", width:"700px",position:'absolute', left:'15px', top:'350px', backgroundColor: "gold", color: "blue", borderColor: "black" ,border: '1px solid rgba(0,0,0,1)',fontSize:"20px", textAlign:"center" }}> PayPal Venue Payment</Link>
+                                <h2 id="text2" style={{textDecorationLine: "none",display:'none', position:'absolute', left:'110px', top:'230px'}}>Succesful Venue Reservation</h2>
+                                <Link to="/Payment" type="button" id="link" className="btn btn-primary" style={{display: "none", position:'absolute', left:'65px', top:'290px',verticalAlign:"middle" ,shape:'rect',height:"50px", width:"700px",position:'absolute', left:'15px', top:'350px', backgroundColor: "#fac43e", color: "black",fontFamily:"futura", fontSize:"20px", textAlign:"center" }}> PayPal Venue Payment</Link>
                         
                               <div id="contactWrapper2" style={{ display:"none",margin:"auto"}}>
                               <form id="contact-form" onSubmit={this.VenuehandleSubmit.bind(this)} method="POST">
-                              <h2 style={{marginBottom:"40px"}}>Venue Reservation</h2>
-                              <h2 id="text2" style={{fontSize:'40', display:'none'}}>WHAT IS UP</h2>
+                              <h2 style={{textDecorationLine: "none",marginBottom:"40px"}}>Venue Reservation</h2>
+                              
                               <p style={{color:'black', position:'absolute', left:'335px', top:'150px'}}>Start Time</p>
                               
                                 <div className="form-group">
@@ -392,7 +392,7 @@ class Contact extends React.Component{
 
                                 
                                 
-                                <button style={{backgroundcolor:'#4CAF50',color:'white',cursor:"pointer",width:"625px",position:'absolute', left:'55px', top:'460px'}} type="button" id='stuff' onClick={sayHello}>Table Reservation</button>;
+                                <button style={{backgroundcolor:'#4CAF50',color:'white',cursor:"pointer",width:"625px",position:'absolute', left:'55px', top:'460px'}} type="button" id='stuff' onClick={sayHello}>Table Reservation</button>
                                 <button style={{cursor:"pointer",width:"625px",position:'absolute', left:'55px', top:'410px'}} type="submit" className="btn btn-primary">Submit</button>
                               </form>
                               </div>
