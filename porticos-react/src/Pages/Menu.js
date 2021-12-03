@@ -121,7 +121,7 @@ const Menu = ({ items }) => {
                             </div>
                         </div> 
 
-                        <div className="section-center">
+                        <div className="section-center" style={{ padding: "0px 0 40px" }}>
       {items.map((menuItem) => {
         const { id, title, img, price, desc } = menuItem
         return (
@@ -145,7 +145,7 @@ const Menu = ({ items }) => {
     </div>
   </div> 
   <footer id="Footer" className="clearfix">
-    <div className="widgets_wrapper" style={{ padding: "120px 0 105px" }}>
+    <div className="widgets_wrapper" style={{ padding: "20px 0 105px" }}>
       <div className="container">
         <div className="column one-third">
           <aside id="text-2" className="widget widget_text">
@@ -155,7 +155,7 @@ const Menu = ({ items }) => {
                 <div
                   style={{ width: "30%", height: 1, background: "#98dace" }}
                 />
-                <hr className="no_line" style={{ margin: "0 auto 15px" }} />
+                <hr className="no_line" style={{ margin: "0 auto -20px" }} />
                 <p>
                   <br />{" "}
                 </p>

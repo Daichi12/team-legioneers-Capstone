@@ -145,7 +145,7 @@ class AboutUs extends React.Component{
                         </div>
                         <div class="section mcb-section no-margin-h no-margin-v  " style={{"paddingTop":"0px","paddingBottom":"230px","backgroundImage":"url(/assets/content/restaurant2/images/home_restaurant2_sectionbg5.jpg)","backgroundRepeat":"no-repeat","backgroundPosition":"center bottom"}}>
                             <div class="section_wrapper mcb-section-inner">
-                                <div class="wrap mcb-wrap one-second  valign-top clearfix" style={{"marginTop":"-60px"}}>
+                                <div class="wrap mcb-wrap one-second  valign-top clearfix" style={{"marginTop":"10px"}}>
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_image ">
                                             <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
@@ -187,7 +187,7 @@ class AboutUs extends React.Component{
                                 <div style={{"paddingRight":"20%"}}>
                                     <h4>Localization</h4>
                                     <div style={{"width":"30%","height":"1px","background":"#98dace"}}></div>
-                                    <hr class="no_line" style={{"margin":"0 auto 15px"}}/>
+                                    <hr class="no_line" style={{"margin":"0 auto -5px"}}/>
                                     <p>
                                         <br/> <h5>Calle Dr. Santiago Veve #55
                                         <br/> San German, Puerto Rico

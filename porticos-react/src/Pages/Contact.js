@@ -34,23 +34,6 @@ class Contact extends React.Component{
    
   }
 
-<<<<<<< HEAD
-  jsonTest(){
-    var obj = new Object();
-   obj.name = "Raj";
-   obj.age  = 32;
-   obj.married = false;
-   var jsonString= JSON.stringify(obj);
-  }
-
-
-=======
-  
->>>>>>> 661a4353baabd3fc07b9fd9bdbb2e008fe97085d
-  // resetForm(){
-  //   this.setState({name: ‘’, email: ‘’, message: ‘’})
-  // }
-
   render(){
     
    function sayHello() {
@@ -284,7 +267,7 @@ class Contact extends React.Component{
                     className="section mcb-section"
                     style={{
                       paddingTop: 0,
-                      paddingBottom: 290,
+                      paddingBottom: 450,
                       backgroundImage: "url(/assets/content/restaurant2/images/home_restaurant2_sectionbg8.jpg)",
                     backgroundRepeat: "no-repeat",
                       backgroundPosition: "center top"
@@ -304,7 +287,7 @@ class Contact extends React.Component{
                         style={{
                           padding: "1px 50px 1px",
                           backgroundColor: "#98dace",
-                          marginTop: 200,
+                          marginTop: 300,
                           marginBottom: -100,
                           height: "525px",
                         }}
@@ -317,7 +300,7 @@ class Contact extends React.Component{
                                 className="no_line"
                                 style={{ margin: "0 auto"}}
                               />
-                                <h2 id="text1" style={{textDecorationLine: "none",display:'none', position:'absolute', left:'0', top:'230px'}}>Thank you for your reservation, see you soon!</h2>
+                                <h2 id="text1" style={{textDecorationLine: "none",display:'none', position:'absolute', left:'0', top:'30px'}}>Thank you for your reservation, see you soon!</h2>
                               <div id="contactWrapper">
                               <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
                               <h2 style={{marginBottom:"40px",textDecorationLine: "none"}}>Table Reservation</h2>
@@ -439,7 +422,7 @@ class Contact extends React.Component{
                         <div
                           style={{ width: "30%", height: 1, background: "#98dace" }}
                         />
-                        <hr className="no_line" style={{ margin: "0 auto 15px" }} />
+                        <hr className="no_line" style={{ margin: "0 auto -20px" }} />
                         <p>
                           <br />{" "}
                         </p>

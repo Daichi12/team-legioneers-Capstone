@@ -126,7 +126,7 @@ const Merchandise = ({ items2 }) => {
                             </div>
                         </div> 
 
-                        <div className="section-center">
+                        <div className="section-center" style={{ padding: "0px 0 40px" }}>
       {items2.map((merchandiseItems) => {
         const { id, title, img, price,desc} = merchandiseItems
         return (
@@ -145,7 +145,7 @@ const Merchandise = ({ items2 }) => {
     </div>
 
    <div className= "merch_btn">
-    <a class="button  button_size_2 button_js" href="/Contact"><span class="button_label">Merchandise Shop In Progress</span></a>
+    <a class="button  button_size_2 button_js" href="https://9xaj4ushwzsepmzy-60837691598.shopifypreview.com/" target="_blank"> <span class="button_label">Merchandise Shop In Progress</span></a>
     </div>
 
             </div>
@@ -155,7 +155,7 @@ const Merchandise = ({ items2 }) => {
     </div>
   </div> 
   <footer id="Footer" className="clearfix">
-    <div className="widgets_wrapper" style={{ padding: "120px 0 105px" }}>
+    <div className="widgets_wrapper" style={{ padding: "20px 0 105px" }}>
       <div className="container">
         <div className="column one-third">
           <aside id="text-2" className="widget widget_text">
@@ -165,7 +165,7 @@ const Merchandise = ({ items2 }) => {
                 <div
                   style={{ width: "30%", height: 1, background: "#98dace" }}
                 />
-                <hr className="no_line" style={{ margin: "0 auto 15px" }} />
+                <hr className="no_line" style={{ margin: "0 auto -20px" }} />
                 <p>
                   <br />{" "}
                 </p>
