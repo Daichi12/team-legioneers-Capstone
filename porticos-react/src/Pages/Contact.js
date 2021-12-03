@@ -9,9 +9,10 @@ import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 //   width: '110%',
 //   height: '867%',
 // };
+var bill='0';
 
 class Contact extends React.Component{
-
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -33,6 +34,7 @@ class Contact extends React.Component{
    
   }
 
+<<<<<<< HEAD
   jsonTest(){
     var obj = new Object();
    obj.name = "Raj";
@@ -42,6 +44,9 @@ class Contact extends React.Component{
   }
 
 
+=======
+  
+>>>>>>> 661a4353baabd3fc07b9fd9bdbb2e008fe97085d
   // resetForm(){
   //   this.setState({name: ‘’, email: ‘’, message: ‘’})
   // }
@@ -61,6 +66,7 @@ class Contact extends React.Component{
 
     }
 }
+
 
     return(
       <div className="page color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky">
@@ -311,10 +317,10 @@ class Contact extends React.Component{
                                 className="no_line"
                                 style={{ margin: "0 auto"}}
                               />
-                                <h2 id="text1" style={{display:'none', position:'absolute', left:'75px', top:'230px'}}>Thank you for your reservation, see you soon!</h2>
+                                <h2 id="text1" style={{textDecorationLine: "none",display:'none', position:'absolute', left:'0', top:'230px'}}>Thank you for your reservation, see you soon!</h2>
                               <div id="contactWrapper">
                               <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-                              <h2 style={{marginBottom:"40px"}}>Table Reservation</h2>
+                              <h2 style={{marginBottom:"40px",textDecorationLine: "none"}}>Table Reservation</h2>
                                 <div className="form-group">
                                   <label htmlFor="name"></label>
                                   <input type="text" placeholder="Enter your name" style={{ width: "200px", textAlign: "center",  borderColor: "black",borderWidth: "2px", float:"left"
@@ -354,15 +360,15 @@ class Contact extends React.Component{
                                 className="no_line"
                                 style={{ margin: "0 auto -40px" }}
                               />
-                                <h2 id="text2" style={{display:'none', position:'absolute', left:'65px', top:'230px'}}>Succesful Venue Reservation</h2>
-                                <Link to="/Payment" type="button" id="link" className="btn btn-primary" style={{ backgroundColor: "gold", color: "blue", borderColor: "black" ,border: '1px solid rgba(0,0,0,1)',display: "none", display:'none', position:'absolute', left:'65px', top:'290px',verticalAlign:"middle" ,shape:'rect',height:"50px", width:"700px",position:'absolute', left:'15px', top:'350px', backgroundColor: "gold", color: "blue", borderColor: "black" ,border: '1px solid rgba(0,0,0,1)',fontSize:"20px", textAlign:"center" }}> PayPal Venue Payment</Link>
+                                <h2 id="text2" style={{textDecorationLine: "none",display:'none', position:'absolute', left:'110px', top:'230px'}}>Succesful Venue Reservation</h2>
+                                <Link to="/Payment" type="button" id="link" className="btn btn-primary" style={{display: "none", position:'absolute', left:'65px', top:'290px',verticalAlign:"middle" ,shape:'rect',height:"50px", width:"700px",position:'absolute', left:'15px', top:'350px', backgroundColor: "#fac43e", color: "black",fontFamily:"futura", fontSize:"20px", textAlign:"center" }}> PayPal Venue Payment</Link>
                         
                               <div id="contactWrapper2" style={{ display:"none",margin:"auto"}}>
                               <form id="contact-form" onSubmit={this.VenuehandleSubmit.bind(this)} method="POST">
-                              <h2 style={{marginBottom:"40px"}}>Venue Reservation</h2>
-                              <h2 id="text2" style={{fontSize:'40', display:'none'}}>WHAT IS UP</h2>
-                              <p style={{color:'black', position:'absolute', left:'335px', top:'160px'}}>Start Time</p>
-                              <p style={{color:'black', position:'absolute', left:'545px', top:'160px'}}>End Time</p>
+                              <h2 style={{textDecorationLine: "none",marginBottom:"40px"}}>Venue Reservation</h2>
+                              
+                              <p style={{color:'black', position:'absolute', left:'335px', top:'150px'}}>Start Time</p>
+                              
                                 <div className="form-group">
                                   <label htmlFor="name"></label>
                                   <input type="text" placeholder="Enter your name" style={{marginLeft:"0px", width: "200px", textAlign: "center",  borderColor: "black",borderWidth: "2px", float:"left"
@@ -390,8 +396,8 @@ class Contact extends React.Component{
 
 <div className="form-group">
                                   <label htmlFor="time"></label>
-                                  <input type="datetime-local" style={{ height:"37px",width: "190px", textAlign: "center", borderColor: "black",borderWidth: "2px", float:"left", marginBottom:"11.7px", marginLeft:"11.7px"
-    }} placeholder="Time of Departure" className="form-control" id="time" value={this.state.endtime} onChange={this.onEndTimeChange.bind(this) } required /> </div>
+                                  <input type="number" style={{ height:"37px",width: "137px", textAlign: "center", borderColor: "black",borderWidth: "2px", float:"left", marginBottom:"11.7px", marginLeft:"20.7px"
+    }} placeholder="Amount of Hours" min="1" max="12" className="form-control" id="time" value={this.state.endtime} onChange={this.onEndTimeChange.bind(this) } required /> </div>
 
 
                                 
@@ -404,7 +410,7 @@ class Contact extends React.Component{
 
                                 
                                 
-                                <button style={{backgroundcolor:'#4CAF50',color:'white',cursor:"pointer",width:"625px",position:'absolute', left:'55px', top:'460px'}} type="button" id='stuff' onClick={sayHello}>Table Reservation</button>;
+                                <button style={{backgroundcolor:'#4CAF50',color:'white',cursor:"pointer",width:"625px",position:'absolute', left:'55px', top:'460px'}} type="button" id='stuff' onClick={sayHello}>Table Reservation</button>
                                 <button style={{cursor:"pointer",width:"625px",position:'absolute', left:'55px', top:'410px'}} type="submit" className="btn btn-primary">Submit</button>
                               </form>
                               </div>
@@ -548,6 +554,7 @@ class Contact extends React.Component{
   }
   onEndTimeChange(event) {
     this.setState({endtime: event.target.value})
+   
   }
   onVenueGroupChange(event) {
     this.setState({Venuegroup: event.target.value})
@@ -562,7 +569,50 @@ class Contact extends React.Component{
     div2.style.display='none';
     text2.style.display='block';
     link.style.display='block';
+    switch (this.state.endtime) {
+      case '1':
+        bill = '100';
+        break;
+      case '2':
+         bill = '200';
+        break;
+      case '3':
+        bill = '300';
+        break;
+      case '4':
+        bill = '400';
+        break;
+      case '5':
+        bill = '500';
+        break;
+      case '6':
+        bill = '600';
+        break;
+      case '7':
+        bill = '700';
+        break;
+      case '8':
+        bill = '800';
+        break;
+      case '9':
+        bill = '900';
+        break;
+      case '10':
+        bill = '1000';
+        break;
+      case '11':
+        bill = '1100';
+        break;
+      case '12':
+        bill = '1200';
+        break;
+    }
+    
+  
+    
+  
     event.preventDefault();
+
 
     // Send form to DB Venue Reservation Endpoint
     axios({
@@ -616,7 +666,10 @@ class Contact extends React.Component{
     alert(JSON.stringify(this.state));
   }
 }
+
+export {bill}
 export default Contact
+
 // export default GoogleApiWrapper({
 //     apiKey: 'AIzaSyAXkkWkxcA5waXDYJsHqatO1FO4dMA4KLI'
 //   })(Contact);
