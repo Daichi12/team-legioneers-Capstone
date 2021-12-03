@@ -618,7 +618,7 @@ class Contact extends React.Component{
     // Send form to DB Table Reservation Endpoint
     axios({
       method: "POST",
-      url:"http://localhost:5000/table_reservations",
+      url:"http://host.docker.internal:5000/table_reservations",
       data:  this.state
     }).then((response)=>{
       if (response.data.status === 'success') {

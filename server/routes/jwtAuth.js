@@ -4,7 +4,7 @@ let router = express.Router();
 
 
 
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwtGenerator = require('../utils/jwtGenerator');
 const pool = require('../db');
 const validinfo = require('../middleware/validinfo');
