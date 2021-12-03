@@ -27,10 +27,20 @@ class Contact extends React.Component{
       endtime:'',
       Venuegroup:'',
       Venuemessage:''
+      
 
     }
    
   }
+
+  jsonTest(){
+    var obj = new Object();
+   obj.name = "Raj";
+   obj.age  = 32;
+   obj.married = false;
+   var jsonString= JSON.stringify(obj);
+  }
+
 
   // resetForm(){
   //   this.setState({name: ‘’, email: ‘’, message: ‘’})
@@ -120,6 +130,11 @@ class Contact extends React.Component{
                               <span>Contact</span>
                             </a>
                           </li>
+                          <li>
+                          <a href="/Merchandise">
+                            <span>Merchandise Shop</span>
+                          </a>
+                        </li>
                         </ul>
                       </nav>
                       <a className="responsive-menu-toggle " href="#">
@@ -405,6 +420,8 @@ class Contact extends React.Component{
             </div>
           </div>
 
+         
+
           <footer id="Footer" className="clearfix">
             <div className="widgets_wrapper" style={{ padding: "120px 0 105px" }}>
               <div className="container">
@@ -493,8 +510,11 @@ class Contact extends React.Component{
         </div>
         <div id="body_overlay" />
       </div>
+      
         )
     }
+   
+ 
 
   // Table Reservation Form Listeners //
   onNameChange(event) {
@@ -590,6 +610,7 @@ class Contact extends React.Component{
         alert("Malformed Table Submission");
       }
     })
+
 
     // JSON submit test
     alert(JSON.stringify(this.state));

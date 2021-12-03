@@ -1,7 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 
-const Menu = ({ items }) => {
+
+  
+
+
+const Merchandise = ({ items2 }) => {
 
    
         return(
@@ -122,8 +127,8 @@ const Menu = ({ items }) => {
                         </div> 
 
                         <div className="section-center">
-      {items.map((menuItem) => {
-        const { id, title, img, price, desc } = menuItem
+      {items2.map((merchandiseItems) => {
+        const { id, title, img, price,desc} = merchandiseItems
         return (
           <article key={id} className="menu-item">
             <img src={img} alt={title} className="photo" />
@@ -132,12 +137,17 @@ const Menu = ({ items }) => {
                 <h4>{title}</h4>
                 <h4 className="price">{price}</h4>
               </header>
-              <p className="item-text">{desc}</p>
+              <p className="item-text">{desc} </p>
             </div>
           </article>
         )
       })}
     </div>
+
+   <div className= "merch_btn">
+    <a class="button  button_size_2 button_js" href="/Contact"><span class="button_label">Merchandise Shop In Progress</span></a>
+    </div>
+
             </div>
           </div>
         </div>
@@ -237,4 +247,4 @@ const Menu = ({ items }) => {
     }
 
 
-export default Menu
+export default Merchandise
