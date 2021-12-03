@@ -266,6 +266,14 @@
     }
   }
 
+  @media screen and (min-width: 2560px)  {
+    .btn-container{
+    position: absolute;
+    right: 830px;
+    top: 950px;
+    }
+  }
+
   @media screen and (min-width: 3072px)  {
     .btn-container{
     position: absolute;
