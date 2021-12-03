@@ -42,7 +42,7 @@ const menu = [
     category: 'Entradas',
     price: "$8",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/r3Rk9kpTURBXy9hOWMwMmU0MWFmOTBkMTM0ZjEyOTAzM2NmZTM2OWE0NS5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Masitas de cerdo fritas al limón.`,
   },
   {
