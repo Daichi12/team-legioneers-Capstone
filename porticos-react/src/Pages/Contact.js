@@ -29,18 +29,17 @@ class Contact extends React.Component{
       endtime:'',
       Venuegroup:'',
       Venuemessage:''
+      
 
     }
    
   }
 
-  
   // resetForm(){
   //   this.setState({name: ‘’, email: ‘’, message: ‘’})
   // }
 
   render(){
-    
    function sayHello() {
     var div = document.getElementById('contactWrapper');
     var div2 = document.getElementById('contactWrapper2');
@@ -122,6 +121,11 @@ class Contact extends React.Component{
                               <span>Contact</span>
                             </a>
                           </li>
+                          <li>
+                          <a href="/Merchandise">
+                            <span>Merchandise Shop</span>
+                          </a>
+                        </li>
                         </ul>
                       </nav>
                       <a className="responsive-menu-toggle " href="#">
@@ -407,6 +411,8 @@ class Contact extends React.Component{
             </div>
           </div>
 
+         
+
           <footer id="Footer" className="clearfix">
             <div className="widgets_wrapper" style={{ padding: "120px 0 105px" }}>
               <div className="container">
@@ -495,8 +501,11 @@ class Contact extends React.Component{
         </div>
         <div id="body_overlay" />
       </div>
+      
         )
     }
+   
+ 
 
   // Table Reservation Form Listeners //
   onNameChange(event) {

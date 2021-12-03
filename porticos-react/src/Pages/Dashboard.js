@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
+
 const Dashboard = ( {setAuth} ) => {
   const [name, setName] = useState("");
 
@@ -40,6 +41,7 @@ const Dashboard = ( {setAuth} ) => {
       <button onClick={e => logout(e)} className="btn btn-primary">
         Logout
       </button>
+     
     </div>
   );
 };
