@@ -9,6 +9,7 @@ import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 //   width: '110%',
 //   height: '867%',
 // };
+
 var bill='0';
 
 class Contact extends React.Component{
@@ -53,9 +54,7 @@ class Contact extends React.Component{
 
     }
 }
-
-
-    return(
+  return(
       <div className="page color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky">
       <div id="Wrapper">
         <div id="Header_wrapper">
@@ -515,23 +514,21 @@ class Contact extends React.Component{
   onMessageChange(event) {
     this.setState({message: event.target.value})
   }
-
   onVenueNameChange(event) {
     this.setState({Venuename: event.target.value})
   }
   onVenuePhoneChange(event) {
     this.setState({Venuephone: event.target.value})
   }
-    onVenueEmailChange(event) {
-      this.setState({Venueemail: event.target.value})
-    }
-    
+  onVenueEmailChange(event) {
+    this.setState({Venueemail: event.target.value})
+  }
+  
   onStartTimeChange(event) {
     this.setState({starttime: event.target.value})
   }
   onEndTimeChange(event) {
     this.setState({endtime: event.target.value})
-   
   }
   onVenueGroupChange(event) {
     this.setState({Venuegroup: event.target.value})
@@ -584,12 +581,8 @@ class Contact extends React.Component{
         bill = '1200';
         break;
     }
-    
-  
-    
-  
-    event.preventDefault();
 
+    event.preventDefault();
 
     // Send form to DB Venue Reservation Endpoint
     axios({
@@ -606,9 +599,8 @@ class Contact extends React.Component{
         alert("Malformed Event Submission");
       }
     })
-    
-    // JSON submit test
-    alert(JSON.stringify(this.state));
+    // Print out JSON submission
+    // alert(JSON.stringify(this.state));
   }
 
   handleSubmit( event ) {
@@ -617,10 +609,6 @@ class Contact extends React.Component{
     div.style.display='none';
     text1.style.display='block';
     event.preventDefault();
-
-    ///////////////////////
-    // [Payment Process] //
-    ///////////////////////
 
     // Send form to DB Table Reservation Endpoint
     axios({
@@ -637,12 +625,10 @@ class Contact extends React.Component{
         alert("Malformed Table Submission");
       }
     })
-
-    // JSON submit test
-    alert(JSON.stringify(this.state));
+    // Print out JSON submission
+    // alert(JSON.stringify(this.state));
   }
 }
-
 export {bill}
 export default Contact
 

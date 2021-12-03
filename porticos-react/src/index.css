@@ -259,6 +259,14 @@
     }
   }
 
+  @media screen and (min-width: 3072px)  {
+    .btn-container{
+    position: absolute;
+    right: 850px;
+    top: 950px;
+    }
+  }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
