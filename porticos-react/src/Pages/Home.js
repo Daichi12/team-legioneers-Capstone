@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 class Home extends React.Component{
 
     render(){
-        return(
+    return(
     <div class="home page template-slider color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky">
     <div id="Wrapper">
         <div id="Header_wrapper">
