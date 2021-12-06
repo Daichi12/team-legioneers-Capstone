@@ -8,8 +8,8 @@
     "npm":"6.14.2"
   },
   "scripts": {
-    "test": "nodemon index.js",
-    "heroku-postbuild": "cd porticos-react && npm install && npm run public"
+    "start": "nodemon index.js",
+    "heroku-postbuild": "cd porticos-react && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",

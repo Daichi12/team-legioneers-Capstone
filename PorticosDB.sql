@@ -1,4 +1,4 @@
-CREATE DATABASE PorticosDB;
+--CREATE DATABASE PorticosDB;
 
 CREATE TABLE Account(
 Account_id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
