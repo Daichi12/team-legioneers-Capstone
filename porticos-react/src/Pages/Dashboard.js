@@ -57,7 +57,7 @@ const Dashboard = ( {setAuth} ) => {
       const body = { name, phone, group, time, message, Venuename, Venuephone, Venueemail, starttime, endtime, Venuegroup, Venuemessage, id };
       axios({
         method: "PUT",
-        url:"http://localhost:5000/table_reservations/:id",
+        url:"/table_reservations/:id",
         data:  JSON.stringify(body)
       }).then((response)=>{
         if (response.data.status === 'success') {
@@ -79,7 +79,7 @@ const Dashboard = ( {setAuth} ) => {
       const body = { name, phone, group, time, message, Venuename, Venuephone, Venueemail, starttime, endtime, Venuegroup, Venuemessage, id };
       axios({
         method: "PUT",
-        url:"http://localhost:5000/event_reservations/:id",
+        url:"/event_reservations/:id",
         data:  JSON.stringify(body)
       }).then((response)=>{
         if (response.data.status === 'success') {
@@ -126,7 +126,7 @@ const Dashboard = ( {setAuth} ) => {
 
   const getProfile = async () => {
     try {
-      const res = await fetch("http://localhost:5000/dashboard/", {
+      const res = await fetch("/dashboard/", {
         method: "GET",
         headers: { token: localStorage.token }
       });
@@ -235,5 +235,5 @@ const Dashboard = ( {setAuth} ) => {
     </div>
   );
 };
- 
+
 export default Dashboard;

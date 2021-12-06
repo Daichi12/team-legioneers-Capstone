@@ -246,5 +246,5 @@ render(){
             )
         }
     }
-    
     export default AboutUs
+    

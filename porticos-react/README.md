@@ -68,3 +68,53 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+-PAYMENT-
+
+Payment Testing Sign in:
+Email ID:
+sb-irkvw8460253@personal.example.com
+
+System Generated Password:
+'g#l1BMX
+
+
+Developer Paypal:
+
+email: 
+porticos1606@gmail.com
+
+password: 
+Legioneers123
+
+Website to see receipts from the payment testing:
+https://developer.paypal.com/developer/notifications
+
+
+-HEROKU-
+
+To open app:
+heroku open
+
+In case of changes:
+git.add *
+git commit -m "Insert Message"
+git push
+git push heroku main
+
+*wait for the push to finalize*
+
+heroku open
+
+
+To access Database in Heroku:
+heroku pg:psql -a porticos1606
+
+ *To view entries in a table*
+
+ Select * From TABLENAME;
+
+ Heroku Website:
+ https://porticos1606.herokuapp.com/
+

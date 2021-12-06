@@ -28,7 +28,7 @@ function App() {
    };
   async function checkAuthenticated(){
     try {
-      const res = await fetch("http://localhost:5000/account/is_verified", {
+      const res = await fetch("/account/is_verified", {
         method: "GET",
         headers: {token: localStorage.token }
       });
@@ -104,9 +104,6 @@ function App() {
         </Routes>
 
 </Router>
-
   );
-          }
-
-
+}
 export default App;

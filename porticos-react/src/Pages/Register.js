@@ -18,7 +18,7 @@ const Register = ( {setAuth} ) => {
     try {
       const body = { Employee_UserName, Employee_Password};
       const response = await fetch(
-        "http://localhost:5000/account/register",
+        "/account/register",
         {
           method: "POST",
           headers: {
