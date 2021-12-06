@@ -5,7 +5,7 @@ const menu = [
     category: 'Entradas',
     price: "$8/$15",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Alitas Fritas con salsa de tu selección; Mojo Isleño, Parcha y/o Guayaba.`,
   },
   {
@@ -14,7 +14,7 @@ const menu = [
     category: 'Entradas',
     price: "$7",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/zI6k9kpTURBXy8yMzRlMTBmNDBmMzg0YTFjZDZiYjczZDIxZTc2YzE3MC5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/zI6k9kpTURBXy8yMzRlMTBmNDBmMzg0YTFjZDZiYjczZDIxZTc2YzE3MC5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Fritura de name, yautía y bacalao.`,
   },
 
@@ -24,7 +24,7 @@ const menu = [
     category: 'Entradas',
     price: "$8",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Queso del país con salsa de guayaba y/o parcha.`,
   },
 
@@ -33,7 +33,7 @@ const menu = [
     title: 'Yuca frita con Picadillo',
     category: 'Entradas',
     price: "$9",
-    img: 'https://www.chefspencil.com/wp-content/uploads/Suya.jpg',
+    img: 'http://www.chefspencil.com/wp-content/uploads/Suya.jpg',
     desc: `Palitos de yuca acompañada de carne molida y salsa de ajo, cilantro y queso.`,
   },
   {
@@ -42,7 +42,7 @@ const menu = [
     category: 'Entradas',
     price: "$8",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Masitas de cerdo fritas al limón.`,
   },
   {
@@ -51,7 +51,7 @@ const menu = [
     category: 'Entradas',
     price: "$9",
     img:
-      'https://img.buzzfeed.com/buzzfeed-static/static/2019-01/14/17/asset/buzzfeed-prod-web-06/sub-buzz-25688-1547505890-13.jpg?output-quality=auto&output-format=auto',
+      'http://img.buzzfeed.com/buzzfeed-static/static/2019-01/14/17/asset/buzzfeed-prod-web-06/sub-buzz-25688-1547505890-13.jpg?output-quality=auto&output-format=auto',
     desc: `Masitas de pollo empanadas con la salsa de su elección.`,
   },
   {
@@ -60,7 +60,7 @@ const menu = [
     category: 'Entradas',
     price: "$9",
     img:
-      'https://shop4younow.com.ng/317-large_default/ofada-rice-sauce-per-portion.jpg',
+      'http://shop4younow.com.ng/317-large_default/ofada-rice-sauce-per-portion.jpg',
     desc: `Albóndigas de carne de res con especies en un guiso jamaiquino.`,
   },
   {
@@ -69,7 +69,7 @@ const menu = [
     category: 'Entradas',
     price: "$10/$16",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/Mg3k9kpTURBXy81Mjc2OWJjZGI3ZTE0NDljMTRhZmYyYWI1MzhmNmRlMC5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/Mg3k9kpTURBXy81Mjc2OWJjZGI3ZTE0NDljMTRhZmYyYWI1MzhmNmRlMC5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Llámalas como quieras, surtido de empanadillas o pastelillos. Escoge entre 12 pcs o 24 pcs.`,
   },
   {
@@ -78,7 +78,7 @@ const menu = [
     category: 'Emparedados/Hamburguesas',
     price: "$12",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/U_fk9kpTURBXy81NGM2MzIxNGE2NTVmYmI2YmU4Njg0MTJkM2QyODQzNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/U_fk9kpTURBXy81NGM2MzIxNGE2NTVmYmI2YmU4Njg0MTJkM2QyODQzNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Emparedado de ropa vieja, lomo de cerdo, jamón, pollo, repollo fresco, queso del país, salsa rosada en pan artesanal. Acompañado de palitos de yuca.`,
   },
   {
@@ -87,7 +87,7 @@ const menu = [
     category: 'Emparedados/Hamburguesas',
     price: "$12",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Emparedado de bistec encebollado, amarillos, aguacate, repollo, lechuga del país y salsa rosada. Acompañado de papas fritas.`,
   },
   {
@@ -96,7 +96,7 @@ const menu = [
     category: 'Emparedados/Hamburguesas',
     price: "$11",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Trio de Hamburguesas de res sazonada a estilo Cubano.`,
   },
 
@@ -106,7 +106,7 @@ const menu = [
     category: 'A La Parrilla',
     price: "$32",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Churrasco cocido a la parrilla. Bañado en una salsa de mojo isleño. Incluye dos acompañantes.`,
   },
 
@@ -116,7 +116,7 @@ const menu = [
     category: 'A La Parrilla',
     price: "$36",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `"Rib Eye" de 10 oz cocido a la parrilla, cubierto de una mantequilla de ajo, cilantro y limón. Incluye dos acompañantes.`,
   },
 
@@ -126,7 +126,7 @@ const menu = [
     category: 'A La Parrilla',
     price: "$38",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Filete Mignon de 10 oz cocido a la parrilla, relleno mantequilla de ajo rostizado, queso del país y pimientos morrones. Incluye dos acompañantes.`,
   },
 
@@ -136,7 +136,7 @@ const menu = [
     category: 'A La Parrilla',
     price: "$38",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Mar y Tierra de Churrasco cocido a la parrilla, relleno de camarones en salsa cremosa. Incluye dos acompañantes.`,
   },
 
@@ -146,7 +146,7 @@ const menu = [
     category: 'A La Parrilla',
     price: "$18",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Chuletón de Cerdo cortado en lámina gruesa con un tope de un escabeche de cebolla. Incluye dos acompañantes.`,
   },
 
@@ -156,7 +156,7 @@ const menu = [
     category: 'A La Parrilla',
     price: "$45",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Parrillada que incluye una galería de cortes de carnes y fusiones de cada una de las Antillas Mayores. Lomo de cerdo, churrasco, pechuga de pollo y chuletón. Incluye dos acompañantes.`,
   },
 
@@ -166,7 +166,7 @@ const menu = [
     category: 'A La Parrilla',
     price: "Precio por libra",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Langosta fresca a la parrilla bañada en una mantequilla de limón y ajo. Incluye dos acompañantes.`,
   },
 
@@ -175,7 +175,7 @@ const menu = [
     title: 'El Esmayao (Churrasco, Camarones, Chillo, Mariscada, Otras Combinaciones.)',
     category: 'Principales',
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: "Precios: ($23 Churrasco, $23 Camarones, $25 Chillo, $30 Mariscada, $16 Otras Combinaciones.) Mofongo de plátano verde, relleno de tu mejor elección como: pica pollo, carne frita al limón, ropa vieja, o pollo al curry jamaiquino.",
   },
 
@@ -185,7 +185,7 @@ const menu = [
     category: 'Principales',
     price: "$15",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Pernil de Cerdo desmenuzado. Bañado en salsa de ron, acompañado de un pastel de masa y cerdo con mamposteado de gandules del país.`,
   },
   {
@@ -194,7 +194,7 @@ const menu = [
     category: 'Principales',
     price: "$16",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Pechuga 10oz salteada, bañada en una salsa al ajillo. Incluye dos acompañantes.`,
   },
   {
@@ -203,7 +203,7 @@ const menu = [
     category: 'Principales',
     price: "$14",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Pastelón de plátano maduro y majado de viandas con carne de cerdo bien marinada y una salsa cremosa de queso, ajo y cilantro. Incluye dos acompañantes.`,
   },
   {
@@ -212,7 +212,7 @@ const menu = [
     category: 'Principales',
     price: "$20",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Chuleta Kan-Kan del país, bañada en una salsa de mojo isleño. Incluye dos acompañantes.`,
   },
   {
@@ -221,7 +221,7 @@ const menu = [
     category: 'Principales',
     price: "Precio por libra",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Pesca fresca del día de 1 libra en adelante. Incluye dos acompañantes.`,
   },
   {
@@ -230,7 +230,7 @@ const menu = [
     category: 'Principales',
     price: "$12",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Majado de viandas con tope de vegetales, salteados en vino albariño y aceite de oliva acompañados de amarillos de plátano.`,
   },
   {
@@ -239,7 +239,7 @@ const menu = [
     category: 'Principales',
     price: "$16",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Carne de res estilo ropa vieja cubana. Incluye dos acompañantes.`,
   },
   {
@@ -248,7 +248,7 @@ const menu = [
     category: 'Principales',
     price: "$14",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Picadillo de carne molida estilo cubano con tope de huevo frito y arroz blanco. Incluye un acompañantes.`,
   },
   {
@@ -257,7 +257,7 @@ const menu = [
     category: 'Principales',
     price: "Precio por libra",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Fresca Langosta del país cocida en arroz cremoso de mariscos. SERVICIO PARA DOS PERSONAS. Incluye un acompañante.`,
   },
 
@@ -266,7 +266,7 @@ const menu = [
     title: '¡Oh! Pero, Bueno! (Churrasco, Camarones, Chillo, Mariscada, Otras Combinaciones.)',
     category: 'Principales',
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: "Precios: ($23 Churrasco, $23 Camarones, $25 Chillo, $30 Mariscada, $16 Otras Combinaciones.) Mangú dominicano, majado de plátanos verdes con cebollas caramelizadas relleno de su mejor elección como: pica pollo, carne frita al limón, ropa vieja, o pollo al curry jamaiquino.",
   },
 
@@ -276,7 +276,7 @@ const menu = [
     category: 'Principales',
     price: "$25",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Filete de chillo en la salsa de su selección; coco, criolla, cebolla escabeche, ajo y limón o chutney de papaya, mango y piña. SE RECOMIENDA EN SALSA DE COCO. Incluye dos acompañantes.`,
   },
   {
@@ -285,7 +285,7 @@ const menu = [
     category: 'Principales',
     price: "$16",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Pollo o lomo de cerdo marinado al estilo jerk servido con una salsa chutney de papaya y su guarnición deseada. Incluye dos acompañantes.`,
   },
   {
@@ -294,7 +294,7 @@ const menu = [
     category: 'Principales',
     price: "$16",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Pollo o lomo de cerdo del País, salteado al estilo jamaiquino con curry, se sirve con su guarnición deseada. Incluye dos acompañantes.`,
   },
   {
@@ -303,7 +303,7 @@ const menu = [
     category: 'Principales',
     price: "$16",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Ensalada jamaiquina con pechuga de pollo, lechuga fresca, queso del país, aderezo de papaya / mango / piña.`,
   },
   {
@@ -311,7 +311,7 @@ const menu = [
     title: 'El Pide Que Hay',
     category: 'Principales',
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Cocina creativa con fusiones caribeñas del Chef, varía según el día. Favor de preguntar a su mesero.`,
   },
   
@@ -322,7 +322,7 @@ const menu = [
     category: 'Postres',
     price: "$7",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Bizcocho mojado con salsa a base de 4 leches, Caramelo salado y helado de vainilla.`,
   },
   {
@@ -331,7 +331,7 @@ const menu = [
     category: 'Postres',
     price: "$5",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Variedad de cremosos flanes.`,
   },
   
@@ -341,7 +341,7 @@ const menu = [
     category: 'Postres',
     price: "$7",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Variedad de cremosos flanes En Porticos1606`,
   },
   
@@ -351,7 +351,7 @@ const menu = [
     category: 'Postres',
     price: "$7",
     img:
-      'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: "Variedad de cremosos flanes En Porticos1606",
   },
   
@@ -359,7 +359,7 @@ const menu = [
     id: 39,
     title: 'Sopa o Crema del dia',
     category: 'Sopas',
-    img:'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+    img:'http://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Pregunte por la sopa o crema del dia.`,
   },
 ]
