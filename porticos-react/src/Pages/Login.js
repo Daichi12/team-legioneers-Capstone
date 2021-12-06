@@ -1,37 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
-
-
 import { toast } from "react-toastify";
-
-var PostData = 
-  [
-    {
-        "reservation_id": 21,
-        "reservation_name": "Chris",
-        "reservation_time": "2021-11-19T13:57",
-        "group_size": 4,
-        "phone": "787-943-6147",
-        "notes": "Test"
-    },
-    {
-        "reservation_id": 22,
-        "reservation_name": "Chris",
-        "reservation_time": "2021-11-19T13:57",
-        "group_size": 4,
-        "phone": "787-943-6147",
-        "notes": "Test"
-    },
-    {
-        "reservation_id": 23,
-        "reservation_name": "Chris",
-        "reservation_time": "2021-11-19T13:57",
-        "group_size": 4,
-        "phone": "787-943-6147",
-        "notes": "Test"
-    },
-]
-
 
 const Login = ( {setAuth} ) => {
   const [inputs, setInputs] = useState({
@@ -77,7 +46,7 @@ const Login = ( {setAuth} ) => {
   
   return (
     <Fragment>
-      <h1 className="text-center my-5">Login</h1>
+      <h1 style={{fontStyle: 'italic', marginBottom: "50px" }} className="text-center my-5">Login</h1>
       <form onSubmit={onSubmitForm}>
         <input
           type="text"
@@ -93,11 +62,13 @@ const Login = ( {setAuth} ) => {
           onChange={e => onChange(e)}
           className="form-control my-3"
         />
-        <button class="btn btn-success btn-block">Submit</button>
+        <button class="btn-submit" style={{marginTop: "40px"}}>
+
+         <h3 style={{textDecorationLine: 'underline',fontWeight: 'bold', fontStyle: 'italic',}}> Login </h3> 
+
+          </button>
       </form>
-      <Link to="/register">Register</Link>
-      <h1></h1>
-      {PostData.map((postDetail, index) => {return <h6> ID: {postDetail.reservation_id}, Name: {postDetail.reservation_name}, Time: {postDetail.reservation_time}, group size: {postDetail.group_size}, phone: {postDetail.phone},  </h6>})}
+      
     </Fragment>
   );
 };

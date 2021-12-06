@@ -266,6 +266,18 @@
     }
   }
 
+  .btn-btn-primary{
+    position: absolute;
+    top: 25px;
+    background:#98dace;
+    color:black
+  }
+  .btn-submit{
+    background:#98dace;
+    color:black;
+
+  }
+
   @media screen and (min-width: 2560px)  {
     .btn-container{
     position: absolute;
@@ -281,6 +293,16 @@
     }
   }
 
+  tbody{
+  
+    font-size: x-large;
+    font-weight: bold;
+    font-style: italic;
+    border-style: solid;
+    
+  }
+ 
+ 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

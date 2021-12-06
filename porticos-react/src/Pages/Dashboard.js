@@ -2,8 +2,10 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios"
-// var venueVar = null;
-// var tableVar = null;
+
+var venueVar = [];
+var tableVar = [];
+
 const Dashboard = ( {setAuth} ) => {
   const [name1, setName] = useState("");
   const [inputs, setInputs] = useState({
@@ -21,8 +23,8 @@ const Dashboard = ( {setAuth} ) => {
       Venuemessage:'',
       id:''
   });
-  const [venueVar, setVenueVar] = useState([]);
-  const [tableVar, setTableVar] = useState([]);
+
+
   const { name, phone, group, time, message, Venuename, Venuephone, Venueemail, starttime, endtime, Venuegroup, Venuemessage, id } = inputs;
 
   const onNameChange = (e) =>
@@ -112,7 +114,7 @@ const Dashboard = ( {setAuth} ) => {
   const getAllVenueReservations = () => {
     //e.preventDefault();
     
-    return axios.get('http://localhost:5000/table_reservations').then(res => {
+    return axios.get('http://localhost:5000/event_reservations').then(res => {
         const parseData = res.data
         console.log(`GETTING INDEX 0: ${JSON.stringify(parseData[0])}`);
         return res.data
@@ -138,15 +140,17 @@ const Dashboard = ( {setAuth} ) => {
   const venuePrint = async () =>{
     const parseData = await getAllVenueReservations();
     //console.log(parseData)
-    setVenueVar(JSON.stringify(parseData));
+    venueVar = parseData;
   }
   const tablePrint = async () =>{
     const parseData = await getAllTableReservations();
     //console.log(parseData)
-    setTableVar(JSON.stringify(parseData));
+    tableVar = parseData;
   }
+
   venuePrint();
   tablePrint();
+
   console.log(`TABLE TEST RESPONSE:  ${ tableVar}` );//Table Reservation Display
   console.log(`VENUE TEST RESPONSE:  ${ venueVar}` );//Venue Reservation Display
   const logout = (e) => {
@@ -163,20 +167,73 @@ const Dashboard = ( {setAuth} ) => {
   useEffect(() => {
     getProfile();
   }, []);
-  //var PostData = getAllTableReservations();
-  //console.log(getAllTableReservations());
+ 
   return (
     <div>
-      <h1 className="mt-5">Dashboard</h1>
-      <h2>Welcome {venueVar}</h2>
-      <button onClick={e => logout(e)} className="btn btn-primary">
-        Logout
+    <center>  <h1 className="mt-5" style={{textDecorationLine: 'underline',fontWeight: 'bold', fontStyle: 'italic', marginBottom:'120px' }}>Dashboard</h1> </center>
+    
+      <button onClick={e => logout(e)} className="btn-btn-primary">
+      <h3 style={{textDecorationLine: 'underline',fontWeight: 'bold', fontStyle: 'italic' }}>  Log Out </h3>
       </button>
-      
+    <center>  <h2 style={{textDecorationLine: 'underline',fontWeight: 'bold', fontStyle: 'italic', marginBottom:'50px'}}> Table Reservations </h2> </center>
+      <table>
+        <tbody>
+          <tr>
+            
+            <th style={{backgroundColor:"rgba(83, 83, 83, 0.185)"}}> ID </th>
+            <th style={{backgroundColor:"rgba(83, 83, 83, 0.185)"}}>Name</th>
+            <th style={{backgroundColor:"rgba(83, 83, 83, 0.185)"}}>Group Size</th>
+            <th style={{backgroundColor:"rgba(83, 83, 83, 0.185)"}}>Phone</th>
+            <th style={{backgroundColor:"rgba(83, 83, 83, 0.185)"}}>Notes</th>
+            
+          </tr>
 
- {/* {tableVar.map((postDetail, index) => {return <h6> ID: {postDetail.reservation_id}, Name: {postDetail.reservation_name}, Time: {postDetail.reservation_time}, group size: {postDetail.group_size}, phone: {postDetail.phone},  </h6>})}   */}
+          {tableVar.map((tableVar, index) => (
+            <tr key= {index}>
+             
+         <td style={{backgroundColor:"#98dace"}}> {tableVar.reservation_id} </td> 
+         <td style={{backgroundColor:"#98dace"}}> {tableVar.reservation_name} </td>
+         <td style={{backgroundColor:"#98dace"}}> {tableVar.group_size} </td>
+         <td style={{backgroundColor:"#98dace"}}> {tableVar.phone} </td>
+         <td style={{backgroundColor:"#98dace"}}> {tableVar.notes} </td>
+         
+        </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <div>
+      <center>  <h2 style={{textDecorationLine: 'underline',fontWeight: 'bold', fontStyle: 'italic', marginTop:'75px', marginBottom:'50px' }}> Venue Reservations </h2> </center>
+      <table>
+        <tbody>
+          <tr>
+            <th style={{backgroundColor:"rgba(83, 83, 83, 0.185)"}}>ID</th>
+            <th style={{backgroundColor:"rgba(83, 83, 83, 0.185)"}}>Name</th>
+            <th style={{backgroundColor:"rgba(83, 83, 83, 0.185)"}}>Group Size</th>
+            <th style={{backgroundColor:"rgba(83, 83, 83, 0.185)"}}>Phone</th>
+            <th style={{backgroundColor:"rgba(83, 83, 83, 0.185)"}}>Email</th>
+            <th style={{backgroundColor:"rgba(83, 83, 83, 0.185)"}}>Notes</th>
+            
+          </tr>
+
+          {venueVar.map((venueVar, index) => (
+            <tr key= {index}>
+         <td style={{backgroundColor:"#98dace"}}> {venueVar.reservation_id} </td> 
+         <td style={{backgroundColor:"#98dace"}}> {venueVar.reservation_name} </td>
+         <td style={{backgroundColor:"#98dace"}}> {venueVar.group_size} </td>
+         <td style={{backgroundColor:"#98dace"}}> {venueVar.phone} </td>
+         <td style={{backgroundColor:"#98dace"}}> {venueVar.email} </td>
+         <td style={{backgroundColor:"#98dace"}}> {venueVar.notes} </td>
+         
+        </tr>
+          ))}
+        </tbody>
+      </table>
+
+      </div>
+
     </div>
   );
 };
-
+ 
 export default Dashboard;
