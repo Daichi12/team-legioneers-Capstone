@@ -1,3 +1,4 @@
+//Dashboard Implementation 
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios"
@@ -68,8 +69,8 @@ const Dashboard = ( {setAuth} ) => {
       console.error(err.message);
     }
   };
-  const handleVenueUpdate = async (e) => {
-    e.preventDefault();
+  const handleVenueUpdate = () => {
+    
     try {
       const body = { name, phone, group, time, message, Venuename, Venuephone, Venueemail, starttime, endtime, Venuegroup, Venuemessage, id };
       axios({
@@ -93,48 +94,28 @@ const Dashboard = ( {setAuth} ) => {
   const getAllTableReservations = async (e) => {
     e.preventDefault();
     try {
-      //const body = { name, phone, group, time, message, Venuename, Venuephone, Venueemail, starttime, endtime, Venuegroup, Venuemessage, id };
-      axios({
-        method: "GET",
-        url:"http://localhost:5000/table_reservations",
-        //data:  JSON.stringify(body)
-      }).then((response)=>{
-        if (response.data.status === 'success') {
-          // Change form box into success message
-          alert("Successful Table Reservation Retrieval");
-          const parseData = response.data.json();
-          alert(parseData);
-          setInputs(parseData);
-        } else if (response.data.status === 'fail') {
-          // Change form box into failure message
-          // possibly just an error alert()
-          alert("Malformed Table Reservation Retrieval");
-        }
+      axios.get('http://localhost:5000/table_reservations').then(res => {
+        const parseData = res.data
+        console.log(`GETTING INDEX 0: ${JSON.stringify(parseData[0])}`);
+        return parseData;
       })
+      
+      //setInputs(parseData);
     } catch (err) {
       console.error(err.message);
     }
   };
-  const getAllVenueReservations = async (e) => {
-    e.preventDefault();
+  const getAllVenueReservations = () => {
+    //e.preventDefault();
+    
     try {
-      //const body = { name, phone, group, time, message, Venuename, Venuephone, Venueemail, starttime, endtime, Venuegroup, Venuemessage, id };
-      axios({
-        method: "GET",
-        url:"http://localhost:5000/table_reservations",
-        //data:  JSON.stringify(body)
-      }).then((response)=>{
-        if (response.data.status === 'success') {
-          // Change form box into success message
-          alert("Successful Venue Reservation Retrieval");
-          const parseData = response.data.json();
-          setInputs(parseData);
-        } else if (response.data.status === 'fail') {
-          // Change form box into failure message
-          // possibly just an error alert()
-          alert("Malformed Venue Reservation Retrieval");
-        }
+      axios.get('http://localhost:5000/event_reservations').then(res => {
+        const parseData = res.data
+        console.log(`GETTING INDEX 0: ${JSON.stringify(parseData[0])}`);
+        return parseData;
       })
+      
+      //setInputs(parseData);
     } catch (err) {
       console.error(err.message);
     }
@@ -153,7 +134,8 @@ const Dashboard = ( {setAuth} ) => {
       console.error(err.message);
     }
   };
-
+  console.log(`VENUE TEST RESPONSE:  ${ getAllVenueReservations()}` );//Table Reservation Display
+  console.log(`TABLE TEST RESPONSE:  ${ getAllTableReservations()}` );//Venue Reservation Display
   const logout = (e) => {
     e.preventDefault();
     try {

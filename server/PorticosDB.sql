@@ -34,7 +34,7 @@ CREATE TABLE Event_Reservations(
     Phone VARCHAR(12),
     Email VARCHAR(100),
     Event_Start_Time VARCHAR(50),
-    Event_End_Time VARCHAR(50),
+    Event_Duration VARCHAR(50),
     Notes VARCHAR(100)
 );
 INSERT INTO Account (Employee_UserName, Employee_Password) VALUES ('Roberto Melendez', 'abc123');
