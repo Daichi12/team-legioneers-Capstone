@@ -138,7 +138,7 @@ return(
     </div>
 
    <div className= "merch_btn">
-    <a class="button  button_size_2 button_js" href="https://porticos1606.myshopify.com/" target="_blank"> <span class="button_label">Merchandise Shop In Progress</span></a>
+    <a class="button  button_size_2 button_js" href="https://porticos1606.myshopify.com/" target="_blank"> <span class="button_label">Merchandise Shop</span></a>
     </div>
             </div>
           </div>

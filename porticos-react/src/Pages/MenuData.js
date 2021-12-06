@@ -43,7 +43,7 @@ const menu = [
     price: "$8",
     img:
       'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
-    desc: `Masitas de cerdo fritas al limón.`,
+    desc: `Masitas de cerdo fritas al limón, incluye 2 complementos.`,
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const menu = [
     category: 'Entradas',
     price: "$9",
     img:
-      'https://shop4younow.com.ng/317-large_default/ofada-rice-sauce-per-portion.jpg',
+      'https://img.buzzfeed.com/buzzfeed-static/static/2019-01/14/17/asset/buzzfeed-prod-web-06/sub-buzz-25688-1547505890-13.jpg?output-quality=auto&output-format=auto',
     desc: `Albóndigas de carne de res con especies en un guiso jamaiquino.`,
   },
   {
