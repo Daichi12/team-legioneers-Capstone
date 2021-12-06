@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "nodemon index.js",
-    "heroku-postbuild": "cd porticos-react && npm install && npm run build"
+    "heroku-postbuild": "cd porticos-react && npm install && npm run public"
   },
   "author": "",
   "license": "ISC",
