@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 class AboutUs extends React.Component{
 
-    render(){
-        return(
-            
-            <div class="page template-slider color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky">
+render(){
+    return(
+    <div class="page template-slider color-custom style-default layout-full-width nice-scroll-on button-stroke no-content-padding no-shadows header-split minimalist-header-no sticky-header sticky-tb-color ab-hide subheader-both-center menuo-no-borders footer-copy-center mobile-tb-left mobile-side-slide mobile-mini-mr-lc mobile-header-mini mobile-sticky">
     <div id="Wrapper">
         <div id="Header_wrapper">
             <header id="Header">
@@ -41,6 +40,11 @@ class AboutUs extends React.Component{
                                             <li>
                                                 <a href="/Contact"><span>Contact</span></a>
                                             </li>
+                                            <li>
+                          <a href="/Merchandise">
+                            <span>Merchandise Shop</span>
+                          </a>
+                        </li>
                                         </ul>
                                     </nav><a class="responsive-menu-toggle " href="#"><i class="icon-menu-fine"></i></a>
                                 </div>
@@ -49,19 +53,28 @@ class AboutUs extends React.Component{
                     </div>
                 </div>
                 <div class="mfn-main-slider" id="mfn-rev-slider">
-                    <div id="rev_slider_2_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery" style={{"margin":"0px auto","backgroundColor":"transparent","padding":"0px","marginTop":"0px","marginBottom":"0px"}}>
-                        <div id="rev_slider_2_1" class="rev_slider fullwidthabanner" style={{"display":"none", "data-version=": "5.3.1.5"}}>
+                    <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery" style={{"margin":"0px auto","backgroundColor":"transparent","padding":"0px","marginTop":"0px","marginBottom":"0px"}}>
+                        <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style={{"display":"none", "data-version=": "5.3.1.5"}}>
                             <ul>
                                 <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                                    <img src="/assets/content/restaurant2/images/home_restaurant2_about_slider1.jpg" alt="" title="home_restaurant2_about_slider1" width="1920" height="720" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
+                                    <img src="/assets/content/restaurant2/images/home_restaurant2_about_slider7.jpg" alt="" title="home_restaurant2_about_slider7" width="1920" height="720" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
                                 </li>
                                 <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                                    <img src="/assets/content/restaurant2/images/home_restaurant2_about_slider2.png" alt="" title="home_restaurant2_about_slider2" width="1920" height="720" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
+                                    <img src="/assets/content/restaurant2/images/home_restaurant2_about_slider8.jpg" alt="" title="home_restaurant2_about_slider8" width="1920" height="720" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
+                                </li>
+                                <li data-index="rs-3" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                    <img src="/assets/content/restaurant2/images/home_restaurant2_about_slider9.jpg" alt="" title="home_restaurant2_about_slider9" width="1920" height="720" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Linear.easeNone" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina/>
                                 </li>
                             </ul>
+                            <div class="tp-static-layers">
+                                <div class="tp-caption   tp-resizeme tp-static-layer" id="slider-1-layer-3" data-x="center" data-hoffset="" data-y="center" data-voffset="20" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-startslide="0" data-endslide="2" data-frames='[{"delay":260,"speed":700,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style={{"zIndex":"6","whiteSpace":"nowrap","fontSize":"48px","lineHeight":"58px","fontWeight":"400","color":"#0f13fcec","fontFamily":"Arial"}}>
+                                    <p2 style={{"font-size": "90px", opacity: 1, color:"#98dace"}}> 
+                                        Learn More About Porticos1606
+                                     </p2>
+                                </div>
+                            </div>
                             <div class="tp-bannertimer tp-bottom" style={{"visibility":"hidden !important"}}></div>
                         </div>
-
                     </div>
                 </div>
             </header>
@@ -76,22 +89,22 @@ class AboutUs extends React.Component{
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column two-third column_column ">
                                             <div class="column_attr clearfix" style={{"padding":"0 7% 0 0"}}>
-                                                <h6 style={{"letterSpacing":"4px"}}>CURABITUR TEMPOR</h6>
-                                                <h3>Donec erat eu odio imperdiet urna lobortis</h3>
+                                                <h6 style={{"letterSpacing":"4px"}}>Porticos1606</h6>
+                                                <h4>PÓRTICOS 1606 is a restaurant with a bar that offers customers a unique and authentic experience in a cozy and quiet environment. Here, you can enjoy our land's flavor and typical seasoning through a Gallery of Caribbean Fusions to your delight and our satisfaction. We are history and a sense of belonging. We are San Germán.</h4>
                                                 <hr class="no_line" style={{"margin":"0 auto 20px"}}/>
-                                                <h6> Morbi laoreet, lacus egestas at, bibendum nulla. Nullam risus et ultrices posuere cubilia Curae, Nullam aliquet, arcu sed ante ligula nulla, egestas at, venenatis interdum, diam in faucibus quis, convallis justo. Donec blandit, quam. Ut id elementum vitae, sollicitudin justo. Pellentesque fringilla eget, condimentum justo ac lacus. Nulla nec odio et ultrices posuere sit amet felis adipiscing dictum enim. Suspendisse ut vehicula faucibus, justo iaculis odio, in faucibus orci fermentum lobortis laoreet ultricies accumsan.</h6>
+                                                <h6> </h6>
                                             </div>
                                         </div>
                                         <div class="column mcb-column one-third column_column ">
                                             <div class="column_attr clearfix">
-                                                <h6 style={{"letterSpacing":"4px"}}>NULLAM JUSTO</h6>
+                                                <h6 style={{"letterSpacing":"4px"}}>Placeholder title</h6>
                                                 <p>
-                                                    Lorem ipsum dolor sit amet mauris non sem. In urna. Sed sed molestie sagittis. Nullam viverra justo.
+                                                    Porticos placeholdertext
                                                 </p>
                                                 <hr class="no_line" style={{"margin":"0 auto 20px"}}/>
-                                                <h6 style={{"letterSpacing":"4px"}}>SODALES</h6>
+                                                <h6 style={{"letterSpacing":"4px"}}>Placeholder Title</h6>
                                                 <p>
-                                                    Quisque justo augue commodo est congue porta, erat volutpat. Curabitur enim. Duis vulputate quam. Proin scelerisque rhoncus eu, fringilla enim. Quisque at nunc pede placerat elementum congue, aliquet elit odio, fermentum facilisis. Nulla vehicula neque. Praesent ante.
+                                                    Placeholdertext
                                                 </p>
                                             </div>
                                         </div>
@@ -111,7 +124,7 @@ class AboutUs extends React.Component{
                                                 </div>
                                                 <hr class="no_line" style={{"margin":"0 auto 40px"}}/>
                                                 <p>
-                                                    <h5> Fusce eu orci. Integer non diam. Vestibulum nibh. Duis ornare elementum dui. Pellentesque tellus. Praesent tortor. In euismod orci orci, blandit quam nulla, faucibus orci luctus laoreet. Vestibulum non nisl sapien dui lectus. </h5>
+                                                    <h5> Placeholder </h5>
                                                 </p>
                                             </div>
                                         </div>
@@ -131,7 +144,7 @@ class AboutUs extends React.Component{
                         </div>
                         <div class="section mcb-section no-margin-h no-margin-v  " style={{"paddingTop":"0px","paddingBottom":"230px","backgroundImage":"url(/assets/content/restaurant2/images/home_restaurant2_sectionbg5.jpg)","backgroundRepeat":"no-repeat","backgroundPosition":"center bottom"}}>
                             <div class="section_wrapper mcb-section-inner">
-                                <div class="wrap mcb-wrap one-second  valign-top clearfix" style={{"marginTop":"-60px"}}>
+                                <div class="wrap mcb-wrap one-second  valign-top clearfix" style={{"marginTop":"10px"}}>
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_image ">
                                             <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
@@ -145,13 +158,13 @@ class AboutUs extends React.Component{
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_column">
                                             <div class="column_attr clearfix align_center">
-                                                <h3>Morbi accumsan
+                                                <h3>COVID19
 													<br />
-													convallis</h3>
+													Regulations</h3>
                                                 <hr class="no_line" style={{"margin":"0 auto 15px"}}/>
-                                                <h5>Donec nec nunc ut lacus egestas dignissim, sapien mauris sed eros quis justo. Donec non ligula enim molestie a, tortor. Sed vehicula sed, pretium wisi. Sed eros. Mauris ut tortor ante libero posuere eu, semper facilisis felis interdum eu rhoncus eget enim.</h5>
+                                                <h5>For the benefit, safety and well-being of our guests and associates of PORTICOS 1606, we have made a moderate accommodation according to the Self-certification already obtained and the protocol of PROSHA and the "National Restaurant Association", thus complying with the requirements of distance, cleanliness and a safe service, but with a unique and authentic experience. </h5>
                                                 <hr class="no_line" style={{"margin":"0 auto 20px"}}/>
-                                                <a class="button  button_size_2 button_js" href="contact.html"><span class="button_label">Contact us</span></a>
+                                                <a class="button  button_size_2 button_js" href="/Contact"><span class="button_label">Contact us</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -173,7 +186,7 @@ class AboutUs extends React.Component{
                                 <div style={{"paddingRight":"20%"}}>
                                     <h4>Localization</h4>
                                     <div style={{"width":"30%","height":"1px","background":"#98dace"}}></div>
-                                    <hr class="no_line" style={{"margin":"0 auto 15px"}}/>
+                                    <hr class="no_line" style={{"margin":"0 auto -5px"}}/>
                                     <p>
                                         <br/> <h5>Calle Dr. Santiago Veve #55
                                         <br/> San German, Puerto Rico
@@ -221,7 +234,7 @@ class AboutUs extends React.Component{
 
         </footer>
     </div>
-
+    
     <div id="Side_slide" class="right dark">
         <div class="close-wrapper">
             <a href="#" class="close"><i class="icon-cancel-fine"></i></a>
@@ -229,12 +242,9 @@ class AboutUs extends React.Component{
         <div class="menu_wrapper"></div>
     </div>
     <div id="body_overlay"></div>
-
             </div>
-
             )
-
         }
     }
-    
     export default AboutUs
+    
