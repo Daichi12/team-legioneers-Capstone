@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios"
-var venueVar = null;
-var tableVar = null;
+// var venueVar = null;
+// var tableVar = null;
 const Dashboard = ( {setAuth} ) => {
   const [name1, setName] = useState("");
   const [inputs, setInputs] = useState({
@@ -21,7 +21,8 @@ const Dashboard = ( {setAuth} ) => {
       Venuemessage:'',
       id:''
   });
-
+  const [venueVar, setVenueVar] = useState([]);
+  const [tableVar, setTableVar] = useState([]);
   const { name, phone, group, time, message, Venuename, Venuephone, Venueemail, starttime, endtime, Venuegroup, Venuemessage, id } = inputs;
 
   const onNameChange = (e) =>
@@ -137,12 +138,12 @@ const Dashboard = ( {setAuth} ) => {
   const venuePrint = async () =>{
     const parseData = await getAllVenueReservations();
     //console.log(parseData)
-    venueVar = JSON.stringify(parseData)
+    setVenueVar(JSON.stringify(parseData));
   }
   const tablePrint = async () =>{
     const parseData = await getAllTableReservations();
     //console.log(parseData)
-    tableVar = JSON.stringify(parseData)
+    setTableVar(JSON.stringify(parseData));
   }
   venuePrint();
   tablePrint();
@@ -167,7 +168,7 @@ const Dashboard = ( {setAuth} ) => {
   return (
     <div>
       <h1 className="mt-5">Dashboard</h1>
-      <h2>Welcome {name1}</h2>
+      <h2>Welcome {venueVar}</h2>
       <button onClick={e => logout(e)} className="btn btn-primary">
         Logout
       </button>
