@@ -316,7 +316,7 @@ app.post("/menu", async(req, res) => {
 
     } catch (error) {
         res.status(500).json(err.message);    }
-})
+});
 
 //get all Menu Selections
 app.get("/menu", async(req, res) =>{
