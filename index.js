@@ -304,7 +304,7 @@ app.delete("/event_reservations/:id", async (req, res) => {
     //Menu Routes//
 
 //Create a Menu Selection 
-
+/*
 app.post("/menu", async(req, res) => {
     try {
       const newMenu = await pool.query(`INSERT INTO Menu (Dish_Name, Dish_Type, Dish_Description, Pricing) VALUES($1, $2, $3, $4)`, 
@@ -434,6 +434,7 @@ app.delete("/menu/:id", async (req, res) => {
         } catch (err){
             res.status(500).json(err.message);        }
     }); 
+    */
 
 //Merchandise Shop Routes
 
