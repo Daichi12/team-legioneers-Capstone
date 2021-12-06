@@ -48,7 +48,7 @@ const Login = ( {setAuth} ) => {
     try {
       const body = { Employee_UserName, Employee_Password };
       const response = await fetch(
-        "http://localhost:5000/account/login",
+        "/account/login",
         {
           method: "POST",
           headers: {

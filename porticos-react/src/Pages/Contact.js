@@ -594,7 +594,7 @@ class Contact extends React.Component{
     // Send form to DB Venue Reservation Endpoint
     axios({
       method: "POST",
-      url:"http://localhost:5000/event_reservations",
+      url:"/event_reservations",
       data:  this.state
     }).then((response)=>{
       if (response.data.status === 'success') {
@@ -620,7 +620,7 @@ class Contact extends React.Component{
     // Send form to DB Table Reservation Endpoint
     axios({
       method: "POST",
-      url:"http://localhost:5000/table_reservations",
+      url:"/table_reservations",
       data:  this.state
     }).then((response)=>{
       if (response.data.status === 'success') {

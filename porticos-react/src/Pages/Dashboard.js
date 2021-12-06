@@ -53,7 +53,7 @@ const Dashboard = ( {setAuth} ) => {
       const body = { name, phone, group, time, message, Venuename, Venuephone, Venueemail, starttime, endtime, Venuegroup, Venuemessage, id };
       axios({
         method: "PUT",
-        url:"http://localhost:5000/table_reservations/:id",
+        url:"/table_reservations/:id",
         data:  JSON.stringify(body)
       }).then((response)=>{
         if (response.data.status === 'success') {
@@ -75,7 +75,7 @@ const Dashboard = ( {setAuth} ) => {
       const body = { name, phone, group, time, message, Venuename, Venuephone, Venueemail, starttime, endtime, Venuegroup, Venuemessage, id };
       axios({
         method: "PUT",
-        url:"http://localhost:5000/event_reservations/:id",
+        url:"/event_reservations/:id",
         data:  JSON.stringify(body)
       }).then((response)=>{
         if (response.data.status === 'success') {
@@ -94,7 +94,7 @@ const Dashboard = ( {setAuth} ) => {
   const getAllTableReservations = async (e) => {
     e.preventDefault();
     try {
-      axios.get('http://localhost:5000/table_reservations').then(res => {
+      axios.get('/table_reservations').then(res => {
         const parseData = res.data
         console.log(`GETTING INDEX 0: ${JSON.stringify(parseData[0])}`);
         return parseData;
@@ -109,7 +109,7 @@ const Dashboard = ( {setAuth} ) => {
     //e.preventDefault();
     
     try {
-      axios.get('http://localhost:5000/event_reservations').then(res => {
+      axios.get('/event_reservations').then(res => {
         const parseData = res.data
         console.log(`GETTING INDEX 0: ${JSON.stringify(parseData[0])}`);
         return parseData;
@@ -123,7 +123,7 @@ const Dashboard = ( {setAuth} ) => {
 
   const getProfile = async () => {
     try {
-      const res = await fetch("http://localhost:5000/dashboard/", {
+      const res = await fetch("/dashboard/", {
         method: "GET",
         headers: { token: localStorage.token }
       });
