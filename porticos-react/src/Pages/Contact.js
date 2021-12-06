@@ -618,6 +618,7 @@ class Contact extends React.Component{
     event.preventDefault();
 
     // Send form to DB Table Reservation Endpoint
+    
     axios({
       method: "POST",
       url:"/table_reservations",
