@@ -5,7 +5,6 @@ import Contact from "./Contact";
 import { bill } from './Contact';
 const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
 
-
 class Payment extends React.Component {
 
   createOrder(data, actions) {
@@ -23,8 +22,6 @@ class Payment extends React.Component {
   onApprove(data, actions) {
     return  actions.order.capture();
   }
-
-  
 
   render() {
    

@@ -362,8 +362,5 @@ const menu = [
     img:'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
     desc: `Pregunte por la sopa o crema del dia.`,
   },
-
-  
-
 ]
 export default menu
