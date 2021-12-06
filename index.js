@@ -16,14 +16,16 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-if(process.env.NODE_ENV === "production"){
-    //server static content
-    //npm run build 
-    app.use(express.static(path.join(__dirname, "porticos-react/public")));
-}
+//app.use(express.static(path.join(__dirname, "porticos-react/build")));
 
-console.log(__dirname);
-console.log(path.join(__dirname, "porticos-react/public"));
+if (process.env.NODE_ENV === "production") {
+    //server static content
+    //npm run build
+    app.use(express.static(path.join(__dirname, "porticos-react/build")));
+  }
+
+//console.log(path.join(__dirname, "porticos-react/build"));
+//console.log(__dirname);
 //app.use(bodyParser.json())
 //register and login routes
 app.use("/account", jwtAuth);
@@ -693,10 +695,11 @@ app.delete("/table_reservations/:id", async (req, res) => {
             res.status(500).json(err.message);        }
     }); 
 
-    app.get("*", (req, res) =>{
-        res.sendFile(path.join(__dirname, "porticos-react/public/index.html"));
-    })
-    app.listen(PORT, ()=>{
-        console.log('server has started on port $(PORT)');
+    app.get("*",(req,res) =>{
+        res.sendFile(path.join(__dirname, "porticos-react/build/index.html"));
     });
+
+      app.listen(PORT, () => {
+        console.log(`Server is starting on port ${PORT}`);
+      });
     

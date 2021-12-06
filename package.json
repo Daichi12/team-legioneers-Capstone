@@ -5,11 +5,11 @@
   "main": "index.js",
   "engines":{
     "node":"14.18.0",
-    "npm":"6.14.2"
+    "npm":"6.14.15"
   },
   "scripts": {
-    "start": "nodemon index.js",
-    "heroku-postbuild": "cd porticos-react && npm install && npm run public"
+    "start": "node index.js",
+    "heroku-postbuild": "cd porticos-react && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
