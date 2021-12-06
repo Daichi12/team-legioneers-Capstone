@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios"
-
+var venueVar = null;
+var tableVar = null;
 const Dashboard = ( {setAuth} ) => {
   const [name1, setName] = useState("");
   const [inputs, setInputs] = useState({
@@ -91,34 +92,33 @@ const Dashboard = ( {setAuth} ) => {
       console.error(err.message);
     }
   };
-  const getAllTableReservations = async (e) => {
-    e.preventDefault();
-    try {
-      axios.get('http://localhost:5000/table_reservations').then(res => {
+  const getAllTableReservations = () => {
+    //e.preventDefault();
+   
+      
+      return axios.get('http://localhost:5000/table_reservations').then(res => {
         const parseData = res.data
         console.log(`GETTING INDEX 0: ${JSON.stringify(parseData[0])}`);
-        return parseData;
+        return res.data
+      }).catch(error => {
+        console.log(error);
+        return Promise.reject(error);
       })
-      
+       
       //setInputs(parseData);
-    } catch (err) {
-      console.error(err.message);
-    }
+   
   };
   const getAllVenueReservations = () => {
     //e.preventDefault();
     
-    try {
-      axios.get('http://localhost:5000/event_reservations').then(res => {
+    return axios.get('http://localhost:5000/table_reservations').then(res => {
         const parseData = res.data
         console.log(`GETTING INDEX 0: ${JSON.stringify(parseData[0])}`);
-        return parseData;
+        return res.data
+      }).catch(error => {
+        console.log(error);
+        return Promise.reject(error);
       })
-      
-      //setInputs(parseData);
-    } catch (err) {
-      console.error(err.message);
-    }
   };
 
   const getProfile = async () => {
@@ -134,8 +134,20 @@ const Dashboard = ( {setAuth} ) => {
       console.error(err.message);
     }
   };
-  console.log(`VENUE TEST RESPONSE:  ${ getAllVenueReservations()}` );//Table Reservation Display
-  console.log(`TABLE TEST RESPONSE:  ${ getAllTableReservations()}` );//Venue Reservation Display
+  const venuePrint = async () =>{
+    const parseData = await getAllVenueReservations();
+    //console.log(parseData)
+    venueVar = JSON.stringify(parseData)
+  }
+  const tablePrint = async () =>{
+    const parseData = await getAllTableReservations();
+    //console.log(parseData)
+    tableVar = JSON.stringify(parseData)
+  }
+  venuePrint();
+  tablePrint();
+  console.log(`TABLE TEST RESPONSE:  ${ tableVar}` );//Table Reservation Display
+  console.log(`VENUE TEST RESPONSE:  ${ venueVar}` );//Venue Reservation Display
   const logout = (e) => {
     e.preventDefault();
     try {
@@ -150,7 +162,8 @@ const Dashboard = ( {setAuth} ) => {
   useEffect(() => {
     getProfile();
   }, []);
-
+  //var PostData = getAllTableReservations();
+  //console.log(getAllTableReservations());
   return (
     <div>
       <h1 className="mt-5">Dashboard</h1>
@@ -158,7 +171,9 @@ const Dashboard = ( {setAuth} ) => {
       <button onClick={e => logout(e)} className="btn btn-primary">
         Logout
       </button>
-     
+      
+
+ {/* {tableVar.map((postDetail, index) => {return <h6> ID: {postDetail.reservation_id}, Name: {postDetail.reservation_name}, Time: {postDetail.reservation_time}, group size: {postDetail.group_size}, phone: {postDetail.phone},  </h6>})}   */}
     </div>
   );
 };
