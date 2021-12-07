@@ -99,7 +99,7 @@ const Dashboard = ( {setAuth} ) => {
     //e.preventDefault();
    
       
-      return axios.get('http://localhost:5000/table_reservations').then(res => {
+      return axios.get('table_reservations').then(res => {
         const parseData = res.data
         console.log(`GETTING INDEX 0: ${JSON.stringify(parseData[0])}`);
         return res.data
@@ -114,7 +114,7 @@ const Dashboard = ( {setAuth} ) => {
   const getAllVenueReservations = () => {
     //e.preventDefault();
     
-    return axios.get('http://localhost:5000/event_reservations').then(res => {
+    return axios.get('event_reservations').then(res => {
         const parseData = res.data
         console.log(`GETTING INDEX 0: ${JSON.stringify(parseData[0])}`);
         return res.data
