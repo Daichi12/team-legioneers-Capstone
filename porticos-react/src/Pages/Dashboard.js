@@ -6,6 +6,7 @@ import axios from "axios"
 var venueVar = [];
 var tableVar = [];
 
+
 const Dashboard = ( {setAuth} ) => {
   const [name1, setName] = useState("");
   const [inputs, setInputs] = useState({
@@ -24,6 +25,8 @@ const Dashboard = ( {setAuth} ) => {
       id:''
   });
 
+  const [Venueid, setVenueid]= useState();
+  const [Tableid, setTableid]= useState();
 
   const { name, phone, group, time, message, Venuename, Venuephone, Venueemail, starttime, endtime, Venuegroup, Venuemessage, id } = inputs;
 
@@ -123,6 +126,29 @@ const Dashboard = ( {setAuth} ) => {
         return Promise.reject(error);
       })
   };
+  
+  const deleteTableReservationById = async id => {
+    await axios.delete(`table_reservations/${id}`)
+  }
+  const deleteEventReservationById = async id => {
+    await axios.delete(`event_reservations/${id}`)
+  }
+
+  const deleteTableReservations = async () => {
+    await axios.delete('table_reservations')
+  }
+  const deleteEventReservations = async () => {
+    await axios.delete('event_reservations')
+  }
+  
+  const onTableIdChange=(event)=> {
+    setTableid({Tableid: event.target.value})
+  }
+  const onVenueIdChange=(event)=> {
+    setVenueid({Venueid: event.target.value})
+  }
+
+
 
   const getProfile = async () => {
     try {
@@ -201,6 +227,21 @@ const Dashboard = ( {setAuth} ) => {
           ))}
         </tbody>
       </table>
+     
+      <div className="form-group">
+                                  <label htmlFor="group"></label>
+                                  <input type="number" placeholder="Delete Table Reservation by Id" min="1" max="1000"  style={{ height:"41.5px", width: "250px", textAlign: "center", borderColor: "black",borderWidth: "2px", marginLeft:"45px"
+    }}className="form-control" id="group" value={useState.Tableid} onChange={onTableIdChange.bind(this)}  required />
+                                </div>
+                                <button  color="#ff5c5c" style={{cursor:"pointer", height:"41.5px", width: "250px", textAlign: "center", borderColor: "black",borderWidth: "2px", marginLeft:"45px"}} type="button" id='stuff' onClick={(deleteTableReservationById(document.getElementById('group')))}>Clear Table Reservation</button>
+                               
+                                <button  color="#ff5c5c" style={{cursor:"pointer", height:"41.5px", width: "250px", textAlign: "center", borderColor: "black",borderWidth: "2px", marginLeft:"45px"}} type="button" id='stuff' onClick={deleteTableReservations()}>Clear All Table Reservations</button>
+
+     
+
+     
+
+                                
 
       <div>
       <center>  <h2 style={{textDecorationLine: 'underline',fontWeight: 'bold', fontStyle: 'italic', marginTop:'75px', marginBottom:'50px' }}> Venue Reservations </h2> </center>
@@ -229,7 +270,14 @@ const Dashboard = ( {setAuth} ) => {
           ))}
         </tbody>
       </table>
+    
+      <div className="form-group">
+                                  <label htmlFor="group"></label>
+                                  <input type="number" placeholder="Delete Venue Reservation by Id" min="1" max="1000" style={{height:"41.5px", width: "250px", textAlign: "center", borderColor: "black",borderWidth: "2px", marginLeft:"45px"}}className="form-control" id="group2" value={Venueid} onChange={onVenueIdChange.bind(this)}  required />
+                                </div>
 
+                                <button  color="#ff5c5c" style={{cursor:"pointer", height:"41.5px", width: "250px", textAlign: "center", borderColor: "black",borderWidth: "2px", marginLeft:"45px"}} type="button" id='stuff' onClick={(deleteTableReservationById(document.getElementById('group')))}>Clear Event Reservation</button>
+                                <button  color="#ff5c5c" style={{cursor:"pointer", height:"41.5px", width: "250px", textAlign: "center", borderColor: "black",borderWidth: "2px", marginLeft:"45px"}} type="button" id='stuff' onClick={ deleteEventReservations()}>Clear All Event Reservations</button>
       </div>
 
     </div>
