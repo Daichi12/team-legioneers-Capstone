@@ -301,8 +301,27 @@
     border-style: solid;
     
   }
+  a.buttonHome {
+    
+    font-size: x-large;
+    font-weight: bold;
+    font-style: italic;
+    border-style: solid;
+    text-decoration: underline;
+    background-color: #98dace;
+    color: black;  padding: 10px 15px 15px 15px;
+    border-top: 1.5px solid black;
+    border-right: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+    border-left: 1.5px solid black;
+}
  
+.buttonHome:hover {
+
+  background-color:gray;
+  transition-delay: 0.1s;
  
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

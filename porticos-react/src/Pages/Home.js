@@ -111,7 +111,8 @@ return(
                                         </div>
                                     </div>
                                     <div class="column mcb-column one column_button">
-                                        <a class="button  button_size_2 button_theme button_js" href="/AboutUs"><span class="button_label">ABOUT US</span></a>
+                                    <a href="/AboutUs" class="buttonHome">About Us</a>
+
                                     </div>
                                 </div>
                             </div>
@@ -119,7 +120,7 @@ return(
                     </div>
                     <div class="section mcb-section full-width no-margin-h no-margin-v" style={{"padding-top":"-20px","padding-bottom":"0px"}}>
                         <div class="section_wrapper mcb-section-inner">
-                            <div class="wrap mcb-wrap one-third  valign-top clearfix" style={{"padding":"-50px -10px 0px"}}>
+                            <div class="wrap mcb-wrap one-third  valign-top clearfix" style={{"margin-top": "-75px" , "padding-bottom": "-10px"}}>
                                 <div class="mcb-wrap-inner">
                                     <div class="column mcb-column one column_image ">
                                         <div class="image_frame image_item no_link scale-with-grid alignright no_border">
