@@ -96,7 +96,7 @@ function App() {
           (<Navigate to="/login_porticos1606"/>)} />
 
 
-          <Route exact path="/register_portico1606" 
+          <Route exact path="/register_porticos1606" 
           element={!isAuthenticated?
           (<Register setAuth={setAuth}/>):
           (<Navigate to="/dashboard"/>)} />
