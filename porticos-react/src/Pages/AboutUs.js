@@ -90,21 +90,21 @@ render(){
                                         <div class="column mcb-column two-third column_column ">
                                             <div class="column_attr clearfix" style={{"padding":"0 7% 0 0"}}>
                                                 <h6 style={{"letterSpacing":"4px"}}>Porticos1606</h6>
-                                                <h4>PÓRTICOS 1606 is a restaurant with a bar that offers customers a unique and authentic experience in a cozy and quiet environment. Here, you can enjoy our land's flavor and typical seasoning through a Gallery of Caribbean Fusions to your delight and our satisfaction. We are history and a sense of belonging. We are San Germán.</h4>
+                                                <h4>PÓRTICOS 1606 is a restaurant with a bar that offers customers an unique and authentic experience in an unique and authentic environment. Here, you can enjoy our land's flavor and typical seasoning through a Gallery of Caribbean Fusions to your delight and our satisfaction. We are history and a sense of belonging. We are San Germán.</h4>
                                                 <hr class="no_line" style={{"margin":"0 auto 20px"}}/>
                                                 <h6> </h6>
                                             </div>
                                         </div>
                                         <div class="column mcb-column one-third column_column ">
                                             <div class="column_attr clearfix">
-                                                <h6 style={{"letterSpacing":"4px"}}>Placeholder title</h6>
+                                                <h6 style={{"letterSpacing":"3px"}}>Call Us</h6>
                                                 <p>
-                                                    Porticos placeholdertext
+                                                    787-978-3555
                                                 </p>
                                                 <hr class="no_line" style={{"margin":"0 auto 20px"}}/>
-                                                <h6 style={{"letterSpacing":"4px"}}>Placeholder Title</h6>
+                                                <h6 style={{"letterSpacing":"3px"}}>Placeholder</h6>
                                                 <p>
-                                                    Placeholdertext
+                                                    Placeholder text
                                                 </p>
                                             </div>
                                         </div>
@@ -114,27 +114,35 @@ render(){
                         </div>
                         <div class="section mcb-section no-margin-h no-margin-v" style={{"paddingTop":"0px","paddingBottom":"0px","backgroundImage":"url(/assets/content/restaurant2/images/home_restaurant2_sectionbg4.jpg)","backgroundRepeat":"no-repeat","backgroundPosition":"center top"}}>
                             <div class="section_wrapper mcb-section-inner">
-                                <div class="wrap mcb-wrap two-fifth  valign-top clearfix" style={{"padding":"80px 5% 60px"}}>
+                                <div class="wrap mcb-wrap valign-top clearfix" style={{"padding":"0px 5% 10px"}}>
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_column">
                                             <div class="column_attr clearfix align_center">
                                                 <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                                    <div class="image_wrapper"><img class="scale-with-grid" src="/assets/content/restaurant2/images/home_restaurant2_about1.png" alt="home_restaurant2_about1" width="159" height="41" />
-                                                    </div>
+                                                <iframe src="https://www.facebook.com/plugins/video.php?height=628&href=https%3A%2F%2Fwww.facebook.com%2F102274211337580%2Fvideos%2F920150325476261%2F&show_text=false&width=1160&t=0" width={1160} height={628} style={{border: 'none', overflow: 'hidden'}} scrolling="no" frameBorder={0} allowFullScreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />
                                                 </div>
-                                                <hr class="no_line" style={{"margin":"0 auto 40px"}}/>
+                                                <hr class="no_line" style={{"margin":"-80px auto 20px"}}/>
                                                 <p>
-                                                    <h5> Placeholder </h5>
+                                                    <h5> Discover Porticos 1606 </h5>
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="wrap mcb-wrap three-fifth  valign-top clearfix">
+                                <div class="wrap mcb-wrap one-second valign-center clearfix">
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column one column_image ">
                                             <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
-                                                <div class="image_wrapper"><img class="scale-with-grid" src="/assets/content/restaurant2/images/home_restaurant2_about2.jpg" alt="home_restaurant2_about2" width="780" height="730" />
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/MernaFjb3qQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wrap mcb-wrap one-second valign-center clearfix">
+                                    <div class="mcb-wrap-inner">
+                                        <div class="column mcb-column one column_image ">
+                                            <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
+                                                <div class="image_wrapper"><img class="scale-with-grid" src="/assets/content/restaurant2/images/home_restaurant2_about2.jpg" alt="home_restaurant2_about2" width="624" height="584" />
                                                 </div>
                                             </div>
                                         </div>
