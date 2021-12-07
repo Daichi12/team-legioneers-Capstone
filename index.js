@@ -300,6 +300,16 @@ app.delete("/event_reservations/:id", async (req, res) => {
     } catch (err){
         res.status(500).json(err.message);        }
     }); 
+    app.delete("/event_reservations", async (req, res) => {
+        try {
+        
+            const deleteTableReservation = await pool.query("DELETE * FROM table_reservations");
+            res.status(200).json({'message':'Event Reservations were deleted'})
+          
+            
+            } catch (err){
+                res.status(500).json(err.message);        }
+        });
 
     //Menu Routes//
 
@@ -694,7 +704,17 @@ app.delete("/table_reservations/:id", async (req, res) => {
         }
         } catch (err){
             res.status(500).json(err.message);        }
-    }); 
+    });
+    app.delete("/table_reservations", async (req, res) => {
+        try {
+        
+            const deleteTableReservation = await pool.query("DELETE * FROM table_reservations");
+            res.status(200).json({'message':'Table Reservations were deleted'})
+          
+            
+            } catch (err){
+                res.status(500).json(err.message);        }
+        });
 
     app.get("*",(req,res) =>{
         res.sendFile(path.join(__dirname, "porticos-react/build/index.html"));
