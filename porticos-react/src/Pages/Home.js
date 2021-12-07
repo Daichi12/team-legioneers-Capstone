@@ -104,7 +104,7 @@ return(
                                     <div class="column mcb-column one column_column  column-margin-20px">
                                         <div class="column_attr clearfix">
                                             <h3>El Sabor
-                                                <br />
+                                                <br/>
                                                 Del Caribe</h3>
                                             <hr class="no_line" style={{"margin": "0 auto 15px"}}/>
                                             <h5>Disfruta de la sazón típica de nuestra tierra con una diversidad de platos fusionados.  </h5>
@@ -117,13 +117,13 @@ return(
                             </div>
                         </div>
                     </div>
-                    <div class="section mcb-section full-width no-margin-h no-margin-v" style={{"padding-top":"0px","padding-bottom":"0px"}}>
+                    <div class="section mcb-section full-width no-margin-h no-margin-v" style={{"padding-top":"-20px","padding-bottom":"0px"}}>
                         <div class="section_wrapper mcb-section-inner">
-                            <div class="wrap mcb-wrap one-third  valign-top clearfix" style={{"padding":"60px 50px 80px"}}>
+                            <div class="wrap mcb-wrap one-third  valign-top clearfix" style={{"padding":"-50px -10px 0px"}}>
                                 <div class="mcb-wrap-inner">
                                     <div class="column mcb-column one column_image ">
                                         <div class="image_frame image_item no_link scale-with-grid alignright no_border">
-                                            <div class="image_wrapper"><img class="scale-with-grid" src="/assets/content/restaurant2/images/home_restaurant2_pic3.png" alt="home_restaurant2_pic3" width="48" height="183" />
+                                            <div class="image_wrapper"><img class="scale-with-grid" src="/assets/content/restaurant2/images/home_restaurant2_pic3.png" alt="home_restaurant2_pic3" width="1050" height="1050" />
                                             </div>
                                         </div>
                                     </div>
@@ -133,7 +133,7 @@ return(
                                 <div class="mcb-wrap-inner">
                                     <div class="column mcb-column one column_image ">
                                         <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
-                                            <div class="image_wrapper"><img class="scale-with-grid" src="/assets/content/restaurant2/images/home_restaurant2_pic2.jpg" alt="home_restaurant2_pic2" width="1280" height="840" />
+                                            <div class="image_wrapper"><img class="scale-with-grid" src="/assets/content/restaurant2/images/home_restaurant2_pic2.jpg" alt="home_restaurant2_pic2" width="1400" height="840" />
                                             </div>
                                         </div>
                                     </div>
