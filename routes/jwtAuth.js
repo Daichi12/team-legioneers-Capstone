@@ -12,7 +12,7 @@ const authorization = require('../middleware/authorization');
 
 //registering
 
-router.post("/register", validinfo, async (req, res) =>{
+router.post("/register_porticos1606", validinfo, async (req, res) =>{
     try {
 
         //1. destructure the req.body(Employee_UserName, Employee_Password) Note: Username
@@ -50,7 +50,7 @@ router.post("/register", validinfo, async (req, res) =>{
 
 //login route
 
-router.post("/login", validinfo, async(req, res)=> {
+router.post("/login_porticos1606", validinfo, async(req, res)=> {
  try {
 
     //1. destructure the req.body

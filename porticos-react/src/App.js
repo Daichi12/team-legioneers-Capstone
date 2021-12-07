@@ -84,7 +84,7 @@ function App() {
           
           <Route path="/Payment" element={<Payment/>} />
 
-          <Route exact path="/login" 
+          <Route exact path="/login_porticos1606" 
           element={!isAuthenticated?
           (<Login setAuth={setAuth}/>):
           (<Navigate to="/dashboard"/>) } />
@@ -93,10 +93,10 @@ function App() {
           <Route exact path="/dashboard" 
           element={isAuthenticated?
           (<Dashboard setAuth={setAuth}/>):
-          (<Navigate to="/login"/>)} />
+          (<Navigate to="/login_porticos1606"/>)} />
 
 
-          <Route exact path="/register" 
+          <Route exact path="/register_porticos1606" 
           element={!isAuthenticated?
           (<Register setAuth={setAuth}/>):
           (<Navigate to="/dashboard"/>)} />
