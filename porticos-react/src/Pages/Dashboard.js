@@ -123,6 +123,20 @@ const Dashboard = ( {setAuth} ) => {
         return Promise.reject(error);
       })
   };
+  
+  const deleteTableReservationById = async id => {
+    await axios.delete('table_reservations/${id}')
+  }
+  const deleteEventReservationById = async id => {
+    await axios.delete('event_reservations/${id}')
+  }
+
+  const deleteTableReservations = async () => {
+    await axios.delete('table_reservations')
+  }
+  const deleteEventReservations = async () => {
+    await axios.delete('event_reservations')
+  }
 
   const getProfile = async () => {
     try {
