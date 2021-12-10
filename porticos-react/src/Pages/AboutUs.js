@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 class AboutUs extends React.Component{
 
 render(){
@@ -45,8 +45,8 @@ render(){
                             <span>Merchandise Shop</span>
                           </a>
                         </li>
-                                        </ul>
-                                    </nav><a class="responsive-menu-toggle " href="#"><i class="icon-menu-fine"></i></a>
+                            </ul>
+                                </nav><a class="responsive-menu-toggle"><i class="icon-menu-fine"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -119,7 +119,7 @@ render(){
                                         <div class="column mcb-column one column_column">
                                             <div class="column_attr clearfix align_center">
                                                 <div class="image_frame image_item no_link scale-with-grid alignnone no_border">
-                                                <iframe src="https://www.facebook.com/plugins/video.php?height=628&href=https%3A%2F%2Fwww.facebook.com%2F102274211337580%2Fvideos%2F920150325476261%2F&show_text=false&width=1160&t=0" width={1160} height={628} style={{border: 'none', overflow: 'hidden'}} scrolling="no" frameBorder={0} allowFullScreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />
+                                                <iframe title="Interview Video" src="https://www.facebook.com/plugins/video.php?height=628&href=https%3A%2F%2Fwww.facebook.com%2F102274211337580%2Fvideos%2F920150325476261%2F&show_text=false&width=1160&t=0" width={1160} height={628} style={{border: 'none', overflow: 'hidden'}} scrolling="no" frameBorder={0} allowFullScreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" />
                                                 </div>
                                                 <hr class="no_line" style={{"margin":"-80px auto 20px"}}/>
                                                 <p>
@@ -216,7 +216,7 @@ render(){
                                         <h5>+1-(787)-978-3555</h5>
                                     </p>
                                     <p style={{"wordWrap":"break-word"}}>
-                                        <a href="#"><h5>porticos1606@yahoo.com</h5></a>
+                                        <a><h5>porticos1606@yahoo.com</h5></a>
                                     </p>
                                 </div>
                             </div>
@@ -245,7 +245,7 @@ render(){
     
     <div id="Side_slide" class="right dark">
         <div class="close-wrapper">
-            <a href="#" class="close"><i class="icon-cancel-fine"></i></a>
+            <a class="close"><i class="icon-cancel-fine"></i></a>
         </div>
         <div class="menu_wrapper"></div>
     </div>

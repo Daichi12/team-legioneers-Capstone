@@ -1,53 +1,28 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { useState } from "react";
 import './App.css';
 import Home from './Pages/Home';
 import Menu from './Pages/Menu';
 import AboutUs from './Pages/AboutUs';
 import Events from './Pages/Events';
 import Contact from './Pages/Contact';
-import { BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
-import { toast } from "react-toastify";
-import Login from "./Pages/Login";
-import Register from "./Pages/Register";
-import Dashboard from "./Pages/Dashboard";
-import Payment from "./Pages/Payment";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MenuCategories from './Pages/MenuCategories';
 import items from './Pages/MenuData';
 import items2 from './Pages/merchandisedata';
 import Merchandise from "./Pages/Merchandise";
-import { render } from "react-dom";
+//import { render } from "react-dom";
 
 const allCategories = ['all', ...new Set(items.map((item) => item.category))]
 
-//toast.configure();
-
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-   const setAuth = (boolean) => {
-     setIsAuthenticated(boolean);
-   };
-  async function checkAuthenticated(){
-    try {
-      const res = await fetch("/account/is_verified", {
-        method: "GET",
-        headers: {token: localStorage.token }
-      });
-
-      const parseRes = await res.json();
-
-      parseRes === true ? setIsAuthenticated(true) : setIsAuthenticated(false);
-    } catch (err) {
-      console.error(err.message);
-    }
-  };
-
-  useEffect(() => {
-    checkAuthenticated();
-  }, []);
 
   const [menuItems, setMenuItems] = useState(items)
-  const [merchandiseItems, setMerchandiseItems] = useState(items2)
-  const [categories, setCategories] = useState(allCategories)
+
+  const [merchandiseItems] = useState(items2)
+  // const [merchandiseItems, setMerchandiseItems] = useState(items2)
+
+  const [categories] = useState(allCategories)
+  // const [categories, setCategories] = useState(allCategories)
 
   const filterItems = (category) => {
     if (category === 'all') {
@@ -58,11 +33,7 @@ function App() {
     setMenuItems(newItems)
   }
 
-
-
-
   return (    
-    
     <Router>
         <Routes> 
           <Route path="" element={<Home/>} />
@@ -76,31 +47,12 @@ function App() {
 
           <Route path="/Merchandise" className="Merchandise" element={<> <Merchandise items2={merchandiseItems}/> </>}/>
        
-          
-        
           <Route path="/AboutUs" element={<AboutUs/>} />
+
           <Route path="/Events" element={<Events/>} />
+
           <Route path="/Contact" element={<Contact/>} />
           
-          <Route path="/Payment" element={<Payment/>} />
-
-          <Route exact path="/login_porticos1606" 
-          element={!isAuthenticated?
-          (<Login setAuth={setAuth}/>):
-          (<Navigate to="/dashboard"/>) } />
-         
-         
-          <Route exact path="/dashboard" 
-          element={isAuthenticated?
-          (<Dashboard setAuth={setAuth}/>):
-          (<Navigate to="/login_porticos1606"/>)} />
-
-
-          <Route exact path="/register_porticos1606" 
-          element={!isAuthenticated?
-          (<Register setAuth={setAuth}/>):
-          (<Navigate to="/dashboard"/>)} />
-    
         </Routes>
 
 </Router>

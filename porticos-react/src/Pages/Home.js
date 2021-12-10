@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 class Home extends React.Component{
 
 render(){
@@ -281,11 +281,9 @@ return(
 </div>
 <div id="body_overlay"></div>
 </div>
+        )
 
-
-    )
-
-}
+    }
 }
 
 export default Home
