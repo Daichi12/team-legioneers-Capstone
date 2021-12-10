@@ -240,6 +240,9 @@ class Contact extends React.Component{
                       className="wrap mcb-wrap one-second  valign-middle clearfix"
                       style={{ padding: "0px 100px 60px" }}
                     >
+
+
+
                       <div className="mcb-wrap-inner">
                         <div className="column mcb-column one column_map ">
                           <div className="column mcb-column one align-right column_column">
@@ -283,124 +286,18 @@ class Contact extends React.Component{
                       <div
                         className="wrap mcb-wrap two-third  valign-top clearfix"
                         style={{
-                          padding: "1px 50px 1px",
+                          padding: "20px 10px 20px 20px",
                           backgroundColor: "#98dace",
                           marginTop: 300,
                           marginBottom: -100,
                           height: "525px",
                         }}
                       >
-                        <div className="mcb-wrap-inner">
-                          <div className="column mcb-column one column_column">
-                            <div className="column_attr clearfix align_center">
-                          
-                              <hr
-                                className="no_line"
-                                style={{ margin: "0 auto"}}
-                              />
-                                <h2 id="text1" style={{textDecorationLine: "none",display:'none', position:'absolute', left:'0', top:'230px', padding: "1px 45px 1px"}}>Thank you for your reservation, see you soon!</h2>
-                              <div id="contactWrapper">
-                              <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-                              <h2 style={{marginBottom:"40px",textDecorationLine: "none"}}>Table Reservation</h2>
-                                <div className="form-group">
-                                  <label htmlFor="name"></label>
-                                  <input type="text" placeholder="Enter your name" style={{ width: "200px", textAlign: "center",  borderColor: "black",borderWidth: "2px", float:"left"
-    }} className="form-control" id="name" value={this.state.name} onChange={this.onNameChange.bind(this)} required/>
-                                </div>
-                                <div className="form-group">
-                                  <label htmlFor="phone"></label>
-                                  <input type="tel" pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}" style={{borderColor: "black",borderWidth: "2px",width: "200px", textAlign: "center", float:"left", marginLeft:"11.7px"
-    }} title="Please enter a valid phone number" placeholder="Enter your phone number" className="form-control" id="phone" aria-describedby="emailHelp" value={this.state.phone} onChange={this.onPhoneChange.bind(this)} required/>
-                                </div>
-                                <div className="form-group">
-                                  <label htmlFor="time"></label>
-                                  <input type="datetime-local" style={{ height:"37px",width: "192px", textAlign: "center", borderColor: "black",borderWidth: "2px", float:"left", marginBottom:"11.7px", marginLeft:"11.7px",float:"left", marginLeft:"11.7px"
-    }} placeholder="Time of Arrival" className="form-control" id="time"  value={this.state.time} onChange={this.onTimeChange.bind(this)} required /> </div>
-                                  <div className="form-group">
-                                  <label htmlFor="group"></label>
-                                  <input type="number"  style={{ height:"41.5px", width: "110px",  borderColor: "black",borderWidth: "2px",marginBottom:"11.7px", margin:"0 auto"}} min="1" max="1000" required value=">0" placeholder="Group size"className="form-control" id="group" value={this.state.group} onChange={this.onGroupChange.bind(this)} required />
-                                </div>
-                                <div className="form-group">
-                                  <label htmlFor="message"></label>
-                                  <textarea className="form-control"  placeholder="Additional message" style={{height:"192.3px",margin: "auto", marginleft: "auto", marginright: "auto", borderColor: "black",borderWidth: "2px"
-    }} rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} required />
-                                </div>
-                                <br></br>
-                                <button  color="#ff5c5c" style={{cursor:"pointer",width:"625px",position:'absolute', left:'55px', top:'460px'}} type="button" id='stuff' onClick={sayHello}>Venue Reservation</button>
-                                <button style={{cursor:"pointer",width:"625px",position:'absolute', left:'55px', top:'410px'}} type="submit" className="btn btn-primary">Submit</button>
-                              </form>
-                              </div>
-                            </div>
-                          </div>
-                          </div>
-                          <div className="mcb-wrap-inner">
-                          <div className="column mcb-column one column_column">
-                            <div className="column_attr clearfix align_center">
-                              
-                              <hr
-                                className="no_line"
-                                style={{ margin: "0 auto -40px" }}
-                              />
-                                <h2 id="text2" style={{textDecorationLine: "none",display:'none', position:'absolute', left:'110px', top:'230px'}}>Succesful Venue Reservation</h2>
-                                <Link to="/Payment" type="button" id="link" className="btn btn-primary" style={{display: "none", position:'absolute', left:'65px', top:'290px',verticalAlign:"middle" ,shape:'rect',height:"45px", width:"230px",position:'absolute', left:'250px', top:'350px', backgroundColor: "#fac43e", color: "black",fontFamily:"futura", fontSize:"20px", textAlign:"center" }}>
-                                <img src="https://www.paypalobjects.com/digitalassets/c/website/marketing/apac/C2/logos-buttons/44_Yellow_CheckOut_Pill_Button.png" alt="Check out with PayPal" />
-                                </Link>
-                        
-                              <div id="contactWrapper2" style={{ display:"none",margin:"auto"}}>
-                              <form id="contact-form" onSubmit={this.VenuehandleSubmit.bind(this)} method="POST">
-                              <h2 style={{textDecorationLine: "none",marginBottom:"40px"}}>Venue Reservation</h2>
-                              
-                              <p style={{color:'black', position:'absolute', left:'335px', top:'150px'}}>Start Time</p>
-                              
-                                <div className="form-group">
-                                  <label htmlFor="name"></label>
-                                  <input type="text" placeholder="Enter your name" style={{marginLeft:"0px", width: "200px", textAlign: "center",  borderColor: "black",borderWidth: "2px", float:"left"
-    }} className="form-control" id="name" value={this.state.Venuename} onChange={this.onVenueNameChange.bind(this)} required/>
-                                </div>
-                                <div className="form-group">
-                                  <label htmlFor="phone"></label>
-                                  <input type="tel" pattern="\(?\d{3}\)?-? *\d{3}-? *-?\d{4}" style={{borderColor: "black",borderWidth: "2px",width: "200px", textAlign: "center", float:"left", marginLeft:"11.7px", 
-    }} title="Please enter a valid phone number" placeholder="Enter your phone number" className="form-control" id="phone" aria-describedby="emailHelp" value={this.state.Venuephone} onChange={this.onVenuePhoneChange.bind(this)} required/>
-                                </div>
-                                <div className="form-group">
-                                  <label htmlFor="email"></label>
-                                  <input type="email" pattern="+@+" style={{borderColor: "black",borderWidth: "2px",width: "190px", textAlign: "center", float:"left", marginLeft:"11.7px", marginBottom:"45px"
-    }} title="Please enter a valid email" placeholder="Enter your email" className="form-control" id="email" aria-describedby="emailHelp" value={this.state.Venueemail} onChange={this.onVenueEmailChange.bind(this)} required/>
-                                </div>
-                                <div className="form-group">
-                                  <label htmlFor="group"></label>
-                                  <input type="number" placeholder="Group size" min="1" max="1000" required value=">0" style={{ height:"41.5px", width: "110px", textAlign: "center", borderColor: "black",borderWidth: "2px",  float:"left", marginLeft:"45px"
-    }}className="form-control" id="group" value={this.state.Venuegroup} onChange={this.onVenueGroupChange.bind(this)} required />
-                                </div>
-                                <div className="form-group">
-                                  <label htmlFor="time"></label>
-                                  <input type="datetime-local" style={{ height:"37px",width: "195px", textAlign: "center", borderColor: "black",borderWidth: "2px", float:"left", marginBottom:"11.7px", marginLeft:"57px"
-    }} placeholder="Time of Arrival" className="form-control" id="time" value={this.state.starttime} onChange={this.onStartTimeChange.bind(this)} required /> </div>
-
-<div className="form-group">
-                                  <label htmlFor="time"></label>
-                                  <input type="number" style={{ height:"37px",width: "137px", textAlign: "center", borderColor: "black",borderWidth: "2px", float:"left", marginBottom:"11.7px", marginLeft:"20.7px"
-    }} placeholder="Amount of Hours" min="1" max="12" className="form-control" id="time" value={this.state.endtime} onChange={this.onEndTimeChange.bind(this) } required /> </div>
-
-
-                                
-                                <div className="form-group">
-                                  <label htmlFor="message"></label>
-                                  <textarea className="form-control"  placeholder="Additional message" style={{ width:"800px",height:"135px", margin: "auto", marginleft: "auto", marginright: "auto", borderColor: "black",borderWidth: "2px"
-    }} rows="5" id="message" value={this.state.Venuemessage} onChange={this.onVenueMessageChange.bind(this)} required />
-                                </div>
-                                <br></br>
-
-                                
-                                
-                                <button style={{backgroundcolor:'#4CAF50',color:'white',cursor:"pointer",width:"625px",position:'absolute', left:'55px', top:'460px'}} type="button" id='stuff' onClick={sayHello}>Table Reservation</button>
-                                <button style={{cursor:"pointer",width:"625px",position:'absolute', left:'55px', top:'410px'}} type="submit" className="btn btn-primary">Submit</button>
-                              </form>
-                              </div>
-                            </div>
-                            
-                          </div>
-                        </div>
+<iframe 
+  src="https://tableagent.com/iframe/porticos-1606/"
+  style={{border:"50px", width:"450px", height:"475px", marginLeft: "110px"}}>
+ 
+</iframe>               
                       </div>
                     </div>
                   </div>
@@ -408,8 +305,6 @@ class Contact extends React.Component{
               </div>
             </div>
           </div>
-
-         
 
           <footer id="Footer" className="clearfix">
             <div className="widgets_wrapper" style={{ padding: "120px 0 105px" }}>
