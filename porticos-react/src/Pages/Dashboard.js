@@ -8,6 +8,7 @@ var tableVar = [];
 
 
 const Dashboard = ( {setAuth} ) => {
+  const[status, setStatus] = useState("");
   const [name1, setName] = useState("");
   const [inputs, setInputs] = useState({
       name: '',
@@ -134,11 +135,13 @@ const Dashboard = ( {setAuth} ) => {
     await axios.delete(`event_reservations/${id}`)
   }
 
-  const deleteTableReservations = async () => {
-    await axios.delete('table_reservations')
+  const deleteTableReservations =  () => {
+   axios.delete('table_reservations')
+   .then(()=> setStatus('Deleted all table reservations'));
   }
   const deleteEventReservations = async () => {
     await axios.delete('event_reservations')
+    .then(()=> setStatus('Deleted all event reservations'));
   }
   
   const onTableIdChange=(event)=> {
