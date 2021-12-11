@@ -12,17 +12,17 @@ import items2 from './Pages/merchandisedata';
 import Merchandise from "./Pages/Merchandise";
 //import { render } from "react-dom";
 
-const allCategories = ['all', ...new Set(items.map((item) => item.category))]
+const allCategories = [...new Set(items.map((item) => item.category))]
 
 function App() {
 
   const [menuItems, setMenuItems] = useState(items)
 
   const [merchandiseItems] = useState(items2)
-  // const [merchandiseItems, setMerchandiseItems] = useState(items2)
+
 
   const [categories] = useState(allCategories)
-  // const [categories, setCategories] = useState(allCategories)
+
 
   const filterItems = (category) => {
     if (category === 'all') {
