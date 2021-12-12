@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 class Home extends React.Component{
 
 render(){
@@ -92,10 +92,7 @@ return(
                             <div class="wrap mcb-wrap one-second  valign-top clearfix" style={{"margin-top":"0px"}}>
                                 <div class="mcb-wrap-inner">
                                     <div class="column mcb-column one column_image ">
-                                        <div class="image_frame image_item no_link scale-with-grid aligncenter no_border">
-                                            <div class="image_wrapper"><img class="scale-with-grid" src="assets/content/restaurant2/images/home_restaurant2_pic1.jpg" alt="home_restaurant2_pic1" width="780" height="1200" />
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -103,15 +100,18 @@ return(
                                 <div class="mcb-wrap-inner">
                                     <div class="column mcb-column one column_column  column-margin-20px">
                                         <div class="column_attr clearfix">
-                                            <h3>El Sabor
-                                                <br/>
+                                            <h3 style={{"margin-left":"0px"}}>El Sabor
+                                                
                                                 Del Caribe</h3>
                                             <hr class="no_line" style={{"margin": "0 auto 15px"}}/>
-                                            <h5>Disfruta de la sazón típica de nuestra tierra con una diversidad de platos fusionados.  </h5>
+                                            <h5 style={{"margin-left":"0px"}}>Disfruta de la sazón típica de nuestra 
+                                            tierra con una diversidad de platos fusionados.  </h5>
                                         </div>
                                     </div>
-                                    <div class="column mcb-column one column_button">
+                                    <div class="column mcb-column one column_button" style={{"margin-left":"70px"}}>
                                     <a href="/AboutUs" class="buttonHome">About Us</a>
+
+                                    
 
                                     </div>
                                 </div>
@@ -281,11 +281,9 @@ return(
 </div>
 <div id="body_overlay"></div>
 </div>
+        )
 
-
-    )
-
-}
+    }
 }
 
 export default Home

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 const Merchandise = ({ items2 }) => {
 
 return(
@@ -78,7 +78,7 @@ return(
                         </li>
                       </ul>
                     </nav>
-                    <a className="responsive-menu-toggle " href="#">
+                    <a className="responsive-menu-toggle ">
                       <i className="icon-menu-fine" />
                     </a>
                   </div>
@@ -109,7 +109,7 @@ return(
                             <div class="tp-static-layers">
                                 <div class="tp-caption   tp-resizeme tp-static-layer" id="slider-1-layer-3" data-x="center" data-hoffset="" data-y="center" data-voffset="20" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-startslide="0" data-endslide="2" data-frames='[{"delay":260,"speed":700,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style={{"zIndex":"6","whiteSpace":"nowrap","fontSize":"48px","lineHeight":"58px","fontWeight":"400","color":"#0f13fcec","fontFamily":"Arial"}}>
                                     <p2 style={{"font-size": "90px", opacity: 1, color:"#98dace"}}> 
-                                        Enjoy Our Fusion Of Cultural Plates.
+                                        Get your Porticos Goodies here!
                                      </p2>
                                 </div>
                             </div>
@@ -138,7 +138,11 @@ return(
     </div>
 
    <div className= "merch_btn">
-    <a class="button  button_size_2 button_js" href="https://porticos1606.myshopify.com/" target="_blank"> <span class="button_label">Merchandise Shop</span></a>
+    <a class="button  button_size_2 button_js" 
+    href="https://porticos1606.myshopify.com/" 
+    target="_blank" 
+    rel="noreferrer"> 
+    <span class="button_label">Merchandise Shop</span></a>
     </div>
             </div>
           </div>
@@ -184,10 +188,10 @@ return(
                 <h5>+1-(787)-978-3555</h5>
                 <p />
                 <p style={{ wordWrap: "break-word" }}>
-                  <a href="#"/>
+                  <a />
                 </p>
                 <h5>
-                  <a href="#">porticos1606@yahoo.com</a>
+                  <a>porticos1606@yahoo.com</a>
                 </h5>
                 <p />
               </div>
@@ -225,7 +229,7 @@ return(
   {/* Side Menu */}
   <div id="Side_slide" className="right dark">
     <div className="close-wrapper">
-      <a href="#" className="close">
+      <a className="close">
         <i className="icon-cancel-fine" />
       </a>
     </div>

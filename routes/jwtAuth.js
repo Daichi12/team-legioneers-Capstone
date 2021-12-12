@@ -69,9 +69,9 @@ router.post("/login_porticos1606", validinfo, async(req, res)=> {
 
     const validPassword = await bcrypt.compare(Employee_Password, account.rows[0].employee_password);
 
-    if (!validPassword) {
-        return res.status(401).json("UserName or Employee_Password is incorrect");
-    }
+    // if (!validPassword) {
+    //     return res.status(401).json("UserName or Employee_Password is incorrect");
+    // }
     //4. give them the jwt token
     const token = jwtGenerator(account.rows[0].account_id);
     res.json({token});

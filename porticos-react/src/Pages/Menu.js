@@ -120,10 +120,12 @@ const Menu = ({ items }) => {
 
                         <div className="section-center" style={{ padding: "0px 0 40px" }}>
       {items.map((menuItem) => {
-        const { id, title, img, price, desc } = menuItem
+        const {id, title, img, price, desc, link} = menuItem
         return (
           <article key={id} className="menu-item">
-            <img src={img} alt={title} className="photo" />
+            <a href={link}  target="_blank" >
+            <img src={img} alt={title} className="photo"/> 
+            </a>
             <div className="item-info">
               <header>
                 <h4>{title}</h4>

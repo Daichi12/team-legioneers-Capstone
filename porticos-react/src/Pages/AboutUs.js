@@ -89,23 +89,23 @@ render(){
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column two-third column_column ">
                                             <div class="column_attr clearfix" style={{"padding":"0 7% 0 0"}}>
-                                                <h6 style={{"letterSpacing":"4px"}}>Porticos1606</h6>
-                                                <h4>PÓRTICOS 1606 is a restaurant with a bar that offers customers an unique and authentic experience in an unique and authentic environment. Here, you can enjoy our land's flavor and typical seasoning through a Gallery of Caribbean Fusions to your delight and our satisfaction. We are history and a sense of belonging. We are San Germán.</h4>
+                                                <h3 style={{"letterSpacing":"4px"}}>Porticos1606</h3>
+                                                <h5>PÓRTICOS 1606 is a restaurant with a bar that offers customers an unique and authentic experience in an unique and authentic environment. Here, you can enjoy our land's flavor and typical seasoning through a Gallery of Caribbean Fusions to your delight and our satisfaction. We are history and a sense of belonging. We are San Germán.</h5>
                                                 <hr class="no_line" style={{"margin":"0 auto 20px"}}/>
                                                 <h6> </h6>
                                             </div>
                                         </div>
                                         <div class="column mcb-column one-third column_column ">
                                             <div class="column_attr clearfix">
-                                                <h6 style={{"letterSpacing":"3px"}}>Call Us</h6>
-                                                <p>
-                                                    787-978-3555
-                                                </p>
+                                                <h3 style={{"letterSpacing":"3px"}}>San German Touristical spot</h3>
+                                                <h5>
+                                                    Founded in 2020
+                                                </h5>
                                                 <hr class="no_line" style={{"margin":"0 auto 20px"}}/>
-                                                <h6 style={{"letterSpacing":"3px"}}>Placeholder</h6>
-                                                <p>
-                                                    Placeholder text
-                                                </p>
+                                                <h3 style={{"letterSpacing":"3px"}}>We care about our customers</h3>
+                                                <h5>
+                                                    Employees fully Vaccinated and following safety Protocols
+                                                </h5>
                                             </div>
                                         </div>
                                     </div>
